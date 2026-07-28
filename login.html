@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Log in — PataSlot</title>
+<meta name="description" content="Log in to your PataSlot dashboard to manage bookings, orders and WhatsApp automation.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/typography.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/buttons.css">
+<link rel="stylesheet" href="css/forms.css">
+<link rel="stylesheet" href="css/auth.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<header class="auth-header">
+  <div class="container flex flex-between">
+    <a href="index.html" class="brand" aria-label="PataSlot home">
+      <span class="brand-mark" aria-hidden="true"><i class="fa-solid fa-calendar-check"></i></span>
+      PataSlot
+    </a>
+    <a href="index.html" class="btn btn--ghost btn--sm">
+      <i class="fa-solid fa-arrow-left"></i> Back to site
+    </a>
+  </div>
+</header>
+
+<main class="auth-shell">
+
+  <section class="auth-shell__brand" aria-hidden="true">
+    <div class="auth-shell__quote">
+      <i class="fa-solid fa-quote-left text-primary"></i>
+      <p>PataSlot books our clients while we're busy with scissors in hand. It's like hiring a full-time receptionist for a tenth of the cost.</p>
+      <div class="auth-shell__author">
+        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Faith Wanjiru">
+        <div>
+          <strong>Faith Wanjiru</strong>
+          <span>Owner, Glow Beauty Studio</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="auth-shell__stats">
+      <div><strong>2,400+</strong><span>Businesses</span></div>
+      <div><strong>1.2M+</strong><span>Bookings</span></div>
+      <div><strong>98%</strong><span>Response rate</span></div>
+    </div>
+  </section>
+
+  <section class="auth-shell__form">
+    <div class="auth-card">
+      <div class="auth-card__head">
+        <span class="eyebrow">Welcome back</span>
+        <h1>Log in to PataSlot</h1>
+        <p>Manage bookings, orders and your WhatsApp assistant.</p>
+      </div>
+
+      <form data-login-form novalidate>
+        <div class="field">
+          <input class="field__control" type="email" id="login-email" name="email" placeholder=" " data-field="email" autocomplete="email" required>
+          <label class="field__label" for="login-email">Business email</label>
+          <p class="field__error"><i class="fa-solid fa-circle-exclamation"></i><span></span></p>
+        </div>
+
+        <div class="field field--has-suffix">
+          <input class="field__control" type="password" id="login-password" name="password" placeholder=" " data-field="password" autocomplete="current-password" required>
+          <label class="field__label" for="login-password">Password</label>
+          <button type="button" class="field__suffix-btn" data-toggle-password aria-label="Show password">
+            <i class="fa-solid fa-eye"></i>
+          </button>
+          <p class="field__error"><i class="fa-solid fa-circle-exclamation"></i><span></span></p>
+        </div>
+
+        <div class="flex flex-between mb-6">
+          <label class="check-row">
+            <input type="checkbox" name="remember" data-field="remember">
+            <span>Remember me</span>
+          </label>
+          <a href="forgot-password.html" class="text-primary auth-forgot-link">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="btn btn--primary btn--lg btn--block" data-submit-btn>
+          <i class="fa-solid fa-arrow-right-to-bracket"></i> Sign in
+        </button>
+      </form>
+
+      <div class="auth-divider">or continue with</div>
+      <div class="oauth-row">
+        <button type="button" class="btn btn--secondary btn--block"><i class="fa-brands fa-google"></i> Google</button>
+        <button type="button" class="btn btn--secondary btn--block"><i class="fa-brands fa-facebook"></i> Facebook</button>
+      </div>
+
+      <p class="auth-foot">Don't have an account? <a href="register.html">Start your free trial</a></p>
+    </div>
+  </section>
+
+</main>
+
+<script src="js/storage.js"></script>
+<script src="js/validators.js"></script>
+<script src="js/api.js"></script>
+<script src="js/notifications.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>

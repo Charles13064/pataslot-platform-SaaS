@@ -1,0 +1,203 @@
+/* ==========================================================================
+   PataSlot — Cards
+   ========================================================================== */
+
+.card {
+  background: var(--color-white);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+}
+
+/* Logo */
+#KhaliFah_Logo{
+  border-radius: 50%;
+}
+
+/* ---- Feature card ---- */
+.feature-card {
+  background: var(--color-white);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+.feature-card__icon {
+  width: 48px; height: 48px;
+  border-radius: var(--radius-md);
+  background: var(--color-primary-light);
+  color: var(--color-primary-dark);
+  display: grid;
+  place-items: center;
+  font-size: 20px;
+  transition: transform var(--dur-base) var(--ease-spring), background var(--dur-base) var(--ease-out);
+}
+.feature-card:hover .feature-card__icon {
+  transform: rotate(-6deg) scale(1.08);
+  background: var(--color-primary);
+  color: white;
+}
+.feature-card--lg { grid-column: span 2; }
+
+/* Bento-style feature grid */
+.bento {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: var(--space-5);
+}
+.bento .feature-card:nth-child(1) { grid-column: span 3; }
+.bento .feature-card:nth-child(2) { grid-column: span 3; }
+.bento .feature-card:nth-child(3) { grid-column: span 2; }
+.bento .feature-card:nth-child(4) { grid-column: span 2; }
+.bento .feature-card:nth-child(5) { grid-column: span 2; }
+
+/* ---- Stat card ---- */
+.stat-card {
+  text-align: center;
+  padding: var(--space-5);
+}
+.stat-card .stat-value {
+  font-size: var(--fs-2xl);
+  font-weight: var(--fw-bold);
+  color: var(--color-black);
+}
+.on-dark .stat-card .stat-value { color: white; }
+.stat-card .stat-label { font-size: var(--fs-sm); color: var(--color-gray-500); }
+.on-dark .stat-card .stat-label { color: rgba(255,255,255,0.55); }
+
+/* ---- Testimonial card ---- */
+.testimonial-card {
+  background: var(--color-white);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+.testimonial-card__stars { color: var(--color-warning); font-size: var(--fs-sm); letter-spacing: 2px; }
+.testimonial-card__quote {
+  font-size: var(--fs-md);
+  line-height: var(--lh-normal);
+  color: var(--color-gray-800);
+}
+.testimonial-card__author {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-top: auto;
+}
+.testimonial-card__avatar {
+  width: 46px; height: 46px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--color-primary-light);
+}
+.testimonial-card__author strong { display: block; font-size: var(--fs-sm); color: var(--color-black); }
+.testimonial-card__author span { font-size: var(--fs-xs); color: var(--color-gray-500); }
+.testimonial-card--featured {
+  background: var(--color-black);
+  border-color: var(--color-black);
+}
+.testimonial-card--featured .testimonial-card__quote { color: rgba(255,255,255,0.92); }
+.testimonial-card--featured .testimonial-card__author span { color: rgba(255,255,255,0.5); }
+
+/* ---- Pricing card ---- */
+.pricing-card {
+  background: var(--color-white);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  padding: var(--space-7);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  position: relative;
+}
+.pricing-card--popular {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-glow);
+  transform: scale(1.03);
+}
+.pricing-card__badge {
+  position: absolute;
+  top: -14px; left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-primary);
+  color: white;
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+}
+.pricing-card__price {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  font-family: 'Switzer', sans-serif;
+  font-weight: 600;
+}
+.pricing-card__price .amount {
+  font-size: var(--fs-3xl);
+  color: var(--color-black);
+  font-size:2.5rem;
+  font-weight:800;
+  margin:0;
+}
+.pricing-card__price .period {
+  color: var(--color-gray-500);
+  font-size: var(--fs-sm);
+}
+.pricing-card__list li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  font-size: var(--fs-sm);
+  color: var(--color-gray-600);
+  padding-block: 6px;
+}
+.pricing-card__list i { color: var(--color-primary); margin-top: 3px; }
+
+/* ---- Integration chip ---- */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 8px 14px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border-subtle);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-medium);
+  background: var(--color-white);
+}
+
+/* ---- FAQ accordion ---- */
+.accordion-item {
+  border-bottom: 1px solid var(--border-subtle);
+}
+.accordion-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-5) 0;
+  font-weight: var(--fw-medium);
+  font-size: var(--fs-md);
+  color: var(--color-black);
+  text-align: left;
+}
+.accordion-trigger i { transition: transform var(--dur-base) var(--ease-out); color: var(--color-gray-500); }
+.accordion-item.is-open .accordion-trigger i { transform: rotate(45deg); color: var(--color-primary); }
+.accordion-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--dur-base) var(--ease-out);
+}
+.accordion-panel p { padding-bottom: var(--space-5); max-width: 640px; }
+
+@media (max-width: 900px) {
+  .bento { grid-template-columns: repeat(2, 1fr); }
+  .bento .feature-card { grid-column: span 2 !important; }
+  .pricing-card--popular { transform: none; }
+}

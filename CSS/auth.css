@@ -1,0 +1,140 @@
+/* ==========================================================================
+   PataSlot — Auth layout
+   Split-panel shell used by login, register, forgot-password, verify-email.
+   ========================================================================== */
+
+.auth-header {
+  height: 76px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.auth-shell {
+  min-height: calc(100vh - 76px);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.auth-shell__brand {
+  background: var(--color-black);
+  color: white;
+  padding: var(--space-9);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+.auth-shell__brand::before {
+  content: '';
+  position: absolute;
+  width: 480px; height: 480px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(var(--color-primary-rgb), 0.35), transparent 70%);
+  top: -160px; right: -160px;
+}
+
+.auth-shell__quote {
+  position: relative;
+  max-width: 420px;
+}
+.auth-shell__quote p {
+  font-size: var(--fs-xl);
+  color: white;
+  line-height: var(--lh-snug);
+  font-weight: var(--fw-medium);
+}
+.auth-shell__author {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+}
+.auth-shell__author img {
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.auth-shell__author strong { display: block; font-size: var(--fs-sm); color: white; }
+.auth-shell__author span { font-size: var(--fs-xs); color: rgba(255,255,255,0.55); }
+
+.auth-shell__stats {
+  position: relative;
+  display: flex;
+  gap: var(--space-8);
+}
+.auth-shell__stats strong { display: block; font-size: var(--fs-xl); color: white; }
+.auth-shell__stats span { font-size: var(--fs-xs); color: rgba(255,255,255,0.55); }
+
+.auth-shell__form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-9) var(--container-pad);
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+}
+.auth-card__head { margin-bottom: var(--space-7); }
+.auth-card__head h1 { font-size: var(--fs-2xl); margin-top: var(--space-2); }
+.auth-card__head p { margin-top: var(--space-2); }
+
+/* Default vertical rhythm for fields inside auth cards / the wizard —
+   removes the need for per-field inline margin styles. */
+.auth-card form .field,
+.wizard-panel .field,
+.wizard-panel .field-row {
+  margin-bottom: var(--space-5);
+}
+.field--has-suffix .field__control { padding-right: 46px; }
+
+.auth-divider {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-block: var(--space-6);
+  color: var(--color-gray-500);
+  font-size: var(--fs-xs);
+}
+.auth-divider::before, .auth-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border-subtle);
+}
+
+.oauth-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3);
+}
+
+.auth-forgot-link { font-size: var(--fs-sm); font-weight: var(--fw-medium); }
+
+.auth-foot {
+  text-align: center;
+  margin-top: var(--space-7);
+  font-size: var(--fs-sm);
+  color: var(--color-gray-500);
+}
+.auth-foot a { color: var(--color-primary-dark); font-weight: var(--fw-medium); }
+
+/* Wide onboarding wizard container (register.html) */
+.onboarding-shell {
+  max-width: 760px;
+  margin-inline: auto;
+  padding: var(--space-9) var(--container-pad) var(--space-11);
+}
+.onboarding-title { margin-top: var(--space-3); }
+.onboarding-subtitle { margin-top: var(--space-3); margin-inline: auto; max-width: 480px; }
+.auth-foot-inline { font-size: var(--fs-sm); color: var(--color-gray-500); }
+.auth-foot-inline a { color: var(--color-primary-dark); font-weight: var(--fw-medium); }
+.wizard-nav--start { justify-content: flex-end; }
+
+@media (max-width: 1024px) {
+  .auth-shell { grid-template-columns: 1fr; }
+  .auth-shell__brand { display: none; }
+}

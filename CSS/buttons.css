@@ -1,0 +1,80 @@
+/* ==========================================================================
+   PataSlot — Buttons
+   ========================================================================== */
+
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  font-family: var(--font-body);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-sm);
+  padding: 0.85rem 1.5rem;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  overflow: hidden;
+  isolation: isolate;
+  transition: transform var(--dur-fast) var(--ease-out), box-shadow var(--dur-base) var(--ease-out), background var(--dur-fast) var(--ease-out);
+  white-space: nowrap;
+}
+.btn:active { transform: scale(0.97); }
+
+.btn--primary {
+  background: var(--color-primary);
+  color: white;
+  box-shadow: 0 10px 24px -8px rgba(var(--color-primary-rgb), 0.55);
+}
+.btn--primary:hover {
+  background: var(--color-primary-dark);
+  box-shadow: 0 14px 30px -8px rgba(var(--color-primary-rgb), 0.65);
+  transform: translateY(-2px);
+}
+
+.btn--secondary {
+  background: var(--color-white);
+  color: var(--color-black);
+  border: 1px solid var(--border-subtle);
+}
+.btn--secondary:hover {
+  border-color: var(--color-gray-300);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--color-black);
+}
+.btn--ghost:hover { background: var(--color-gray-100); }
+
+.btn--on-dark {
+  background: rgba(255,255,255,0.1);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.18);
+}
+.btn--on-dark:hover { background: rgba(255,255,255,0.18); transform: translateY(-2px); }
+
+.btn--lg { padding: 1rem 2rem; font-size: var(--fs-base); }
+.btn--sm { padding: 0.6rem 1.1rem; font-size: var(--fs-xs); }
+.btn--block { width: 100%; }
+
+.btn--icon-only {
+  width: 40px; height: 40px;
+  padding: 0;
+  border-radius: 50%;
+}
+
+/* Ripple */
+.btn .ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.5);
+  transform: scale(0);
+  animation: ripple 600ms var(--ease-out);
+  pointer-events: none;
+}
+@keyframes ripple {
+  to { transform: scale(3); opacity: 0; }
+}

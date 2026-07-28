@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Create your account — PataSlot</title>
+<meta name="description" content="Register your business on PataSlot and start automating bookings, orders and payments on WhatsApp.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/typography.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/buttons.css">
+<link rel="stylesheet" href="css/forms.css">
+<link rel="stylesheet" href="css/auth.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<header class="auth-header">
+  <div class="container flex flex-between">
+    <a href="index.html" class="brand" aria-label="PataSlot home">
+      <span class="brand-mark" aria-hidden="true"><i class="fa-solid fa-calendar-check"></i></span>
+      PataSlot
+    </a>
+    <p class="auth-foot-inline">Already have an account? <a href="login.html">Log in</a></p>
+  </div>
+</header>
+
+<main class="onboarding-shell" data-wizard>
+
+  <div class="text-center mb-6">
+    <span class="eyebrow">Create your account</span>
+    <h1 class="onboarding-title">Let's get your business on WhatsApp</h1>
+    <p class="lede onboarding-subtitle">Six quick steps. You can always fine-tune details later in Settings.</p>
+  </div>
+
+  <div class="wizard-progress">
+    <div class="wizard-progress__step is-active" data-progress-step>
+      <span class="wizard-progress__dot">1</span><span class="wizard-progress__label">Account</span>
+    </div>
+    <div class="wizard-progress__line"></div>
+    <div class="wizard-progress__step" data-progress-step>
+      <span class="wizard-progress__dot">2</span><span class="wizard-progress__label">Business</span>
+    </div>
+    <div class="wizard-progress__line"></div>
+    <div class="wizard-progress__step" data-progress-step>
+      <span class="wizard-progress__dot">3</span><span class="wizard-progress__label">Location</span>
+    </div>
+    <div class="wizard-progress__line"></div>
+    <div class="wizard-progress__step" data-progress-step>
+      <span class="wizard-progress__dot">4</span><span class="wizard-progress__label">Integrations</span>
+    </div>
+    <div class="wizard-progress__line"></div>
+    <div class="wizard-progress__step" data-progress-step>
+      <span class="wizard-progress__dot">5</span><span class="wizard-progress__label">AI &amp; Plan</span>
+    </div>
+    <div class="wizard-progress__line"></div>
+    <div class="wizard-progress__step" data-progress-step>
+      <span class="wizard-progress__dot">6</span><span class="wizard-progress__label">Review</span>
+    </div>
+  </div>
+
+  <form novalidate>
+    <div class="card">
+
+      <!-- ===== STEP 1 — ACCOUNT ===== -->
+      <section class="wizard-panel is-active">
+        <p class="form-section-title">Your account</p>
+        <p class="form-section-hint">This is how you'll log in and manage PataSlot.</p>
+
+        <div class="field">
+          <input class="field__control" type="text" id="owner_name" name="owner_name" placeholder=" " data-required required>
+          <label class="field__label" for="owner_name">Owner full name</label>
+          <p class="field__error"><i class="fa-solid fa-circle-exclamation"></i><span></span></p>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <input class="field__control" type="email" id="business_email" name="business_email" placeholder=" " data-required data-validate="email" required>
+            <label class="field__label" for="business_email">Business email</label>
+            <p class="field__error"><i class="fa-solid fa-circle-exclamation"></i><span></span></p>
+          </div>
+          <div class="field">
+            <input class="field__control" type="tel" id="business_phone" name="business_phone" placeholder=" " data-required data-validate="phone" required>
+            <label class="field__label" for="business_phone">Business phone</label>
+            <p class="field__hint">e.g. 0712 345 678</p>
+            <p class="field__error"><i class="fa-solid fa-circle-exclamation"></i><span></span></p>
+          </div>
+        </div>
+
+        <div class="field field--has-suffix">
+          <input class="field__control" type="password" id="password" name="password" placeholder=" " data-field="password" data-required required>
+          <label class="field__label" for="password">Password</label>
+          <button type="button" class="field__suffix-btn" data-toggle-password aria-label="Show password">
+            <i class="fa-solid fa-eye"></i>
+          </button>
+          <div class="pw-meter" data-pw-meter data-strength="0"><span></span><span></span><span></span><span></span></div>
+          <p class="pw-meter-label" data-pw-label></p>
+          <p class="field__error"><i class="fa-solid fa-circle-exclamation"></i><span></span></p>
+        </div>
+
+        <div class="field">
+          <input class="field__control" type="password" id="password_confirm" name="password_confirm" placeholder=" " data-field="password_confirm" data-required required>
+          <label class="field__label" for="password_confirm">Confirm password</label>
+          <p class="field__error"><i class="fa-solid fa-circle-exclamation"></i><span></span></p>
+        </div>
+
+        <div class="wizard-nav wizard-nav--start">
+          <span></span>
+          <button type="button" class="btn btn--primary" data-wizard-next>Continue <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+      </section>
+
+      <!-- ===== STEP 2 — BUSINESS PROFILE ===== -->
+      <section class="wizard-panel">
+        <p class="form-section-title">Business profile</p>
+        <p class="form-section-hint">Tell customers who they're chatting with.</p>
+
+        <div class="field">
+          <input class="field__control" type="text" id="business_name" name="business_name" placeholder=" " data-required required>
+          <label class="field__label" for="business_name">Business name</label>
+          <p class="field__error"><i class="fa-solid fa-circle-exclamation"></i><span></span></p>
+        </div>
+
+        <div class="field-row">
+          <div class="field field--select">
+            <select class="field__control select-control" id="business_category" name="business_category" data-required required>
+              <option value="" disabled selected hidden></option>
+              <option>Beauty & Salon</option>
+              <option>Health & Wellness</option>
+              <option>Food & Restaurant</option>
+              <option>Fitness</option>
+              <option>Automotive</option>
+              <option>Retail & Grocery</option>
+              <option>Professional Services</option>
+              <option>Other</option>
+            </select>
+            <label class="field__label" for="business_category">Business category</label>
+            <p class="field__error"><i class="fa-solid fa-circle-exclamation"></i><span></span></p>
+          </div>
+          <div class="field">
+            <input class="field__control" type="tel" id="whatsapp_number" name="whatsapp_number" placeholder=" " data-required data-validate="phone" required>
+            <label class="field__label" for="whatsapp_number">WhatsApp number</label>
+            <p class="field__error"><i class="fa-solid fa-circle-exclamation"></i><span></span></p>
+          </div>
+        </div>
+
+        <div class="field">
+          <textarea class="field__control" id="business_description" name="business_description" placeholder=" " rows="3" data-required required></textarea>
+          <label class="field__label" for="business_description">Business description</label>
+          <p class="field__error"><i class="fa-solid fa-circle-exclamation"></i><span></span></p>
+        </div>
+
+        <div class="field-row">
+          <div class="field field--select">
+            <select class="field__control select-control" id="business_language" name="business_language">
+              <option>English</option>
+              <option>Swahili</option>
+              <option>English & Swahili</option>
+            </select>
+            <label class="field__label" for="business_language">Business language</label>
+          </div>
+          <div class="field field--select">
+            <select class="field__control select-control" id="currency" name="currency">
+              <option>KES — Kenyan Shilling</option>
+              <option>USD — US Dollar</option>
+              <option>UGX — Ugandan Shilling</option>
+              <option>TZS — Tanzanian Shilling</option>
+            </select>
+            <label class="field__label" for="currency">Currency</label>
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field field--select">
+            <select class="field__control select-control" id="timezone" name="timezone">
+              <option>Africa/Nairobi (GMT+3)</option>
+              <option>Africa/Kampala (GMT+3)</option>
+              <option>Africa/Dar_es_Salaam (GMT+3)</option>
+            </select>
+            <label class="field__label" for="timezone">Timezone</label>
+          </div>
+          <div class="field">
+            <input class="field__control" type="url" id="website" name="website" placeholder=" " data-validate="url">
+            <label class="field__label" for="website">Website (optional)</label>
+            <p class="field__error"><i class="fa-solid fa-circle-exclamation"></i><span></span></p>
+          </div>
+        </div>
+
+        <p class="form-section-title mt-6">Business logo</p>
+        <div class="dropzone" data-dropzone>
+          <input type="file" name="logo" accept="image/*" hidden>
+          <div class="dropzone__prompt">
+            <div class="dropzone__icon"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+            <p>Drag &amp; drop your logo, or click to upload</p>
+            <p class="field__hint">PNG or JPG, up to 2MB — optional, add it anytime</p>
+          </div>
+          <div class="dropzone__preview">
+            <img class="dropzone__thumb" data-dropzone-thumb alt="Logo preview">
+            <div>
+              <p data-dropzone-filename></p>
+              <button type="button" class="btn btn--ghost btn--sm" data-dropzone-remove>Remove</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="wizard-nav">
+          <button type="button" class="btn btn--secondary" data-wizard-prev><i class="fa-solid fa-arrow-left"></i> Back</button>
+          <button type="button" class="btn btn--primary" data-wizard-next>Continue <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+      </section>
+
+      <!-- ===== STEP 3 — LOCATION ===== -->
+      <section class="wizard-panel">
+        <p class="form-section-title">Where are you based?</p>
+        <p class="form-section-hint">Helps customers find you and sets your default service area.</p>
+
+        <div class="field-row">
+          <div class="field field--select">
+            <select class="field__control select-control" id="country" name="country" data-required required>
+              <option>Kenya</option>
+              <option>Uganda</option>
+              <option>Tanzania</option>
+              <option>Rwanda</option>
+            </select>
+            <label class="field__label" for="country">Country</label>
+          </div>
+          <div class="field">
+            <input class="field__control" type="text" id="county" name="county" placeholder=" " data-required required>
+            <label class="field__label" for="county">County / State</label>
+            <p class="field__error"><i class="fa-solid fa-circle-exclamation"></i><span></span></p>
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <input class="field__control" type="text" id="city" name="city" placeholder=" " data-required required>
+            <label class="field__label" for="city">City / Town</label>
+            <p class="field__error"><i class="fa-solid fa-circle-exclamation"></i><span></span></p>
+          </div>
+          <div class="field">
+            <input class="field__control" type="text" id="physical_address" name="physical_address" placeholder=" " data-required required>
+            <label class="field__label" for="physical_address">Physical address</label>
+            <p class="field__error"><i class="fa-solid fa-circle-exclamation"></i><span></span></p>
+          </div>
+        </div>
+
+        <div class="field">
+          <input class="field__control" type="url" id="google_maps_location" name="google_maps_location" placeholder=" " data-validate="url">
+          <label class="field__label" for="google_maps_location">Google Maps link (optional)</label>
+          <p class="field__error"><i class="fa-solid fa-circle-exclamation"></i><span></span></p>
+        </div>
+
+        <div class="wizard-nav">
+          <button type="button" class="btn btn--secondary" data-wizard-prev><i class="fa-solid fa-arrow-left"></i> Back</button>
+          <button type="button" class="btn btn--primary" data-wizard-next>Continue <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+      </section>
+
+      <!-- ===== STEP 4 — SOCIAL & META/WHATSAPP INTEGRATIONS ===== -->
+      <section class="wizard-panel">
+        <p class="form-section-title">Social &amp; WhatsApp integrations</p>
+        <p class="form-section-hint">Everything here is optional at signup — you can paste these in later from Settings → Integrations once your Meta app is approved.</p>
+
+        <div class="field-row">
+          <div class="field">
+            <input class="field__control" type="url" id="facebook" name="facebook" placeholder=" " data-validate="url">
+            <label class="field__label" for="facebook">Facebook page</label>
+          </div>
+          <div class="field">
+            <input class="field__control" type="url" id="instagram" name="instagram" placeholder=" " data-validate="url">
+            <label class="field__label" for="instagram">Instagram</label>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <input class="field__control" type="url" id="tiktok" name="tiktok" placeholder=" " data-validate="url">
+            <label class="field__label" for="tiktok">TikTok</label>
+          </div>
+          <div class="field">
+            <input class="field__control" type="url" id="linkedin" name="linkedin" placeholder=" " data-validate="url">
+            <label class="field__label" for="linkedin">LinkedIn</label>
+          </div>
+        </div>
+        <div class="field">
+          <input class="field__control" type="url" id="youtube" name="youtube" placeholder=" " data-validate="url">
+          <label class="field__label" for="youtube">YouTube</label>
+        </div>
+
+        <p class="form-section-title mt-6">Meta &amp; WhatsApp Business API <span class="chip">Advanced</span></p>
+        <p class="form-section-hint">Find these in Meta Business Suite under WhatsApp → API Setup.</p>
+
+        <div class="field-row">
+          <div class="field">
+            <input class="field__control" type="text" id="meta_app_id" name="meta_app_id" placeholder=" ">
+            <label class="field__label" for="meta_app_id">Meta App ID</label>
+          </div>
+          <div class="field">
+            <input class="field__control" type="password" id="meta_app_secret" name="meta_app_secret" placeholder=" " autocomplete="off">
+            <label class="field__label" for="meta_app_secret">Meta App Secret</label>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <input class="field__control" type="text" id="wa_business_account_id" name="wa_business_account_id" placeholder=" ">
+            <label class="field__label" for="wa_business_account_id">WhatsApp Business Account ID</label>
+          </div>
+          <div class="field">
+            <input class="field__control" type="text" id="wa_phone_number_id" name="wa_phone_number_id" placeholder=" ">
+            <label class="field__label" for="wa_phone_number_id">WhatsApp Phone Number ID</label>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <input class="field__control" type="text" id="meta_webhook_token" name="meta_webhook_token" placeholder=" ">
+            <label class="field__label" for="meta_webhook_token">Meta Webhook Verify Token</label>
+          </div>
+          <div class="field">
+            <input class="field__control" type="password" id="meta_access_token" name="meta_access_token" placeholder=" " autocomplete="off">
+            <label class="field__label" for="meta_access_token">Meta Permanent Access Token</label>
+          </div>
+        </div>
+
+        <div class="wizard-nav">
+          <button type="button" class="btn btn--secondary" data-wizard-prev><i class="fa-solid fa-arrow-left"></i> Back</button>
+          <button type="button" class="btn btn--primary" data-wizard-next>Continue <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+      </section>
+
+      <!-- ===== STEP 5 — AI & PLAN ===== -->
+      <section class="wizard-panel">
+        <p class="form-section-title">AI assistant</p>
+        <p class="form-section-hint">PataSlot ships with a default AI model — add your own key only if you want a custom one.</p>
+
+        <div class="field-row">
+          <div class="field">
+            <input class="field__control" type="password" id="ai_api_key" name="ai_api_key" placeholder=" " autocomplete="off">
+            <label class="field__label" for="ai_api_key">OpenAI / OpenRouter API key (optional)</label>
+          </div>
+          <div class="field field--select">
+            <select class="field__control select-control" id="ai_model" name="ai_model">
+              <option>PataSlot Default (recommended)</option>
+              <option>GPT-4o mini</option>
+              <option>Claude Haiku</option>
+              <option>Llama 3.1 70B</option>
+            </select>
+            <label class="field__label" for="ai_model">Preferred AI model</label>
+          </div>
+        </div>
+
+        <p class="form-section-title mt-6">Choose your plan</p>
+        <div class="grid grid-3" data-stagger>
+          <label class="plan-card" data-plan-card>
+            <input type="radio" name="subscription_plan" value="starter">
+            <h3>Starter</h3>
+            <p class="amount">KES 2,500<span class="period"> /mo</span></p>
+            <p class="field__hint">1 number · 500 chats/mo</p>
+          </label>
+          <label class="plan-card is-selected" data-plan-card>
+            <input type="radio" name="subscription_plan" value="growth" checked>
+            <h3>Growth</h3>
+            <p class="amount">KES 6,500<span class="period"> /mo</span></p>
+            <p class="field__hint">3 numbers · 5,000 chats/mo</p>
+          </label>
+          <label class="plan-card" data-plan-card>
+            <input type="radio" name="subscription_plan" value="scale">
+            <h3>Scale</h3>
+            <p class="amount">KES 15,000<span class="period"> /mo</span></p>
+            <p class="field__hint">Unlimited numbers & chats</p>
+          </label>
+        </div>
+
+        <div class="wizard-nav">
+          <button type="button" class="btn btn--secondary" data-wizard-prev><i class="fa-solid fa-arrow-left"></i> Back</button>
+          <button type="button" class="btn btn--primary" data-wizard-next>Continue <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+      </section>
+
+      <!-- ===== STEP 6 — REVIEW ===== -->
+      <section class="wizard-panel">
+        <p class="form-section-title">Review &amp; confirm</p>
+        <p class="form-section-hint">Double-check the essentials before we create your account.</p>
+
+        <dl class="review-list mb-6">
+          <div class="review-list__row"><dt>Business name</dt><dd data-review="review_business_name">—</dd></div>
+          <div class="review-list__row"><dt>Owner</dt><dd data-review="review_owner_name">—</dd></div>
+          <div class="review-list__row"><dt>Email</dt><dd data-review="review_email">—</dd></div>
+          <div class="review-list__row"><dt>WhatsApp number</dt><dd data-review="review_whatsapp">—</dd></div>
+          <div class="review-list__row"><dt>City</dt><dd data-review="review_location">—</dd></div>
+          <div class="review-list__row"><dt>Plan</dt><dd data-review="review_plan">—</dd></div>
+        </dl>
+
+        <label class="check-row mb-3">
+          <input type="checkbox" name="terms" data-field="terms" required>
+          <span>I agree to the <a href="terms.html" class="text-primary">Terms of Service</a> and <a href="privacy.html" class="text-primary">Privacy Policy</a></span>
+        </label>
+        <label class="check-row mb-6">
+          <input type="checkbox" name="marketing_consent">
+          <span>Send me product updates and tips over email (optional)</span>
+        </label>
+
+        <div class="wizard-nav">
+          <button type="button" class="btn btn--secondary" data-wizard-prev><i class="fa-solid fa-arrow-left"></i> Back</button>
+          <button type="submit" class="btn btn--primary btn--lg" data-wizard-submit><i class="fa-solid fa-rocket"></i> Create my account</button>
+        </div>
+      </section>
+
+    </div>
+  </form>
+
+  <p class="auth-foot">Already have an account? <a href="login.html">Log in</a></p>
+</main>
+
+<script src="js/storage.js"></script>
+<script src="js/validators.js"></script>
+<script src="js/api.js"></script>
+<script src="js/notifications.js"></script>
+<script src="js/onboarding.js"></script>
+</body>
+</html>
