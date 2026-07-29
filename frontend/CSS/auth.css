@@ -5,15 +5,23 @@
 
 .auth-header {
   height: 76px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--z-nav);
   display: flex;
   align-items: center;
   border-bottom: 1px solid var(--border-subtle);
+  background: var(--surface-page);
 }
+.auth-header .container { gap: var(--space-8); }
 
 .auth-shell {
-  min-height: calc(100vh - 76px);
+  min-height: 100vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  padding-top: 76px;
 }
 
 .auth-shell__brand {
