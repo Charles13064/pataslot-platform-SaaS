@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Products | PataSlot</title>
+
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/theme.css">
+<script src="js/theme.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/typography.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/buttons.css">
+<link rel="stylesheet" href="css/forms.css">
+<link rel="stylesheet" href="css/cards.css">
+<link rel="stylesheet" href="css/sidebar.css">
+<link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="css/tables.css">
+<link rel="stylesheet" href="css/modals.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<div class="app-shell" data-app-shell>
+  <div class="sidebar-backdrop" data-sidebar-backdrop></div>
+
+  <aside class="sidebar" data-sidebar>
+    <div class="sidebar-brand">
+      <span class="brand-mark" aria-hidden="true"><i class="fa-solid fa-calendar-check"></i></span>
+      <span>PataSlot</span>
+      <button class="sidebar-collapse-btn" data-sidebar-collapse aria-label="Collapse sidebar"><i class="fa-solid fa-angles-left"></i></button>
+    </div>
+    <nav class="sidebar-nav" aria-label="Primary">
+      <a href="dashboard.html" class="sidebar-link"><i class="fa-solid fa-grip"></i><span>Dashboard</span></a>
+      <a href="inbox.html" class="sidebar-link"><i class="fa-brands fa-whatsapp"></i><span>Inbox</span><span class="badge-count">12</span></a>
+      <a href="contacts.html" class="sidebar-link"><i class="fa-solid fa-address-book"></i><span>Contacts</span></a>
+      <p class="sidebar-section-label">Catalog</p>
+      <a href="products.html" class="sidebar-link is-active"><i class="fa-solid fa-box"></i><span>Products</span></a>
+      <a href="services.html" class="sidebar-link"><i class="fa-solid fa-scissors"></i><span>Services</span></a>
+      <a href="appointments.html" class="sidebar-link"><i class="fa-solid fa-calendar-days"></i><span>Appointments</span></a>
+      <a href="gallery.html" class="sidebar-link"><i class="fa-solid fa-images"></i><span>Gallery</span></a>
+      <p class="sidebar-section-label">Engage</p>
+      <a href="broadcasts.html" class="sidebar-link"><i class="fa-solid fa-tower-broadcast"></i><span>Broadcasts</span></a>
+      <a href="automations.html" class="sidebar-link"><i class="fa-solid fa-diagram-project"></i><span>Automations</span></a>
+      <a href="ai.html" class="sidebar-link"><i class="fa-solid fa-robot"></i><span>AI Assistant</span></a>
+      <p class="sidebar-section-label">Business</p>
+      <a href="analytics.html" class="sidebar-link"><i class="fa-solid fa-chart-line"></i><span>Analytics</span></a>
+      <a href="integrations.html" class="sidebar-link"><i class="fa-solid fa-plug"></i><span>Integrations</span></a>
+      <a href="billing.html" class="sidebar-link"><i class="fa-solid fa-credit-card"></i><span>Billing</span></a>
+      <a href="settings.html" class="sidebar-link"><i class="fa-solid fa-gear"></i><span>Settings</span></a>
+    </nav>
+    <div class="sidebar-footer">
+      <a href="profile.html" class="sidebar-user">
+        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Faith Wanjiru">
+        <div class="sidebar-user__meta"><strong>Faith Wanjiru</strong><span>Glow Beauty Studio</span></div>
+      </a>
+      <a href="login.html" class="sidebar-link"><i class="fa-solid fa-arrow-right-from-bracket"></i><span>Log out</span></a>
+    </div>
+  </aside>
+
+  <div class="main-content">
+    <header class="topbar">
+      <button class="topbar-menu-btn" data-sidebar-open aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+      <h1 class="topbar-title">Products</h1>
+      <div class="topbar-actions">
+        <button class="theme-toggle" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i><i class="fa-solid fa-sun"></i></button>
+        <button class="topbar-icon-btn" aria-label="Notifications"><i class="fa-regular fa-bell"></i><span class="dot"></span></button>
+        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Faith Wanjiru" class="topbar-avatar">
+      </div>
+    </header>
+
+    <div class="page-wrap">
+      <div class="page-head">
+        <div>
+          <h1>Products</h1>
+          <p class="text-muted">What customers can order straight from WhatsApp.</p>
+        </div>
+        <button class="btn btn--primary" data-modal-open="modal-add-product"><i class="fa-solid fa-plus"></i> Add product</button>
+      </div>
+
+      <div class="table-toolbar toolbar-card mb-6">
+        <div class="field">
+          <input class="field__control" type="search" id="product-search" placeholder=" " data-filter-input data-filter-target="[data-product-grid]">
+          <label class="field__label" for="product-search">Search products</label>
+        </div>
+        <div class="flex gap-3 flex-wrap">
+          <span class="chip is-active"><i class="fa-solid fa-layer-group"></i> All categories</span>
+          <span class="chip"><i class="fa-solid fa-spray-can-sparkles"></i> Hair care</span>
+          <span class="chip"><i class="fa-solid fa-pump-soap"></i> Skin care</span>
+          <span class="chip"><i class="fa-solid fa-gift"></i> Bundles</span>
+        </div>
+      </div>
+
+      <div class="grid grid-4" data-product-grid data-stagger>
+        <div class="product-card hover-lift" data-reveal="up" data-filter-row>
+          <div class="product-card__image">
+            <i class="fa-solid fa-spray-can-sparkles"></i>
+            <span class="badge badge--success product-card__stock">42 in stock</span>
+            <button class="product-card__quick-edit" data-modal-open="modal-quick-edit" aria-label="Quick edit"><i class="fa-solid fa-pen"></i></button>
+          </div>
+          <div class="product-card__body">
+            <h4>Argan Oil Hair Serum</h4>
+            <p class="category">Hair care</p>
+            <div class="product-card__footer">
+              <span class="product-card__price">KES 1,200</span>
+              <span class="text-muted text-2xs">18 sold</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card hover-lift" data-reveal="up" data-filter-row>
+          <div class="product-card__image">
+            <i class="fa-solid fa-pump-soap"></i>
+            <span class="badge badge--warning product-card__stock">6 left</span>
+            <button class="product-card__quick-edit" data-modal-open="modal-quick-edit" aria-label="Quick edit"><i class="fa-solid fa-pen"></i></button>
+          </div>
+          <div class="product-card__body">
+            <h4>Shea Butter Body Cream</h4>
+            <p class="category">Skin care</p>
+            <div class="product-card__footer">
+              <span class="product-card__price">KES 850</span>
+              <span class="text-muted text-2xs">54 sold</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card hover-lift" data-reveal="up" data-filter-row>
+          <div class="product-card__image">
+            <i class="fa-solid fa-gift"></i>
+            <span class="badge badge--danger product-card__stock">Out of stock</span>
+            <button class="product-card__quick-edit" data-modal-open="modal-quick-edit" aria-label="Quick edit"><i class="fa-solid fa-pen"></i></button>
+          </div>
+          <div class="product-card__body">
+            <h4>Bridal Glow Bundle</h4>
+            <p class="category">Bundles</p>
+            <div class="product-card__footer">
+              <span class="product-card__price">KES 4,500</span>
+              <span class="text-muted text-2xs">9 sold</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card hover-lift" data-reveal="up" data-filter-row>
+          <div class="product-card__image">
+            <i class="fa-solid fa-spray-can-sparkles"></i>
+            <span class="badge badge--success product-card__stock">28 in stock</span>
+            <button class="product-card__quick-edit" data-modal-open="modal-quick-edit" aria-label="Quick edit"><i class="fa-solid fa-pen"></i></button>
+          </div>
+          <div class="product-card__body">
+            <h4>Curl Defining Cream</h4>
+            <p class="category">Hair care</p>
+            <div class="product-card__footer">
+              <span class="product-card__price">KES 950</span>
+              <span class="text-muted text-2xs">31 sold</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card hover-lift" data-reveal="up" data-filter-row>
+          <div class="product-card__image">
+            <i class="fa-solid fa-pump-soap"></i>
+            <span class="badge badge--success product-card__stock">63 in stock</span>
+            <button class="product-card__quick-edit" data-modal-open="modal-quick-edit" aria-label="Quick edit"><i class="fa-solid fa-pen"></i></button>
+          </div>
+          <div class="product-card__body">
+            <h4>Vitamin C Face Serum</h4>
+            <p class="category">Skin care</p>
+            <div class="product-card__footer">
+              <span class="product-card__price">KES 1,600</span>
+              <span class="text-muted text-2xs">47 sold</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card hover-lift" data-reveal="up" data-filter-row>
+          <div class="product-card__image">
+            <i class="fa-solid fa-gift"></i>
+            <span class="badge badge--success product-card__stock">15 in stock</span>
+            <button class="product-card__quick-edit" data-modal-open="modal-quick-edit" aria-label="Quick edit"><i class="fa-solid fa-pen"></i></button>
+          </div>
+          <div class="product-card__body">
+            <h4>Self-Care Starter Kit</h4>
+            <p class="category">Bundles</p>
+            <div class="product-card__footer">
+              <span class="product-card__price">KES 2,300</span>
+              <span class="text-muted text-2xs">22 sold</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pagination -->
+      <div class="flex flex-between mt-6">
+        <span class="text-muted text-sm">Showing 6 of 42 products</span>
+        <div class="flex gap-2">
+          <button class="btn btn--secondary btn--sm" disabled><i class="fa-solid fa-chevron-left"></i></button>
+          <button class="btn btn--secondary btn--sm">1</button>
+          <button class="btn btn--secondary btn--sm">2</button>
+          <button class="btn btn--secondary btn--sm">3</button>
+          <button class="btn btn--secondary btn--sm"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Add product modal ===== -->
+<div class="modal-backdrop" id="modal-add-product">
+  <div class="modal modal--lg">
+    <div class="modal__head">
+      <h3>Add product</h3>
+      <button class="modal__close" data-modal-close aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="modal__body">
+      <div class="dropzone" data-dropzone>
+        <input type="file" name="product_image" accept="image/*" hidden>
+        <div class="dropzone__prompt">
+          <div class="dropzone__icon"><i class="fa-solid fa-image"></i></div>
+          <p>Drag &amp; drop a product photo, or click to upload</p>
+        </div>
+        <div class="dropzone__preview">
+          <img class="dropzone__thumb" data-dropzone-thumb alt="Product preview">
+          <div><p data-dropzone-filename></p><button type="button" class="btn btn--ghost btn--sm" data-dropzone-remove>Remove</button></div>
+        </div>
+      </div>
+
+      <div class="field mt-5">
+        <input class="field__control" type="text" id="product-name" placeholder=" ">
+        <label class="field__label" for="product-name">Product name</label>
+      </div>
+
+      <div class="field-row">
+        <div class="field field--select">
+          <select class="field__control select-control" id="product-category">
+            <option>Hair care</option>
+            <option>Skin care</option>
+            <option>Bundles</option>
+          </select>
+          <label class="field__label" for="product-category">Category</label>
+        </div>
+        <div class="field">
+          <input class="field__control" type="number" id="product-price" placeholder=" ">
+          <label class="field__label" for="product-price">Price (KES)</label>
+        </div>
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <input class="field__control" type="number" id="product-stock" placeholder=" ">
+          <label class="field__label" for="product-stock">Stock quantity</label>
+        </div>
+        <div class="field field--select">
+          <select class="field__control select-control" id="product-status">
+            <option>Active</option>
+            <option>Draft</option>
+          </select>
+          <label class="field__label" for="product-status">Status</label>
+        </div>
+      </div>
+
+      <div class="field">
+        <textarea class="field__control" id="product-description" rows="3" placeholder=" "></textarea>
+        <label class="field__label" for="product-description">Description</label>
+      </div>
+    </div>
+    <div class="modal__foot">
+      <button class="btn btn--secondary" data-modal-close>Cancel</button>
+      <button class="btn btn--primary"><i class="fa-solid fa-check"></i> Save product</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Quick edit modal ===== -->
+<div class="modal-backdrop" id="modal-quick-edit">
+  <div class="modal">
+    <div class="modal__head">
+      <h3>Quick edit</h3>
+      <button class="modal__close" data-modal-close aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="modal__body">
+      <div class="field-row">
+        <div class="field">
+          <input class="field__control" type="number" id="quick-price" placeholder=" ">
+          <label class="field__label" for="quick-price">Price (KES)</label>
+        </div>
+        <div class="field">
+          <input class="field__control" type="number" id="quick-stock" placeholder=" ">
+          <label class="field__label" for="quick-stock">Stock</label>
+        </div>
+      </div>
+    </div>
+    <div class="modal__foot">
+      <button class="btn btn--secondary" data-modal-close>Cancel</button>
+      <button class="btn btn--primary">Save changes</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/utils.js"></script>
+<script src="js/sidebar.js"></script>
+<script src="js/table-filter.js"></script>
+<script src="js/modal.js"></script>
+<script src="js/dropzone.js"></script>
+</body>
+</html>

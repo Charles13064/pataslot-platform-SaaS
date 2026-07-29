@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contacts — PataSlot</title>
+
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/theme.css">
+<script src="js/theme.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/typography.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/buttons.css">
+<link rel="stylesheet" href="css/forms.css">
+<link rel="stylesheet" href="css/cards.css">
+<link rel="stylesheet" href="css/sidebar.css">
+<link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="css/tables.css">
+<link rel="stylesheet" href="css/modals.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<div class="app-shell" data-app-shell>
+  <div class="sidebar-backdrop" data-sidebar-backdrop></div>
+
+  <aside class="sidebar" data-sidebar>
+    <div class="sidebar-brand">
+      <span class="brand-mark" aria-hidden="true"><i class="fa-solid fa-calendar-check"></i></span>
+      <span>PataSlot</span>
+      <button class="sidebar-collapse-btn" data-sidebar-collapse aria-label="Collapse sidebar"><i class="fa-solid fa-angles-left"></i></button>
+    </div>
+    <nav class="sidebar-nav" aria-label="Primary">
+      <a href="dashboard.html" class="sidebar-link"><i class="fa-solid fa-grip"></i><span>Dashboard</span></a>
+      <a href="inbox.html" class="sidebar-link"><i class="fa-brands fa-whatsapp"></i><span>Inbox</span><span class="badge-count">12</span></a>
+      <a href="contacts.html" class="sidebar-link is-active"><i class="fa-solid fa-address-book"></i><span>Contacts</span></a>
+      <p class="sidebar-section-label">Catalog</p>
+      <a href="products.html" class="sidebar-link"><i class="fa-solid fa-box"></i><span>Products</span></a>
+      <a href="services.html" class="sidebar-link"><i class="fa-solid fa-scissors"></i><span>Services</span></a>
+      <a href="appointments.html" class="sidebar-link"><i class="fa-solid fa-calendar-days"></i><span>Appointments</span></a>
+      <a href="gallery.html" class="sidebar-link"><i class="fa-solid fa-images"></i><span>Gallery</span></a>
+      <p class="sidebar-section-label">Engage</p>
+      <a href="broadcasts.html" class="sidebar-link"><i class="fa-solid fa-tower-broadcast"></i><span>Broadcasts</span></a>
+      <a href="automations.html" class="sidebar-link"><i class="fa-solid fa-diagram-project"></i><span>Automations</span></a>
+      <a href="ai.html" class="sidebar-link"><i class="fa-solid fa-robot"></i><span>AI Assistant</span></a>
+      <p class="sidebar-section-label">Business</p>
+      <a href="analytics.html" class="sidebar-link"><i class="fa-solid fa-chart-line"></i><span>Analytics</span></a>
+      <a href="integrations.html" class="sidebar-link"><i class="fa-solid fa-plug"></i><span>Integrations</span></a>
+      <a href="billing.html" class="sidebar-link"><i class="fa-solid fa-credit-card"></i><span>Billing</span></a>
+      <a href="settings.html" class="sidebar-link"><i class="fa-solid fa-gear"></i><span>Settings</span></a>
+    </nav>
+    <div class="sidebar-footer">
+      <a href="profile.html" class="sidebar-user">
+        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Faith Wanjiru">
+        <div class="sidebar-user__meta"><strong>Faith Wanjiru</strong><span>Glow Beauty Studio</span></div>
+      </a>
+      <a href="login.html" class="sidebar-link"><i class="fa-solid fa-arrow-right-from-bracket"></i><span>Log out</span></a>
+    </div>
+  </aside>
+
+  <div class="main-content">
+    <header class="topbar">
+      <button class="topbar-menu-btn" data-sidebar-open aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+      <h1 class="topbar-title">Contacts</h1>
+      <div class="topbar-actions">
+        <button class="theme-toggle" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i><i class="fa-solid fa-sun"></i></button>
+        <button class="topbar-icon-btn" aria-label="Notifications"><i class="fa-regular fa-bell"></i><span class="dot"></span></button>
+        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Faith Wanjiru" class="topbar-avatar">
+      </div>
+    </header>
+
+    <div class="page-wrap">
+      <div class="page-head">
+        <div>
+          <h1>Contacts</h1>
+          <p class="text-muted">Everyone who has messaged Glow Beauty Studio.</p>
+        </div>
+        <button class="btn btn--primary" data-modal-open="modal-add-contact"><i class="fa-solid fa-user-plus"></i> Add contact</button>
+      </div>
+
+      <div class="metric-grid mb-6" data-stagger>
+        <div class="metric-card hover-lift" data-reveal="up">
+          <div class="metric-card__top"><span class="metric-card__label">Total contacts</span><span class="metric-card__icon"><i class="fa-solid fa-address-book"></i></span></div>
+          <span class="metric-card__value"><span class="counter" data-counter="486">0</span></span>
+        </div>
+        <div class="metric-card hover-lift" data-reveal="up">
+          <div class="metric-card__top"><span class="metric-card__label">New this month</span><span class="metric-card__icon"><i class="fa-solid fa-user-plus"></i></span></div>
+          <span class="metric-card__value"><span class="counter" data-counter="34">0</span></span>
+        </div>
+        <div class="metric-card hover-lift" data-reveal="up">
+          <div class="metric-card__top"><span class="metric-card__label">Repeat customers</span><span class="metric-card__icon"><i class="fa-solid fa-heart"></i></span></div>
+          <span class="metric-card__value"><span class="counter" data-counter="61" data-suffix="%">0</span></span>
+        </div>
+        <div class="metric-card hover-lift" data-reveal="up">
+          <div class="metric-card__top"><span class="metric-card__label">Avg. spend</span><span class="metric-card__icon"><i class="fa-solid fa-sack-dollar"></i></span></div>
+          <span class="metric-card__value">KES <span class="counter" data-counter="3200">0</span></span>
+        </div>
+      </div>
+
+      <div class="data-table-wrap">
+        <div class="table-toolbar">
+          <div class="field">
+            <input class="field__control" type="search" id="contact-search" placeholder=" " data-filter-input data-filter-target="[data-contacts-body]">
+            <label class="field__label" for="contact-search">Search contacts</label>
+          </div>
+          <div class="flex gap-3">
+            <span class="chip"><i class="fa-solid fa-filter"></i> All tags</span>
+            <span class="chip"><i class="fa-solid fa-arrow-down-wide-short"></i> Last visit</span>
+          </div>
+        </div>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Customer</th>
+              <th>Tags</th>
+              <th>Last visit</th>
+              <th>Total spent</th>
+              <th>Appointments</th>
+              <th>Messages</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody data-contacts-body>
+            <tr data-filter-row>
+              <td><div class="table-entity"><img src="https://randomuser.me/api/portraits/men/54.jpg" alt=""><div><strong>John Mwangi</strong><span>+254 712 345 678</span></div></div></td>
+              <td><span class="badge badge--success">Regular</span></td>
+              <td>Today</td>
+              <td>KES 8,400</td>
+              <td>14</td>
+              <td>62</td>
+              <td class="table-actions"><button aria-label="Message"><i class="fa-brands fa-whatsapp"></i></button></td>
+            </tr>
+            <tr data-filter-row>
+              <td><div class="table-entity"><img src="https://randomuser.me/api/portraits/women/22.jpg" alt=""><div><strong>Mercy Njeri</strong><span>+254 722 100 220</span></div></div></td>
+              <td><span class="badge badge--neutral">New</span></td>
+              <td>18 min ago</td>
+              <td>KES 500</td>
+              <td>1</td>
+              <td>4</td>
+              <td class="table-actions"><button aria-label="Message"><i class="fa-brands fa-whatsapp"></i></button></td>
+            </tr>
+            <tr data-filter-row>
+              <td><div class="table-entity"><img src="https://randomuser.me/api/portraits/men/76.jpg" alt=""><div><strong>Peter Otieno</strong><span>+254 733 908 121</span></div></div></td>
+              <td><span class="badge badge--success">Regular</span></td>
+              <td>1 hour ago</td>
+              <td>KES 12,900</td>
+              <td>22</td>
+              <td>140</td>
+              <td class="table-actions"><button aria-label="Message"><i class="fa-brands fa-whatsapp"></i></button></td>
+            </tr>
+            <tr data-filter-row>
+              <td><div class="table-entity"><img src="https://randomuser.me/api/portraits/women/12.jpg" alt=""><div><strong>Grace Achieng</strong><span>+254 700 554 213</span></div></div></td>
+              <td><span class="badge badge--warning">VIP</span></td>
+              <td>3 hours ago</td>
+              <td>KES 21,300</td>
+              <td>31</td>
+              <td>205</td>
+              <td class="table-actions"><button aria-label="Message"><i class="fa-brands fa-whatsapp"></i></button></td>
+            </tr>
+            <tr data-filter-row>
+              <td><div class="table-entity"><img src="https://randomuser.me/api/portraits/women/45.jpg" alt=""><div><strong>Amina Hassan</strong><span>+254 711 220 987</span></div></div></td>
+              <td><span class="badge badge--neutral">New</span></td>
+              <td>Yesterday</td>
+              <td>KES 0</td>
+              <td>0</td>
+              <td>2</td>
+              <td class="table-actions"><button aria-label="Message"><i class="fa-brands fa-whatsapp"></i></button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Add contact modal ===== -->
+<div class="modal-backdrop" id="modal-add-contact">
+  <div class="modal">
+    <div class="modal__head">
+      <h3>Add contact</h3>
+      <button class="modal__close" data-modal-close aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="modal__body">
+      <div class="field">
+        <input class="field__control" type="text" id="contact-name" placeholder=" ">
+        <label class="field__label" for="contact-name">Full name</label>
+      </div>
+      <div class="field">
+        <input class="field__control" type="tel" id="contact-phone" placeholder=" ">
+        <label class="field__label" for="contact-phone">WhatsApp number</label>
+      </div>
+      <div class="field field--select">
+        <select class="field__control select-control" id="contact-tag">
+          <option>Regular</option>
+          <option>VIP</option>
+          <option>New</option>
+        </select>
+        <label class="field__label" for="contact-tag">Tag</label>
+      </div>
+    </div>
+    <div class="modal__foot">
+      <button class="btn btn--secondary" data-modal-close>Cancel</button>
+      <button class="btn btn--primary"><i class="fa-solid fa-user-plus"></i> Add contact</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/utils.js"></script>
+<script src="js/sidebar.js"></script>
+<script src="js/table-filter.js"></script>
+<script src="js/modal.js"></script>
+</body>
+</html>

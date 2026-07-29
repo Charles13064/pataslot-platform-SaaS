@@ -1,0 +1,61 @@
+/* ==========================================================================
+   PataSlot — Theme
+   Light tokens live in variables.css. This file only overrides what
+   changes in dark mode, plus the toggle control itself.
+   ========================================================================== */
+
+:root[data-theme="dark"] {
+  --surface-page: #0B1220;
+  --surface-alt: #101A2C;
+  --border-subtle: #223049;
+
+  --color-black: #F8FAFC;      /* headings read as "black" in light mode */
+  --color-gray-900: #E2E8F0;
+  --color-gray-800: #CBD5E1;
+  --color-gray-600: #94A3B8;
+  --color-gray-500: #7A8CA6;
+  --color-gray-300: #334155;
+  --color-gray-100: #1B2740;
+  --color-gray-50: #141E33;
+  --color-white: #16213A;      /* "card" white becomes navy surface */
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 8px 24px -8px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 24px 60px -16px rgba(0, 0, 0, 0.6);
+}
+
+:root[data-theme="dark"] body { background: var(--surface-page); color: var(--color-gray-800); }
+:root[data-theme="dark"] .site-header,
+:root[data-theme="dark"] .topbar { background: rgba(11, 18, 32, 0.82); }
+:root[data-theme="dark"] .card,
+:root[data-theme="dark"] .feature-card,
+:root[data-theme="dark"] .stat-card,
+:root[data-theme="dark"] .testimonial-card,
+:root[data-theme="dark"] .pricing-card,
+:root[data-theme="dark"] .field__control,
+:root[data-theme="dark"] .sidebar,
+:root[data-theme="dark"] .data-table { background: var(--color-white); }
+:root[data-theme="dark"] .chip { background: var(--color-gray-50); }
+
+/* Smooth cross-fade whenever the theme flips */
+body, .card, .feature-card, .stat-card, .sidebar, .topbar, .field__control, .data-table {
+  transition: background var(--dur-base) var(--ease-out), color var(--dur-base) var(--ease-out), border-color var(--dur-base) var(--ease-out);
+}
+
+/* ---- Theme toggle button ---- */
+.theme-toggle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--color-gray-100);
+  color: var(--color-gray-600);
+  font-size: 15px;
+  flex-shrink: 0;
+  transition: background var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out), transform var(--dur-fast) var(--ease-out);
+}
+.theme-toggle:hover { background: var(--color-primary-light); color: var(--color-primary-dark); transform: rotate(-12deg); }
+.theme-toggle .fa-sun { display: none; }
+:root[data-theme="dark"] .theme-toggle .fa-sun { display: block; }
+:root[data-theme="dark"] .theme-toggle .fa-moon { display: none; }

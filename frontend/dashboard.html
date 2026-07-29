@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard — PataSlot</title>
+
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/theme.css">
+<script src="js/theme.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet" href="Frontenfcss/reset.css">
+<link rel="stylesheet" href="css/typography.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/buttons.css">
+<link rel="stylesheet" href="css/forms.css">
+<link rel="stylesheet" href="css/cards.css">
+<link rel="stylesheet" href="css/sidebar.css">
+<link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="css/tables.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<div class="app-shell" data-app-shell>
+
+  <div class="sidebar-backdrop" data-sidebar-backdrop></div>
+
+  <!-- ===================== SIDEBAR ===================== -->
+  <aside class="sidebar" data-sidebar>
+    <div class="sidebar-brand">
+      <span class="brand-mark" aria-hidden="true"><i class="fa-solid fa-calendar-check"></i></span>
+      <span>PataSlot</span>
+      <button class="sidebar-collapse-btn" data-sidebar-collapse aria-label="Collapse sidebar">
+        <i class="fa-solid fa-angles-left"></i>
+      </button>
+    </div>
+
+    <nav class="sidebar-nav" aria-label="Primary">
+      <a href="dashboard.html" class="sidebar-link is-active"><i class="fa-solid fa-grip"></i><span>Dashboard</span></a>
+      <a href="inbox.html" class="sidebar-link"><i class="fa-brands fa-whatsapp"></i><span>Inbox</span><span class="badge-count">12</span></a>
+      <a href="contacts.html" class="sidebar-link"><i class="fa-solid fa-address-book"></i><span>Contacts</span></a>
+
+      <p class="sidebar-section-label">Catalog</p>
+      <a href="products.html" class="sidebar-link"><i class="fa-solid fa-box"></i><span>Products</span></a>
+      <a href="services.html" class="sidebar-link"><i class="fa-solid fa-scissors"></i><span>Services</span></a>
+      <a href="appointments.html" class="sidebar-link"><i class="fa-solid fa-calendar-days"></i><span>Appointments</span></a>
+      <a href="gallery.html" class="sidebar-link"><i class="fa-solid fa-images"></i><span>Gallery</span></a>
+
+      <p class="sidebar-section-label">Engage</p>
+      <a href="broadcasts.html" class="sidebar-link"><i class="fa-solid fa-tower-broadcast"></i><span>Broadcasts</span></a>
+      <a href="automations.html" class="sidebar-link"><i class="fa-solid fa-diagram-project"></i><span>Automations</span></a>
+      <a href="ai.html" class="sidebar-link"><i class="fa-solid fa-robot"></i><span>AI Assistant</span></a>
+
+      <p class="sidebar-section-label">Business</p>
+      <a href="analytics.html" class="sidebar-link"><i class="fa-solid fa-chart-line"></i><span>Analytics</span></a>
+      <a href="integrations.html" class="sidebar-link"><i class="fa-solid fa-plug"></i><span>Integrations</span></a>
+      <a href="billing.html" class="sidebar-link"><i class="fa-solid fa-credit-card"></i><span>Billing</span></a>
+      <a href="settings.html" class="sidebar-link"><i class="fa-solid fa-gear"></i><span>Settings</span></a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <a href="profile.html" class="sidebar-user">
+        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Faith Wanjiru">
+        <div class="sidebar-user__meta">
+          <strong>Faith Wanjiru</strong>
+          <span>Glow Beauty Studio</span>
+        </div>
+      </a>
+      <a href="login.html" class="sidebar-link"><i class="fa-solid fa-arrow-right-from-bracket"></i><span>Log out</span></a>
+    </div>
+  </aside>
+
+  <!-- ===================== MAIN ===================== -->
+  <div class="main-content">
+
+    <header class="topbar">
+      <button class="topbar-menu-btn" data-sidebar-open aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+
+      <div class="topbar-search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <span>Search products, contacts, appointments…</span>
+        <kbd>Ctrl K</kbd>
+      </div>
+
+      <div class="topbar-actions">
+        <button class="theme-toggle" aria-label="Toggle dark mode">
+          <i class="fa-solid fa-moon"></i>
+          <i class="fa-solid fa-sun"></i>
+        </button>
+        <button class="topbar-icon-btn" aria-label="Notifications">
+          <i class="fa-regular fa-bell"></i>
+          <span class="dot"></span>
+        </button>
+        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Faith Wanjiru" class="topbar-avatar">
+      </div>
+    </header>
+
+    <div class="page-wrap">
+
+      <div class="page-head">
+        <div>
+          <h1>Good morning, Faith 👋</h1>
+          <p class="text-muted">Here's how Glow Beauty Studio is doing today.</p>
+        </div>
+        <a href="broadcasts.html" class="btn btn--primary"><i class="fa-solid fa-tower-broadcast"></i> New broadcast</a>
+      </div>
+
+      <!-- ===== QUICK STATS ===== -->
+      <div class="metric-grid" data-stagger>
+        <div class="metric-card hover-lift" data-reveal="up">
+          <div class="metric-card__top">
+            <span class="metric-card__label">Today's conversations</span>
+            <span class="metric-card__icon"><i class="fa-brands fa-whatsapp"></i></span>
+          </div>
+          <span class="metric-card__value"><span class="counter" data-counter="86">0</span></span>
+          <span class="metric-card__delta metric-card__delta--up"><i class="fa-solid fa-arrow-up"></i> 14% vs yesterday</span>
+        </div>
+        <div class="metric-card hover-lift" data-reveal="up">
+          <div class="metric-card__top">
+            <span class="metric-card__label">Appointments today</span>
+            <span class="metric-card__icon"><i class="fa-solid fa-calendar-days"></i></span>
+          </div>
+          <span class="metric-card__value"><span class="counter" data-counter="19">0</span></span>
+          <span class="metric-card__delta metric-card__delta--up"><i class="fa-solid fa-arrow-up"></i> 4 pending</span>
+        </div>
+        <div class="metric-card hover-lift" data-reveal="up">
+          <div class="metric-card__top">
+            <span class="metric-card__label">Today's revenue</span>
+            <span class="metric-card__icon"><i class="fa-solid fa-money-bill-trend-up"></i></span>
+          </div>
+          <span class="metric-card__value">KES <span class="counter" data-counter="24600" data-suffix="">0</span></span>
+          <span class="metric-card__delta metric-card__delta--up"><i class="fa-solid fa-arrow-up"></i> 9% vs avg</span>
+        </div>
+        <div class="metric-card hover-lift" data-reveal="up">
+          <div class="metric-card__top">
+            <span class="metric-card__label">AI credits left</span>
+            <span class="metric-card__icon"><i class="fa-solid fa-robot"></i></span>
+          </div>
+          <span class="metric-card__value"><span class="counter" data-counter="380">0</span> / 500</span>
+          <span class="metric-card__delta metric-card__delta--down"><i class="fa-solid fa-arrow-down"></i> Renews in 6 days</span>
+        </div>
+      </div>
+
+      <!-- ===== REVENUE CHART + SIDE WIDGETS ===== -->
+      <div class="dashboard-grid">
+        <div class="chart-panel hover-lift" data-reveal="up">
+          <div class="chart-panel__head">
+            <h3>Revenue</h3>
+            <span class="chip">Last 6 months</span>
+          </div>
+          <div class="chart-panel__canvas-wrap">
+            <canvas id="revenueChart"></canvas>
+          </div>
+        </div>
+
+        <div class="chart-panel hover-lift" data-reveal="up">
+          <div class="chart-panel__head"><h3>Usage this month</h3></div>
+          <div class="usage-meter">
+            <div class="usage-meter__label"><span>WhatsApp conversations</span><span>420 / 500</span></div>
+            <div class="usage-meter__bar"><div class="usage-meter__fill" data-fill="84"></div></div>
+          </div>
+          <div class="usage-meter">
+            <div class="usage-meter__label"><span>AI requests</span><span>380 / 500</span></div>
+            <div class="usage-meter__bar"><div class="usage-meter__fill usage-meter__fill--warn" data-fill="76"></div></div>
+          </div>
+          <div class="usage-meter">
+            <div class="usage-meter__label"><span>Storage used</span><span>1.2GB / 5GB</span></div>
+            <div class="usage-meter__bar"><div class="usage-meter__fill" data-fill="24"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== CONVERSATIONS + APPOINTMENTS ===== -->
+      <div class="dashboard-grid">
+        <div class="chart-panel hover-lift" data-reveal="up">
+          <div class="chart-panel__head">
+            <h3>Recent conversations</h3>
+            <a href="inbox.html" class="text-primary">View inbox</a>
+          </div>
+          <div class="convo-list">
+            <a href="inbox.html" class="convo-item">
+              <img src="https://randomuser.me/api/portraits/men/54.jpg" alt="">
+              <div class="convo-item__body">
+                <div class="convo-item__top"><strong>John Mwangi</strong><span>2m ago</span></div>
+                <p class="convo-item__preview">Booked a haircut for 3:15pm ✂️</p>
+              </div>
+              <span class="convo-item__unread">2</span>
+            </a>
+            <a href="inbox.html" class="convo-item">
+              <img src="https://randomuser.me/api/portraits/women/22.jpg" alt="">
+              <div class="convo-item__body">
+                <div class="convo-item__top"><strong>Mercy Njeri</strong><span>18m ago</span></div>
+                <p class="convo-item__preview">Is the 5pm slot still available?</p>
+              </div>
+            </a>
+            <a href="inbox.html" class="convo-item">
+              <img src="https://randomuser.me/api/portraits/men/76.jpg" alt="">
+              <div class="convo-item__body">
+                <div class="convo-item__top"><strong>Peter Otieno</strong><span>1h ago</span></div>
+                <p class="convo-item__preview">Paid KES 500 deposit via M-Pesa</p>
+              </div>
+            </a>
+            <a href="inbox.html" class="convo-item">
+              <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="">
+              <div class="convo-item__body">
+                <div class="convo-item__top"><strong>Grace Achieng</strong><span>3h ago</span></div>
+                <p class="convo-item__preview">Thank you, see you tomorrow!</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="chart-panel hover-lift" data-reveal="up">
+          <div class="chart-panel__head">
+            <h3>Upcoming appointments</h3>
+            <a href="appointments.html" class="text-primary">View all</a>
+          </div>
+          <div class="convo-list">
+            <div class="appt-item"><span class="appt-item__time">11:00</span><div class="appt-item__body"><strong>Jane Wambui</strong><span>Hair coloring</span></div></div>
+            <div class="appt-item"><span class="appt-item__time">12:30</span><div class="appt-item__body"><strong>Kevin Kiprop</strong><span>Beard trim</span></div></div>
+            <div class="appt-item"><span class="appt-item__time">3:15</span><div class="appt-item__body"><strong>John Mwangi</strong><span>Haircut</span></div></div>
+            <div class="appt-item"><span class="appt-item__time">5:00</span><div class="appt-item__body"><strong>Mercy Njeri</strong><span>Manicure</span></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== QUICK ACTIONS ===== -->
+      <p class="form-section-title mt-8">Quick actions</p>
+      <div class="quick-actions">
+        <a href="products.html" class="quick-action-btn hover-lift"><i class="fa-solid fa-box"></i> Add product</a>
+        <a href="services.html" class="quick-action-btn hover-lift"><i class="fa-solid fa-scissors"></i> Add service</a>
+        <a href="broadcasts.html" class="quick-action-btn hover-lift"><i class="fa-solid fa-tower-broadcast"></i> Broadcast</a>
+        <a href="gallery.html" class="quick-action-btn hover-lift"><i class="fa-solid fa-images"></i> Upload gallery</a>
+        <a href="automations.html" class="quick-action-btn hover-lift"><i class="fa-solid fa-diagram-project"></i> Automation</a>
+      </div>
+
+      <!-- ===== NOTIFICATIONS ===== -->
+      <p class="form-section-title mt-8">Notifications</p>
+      <div class="chart-panel">
+        <div class="notif-item">
+          <span class="notif-item__icon notif-item__icon--warn"><i class="fa-solid fa-credit-card"></i></span>
+          <div><p>Your Growth plan payment is due in 3 days.</p><span>Today, 8:02 AM</span></div>
+        </div>
+        <div class="notif-item">
+          <span class="notif-item__icon notif-item__icon--error"><i class="fa-solid fa-calendar-xmark"></i></span>
+          <div><p>Appointment with Sarah K. was cancelled.</p><span>Today, 7:41 AM</span></div>
+        </div>
+        <div class="notif-item">
+          <span class="notif-item__icon notif-item__icon--info"><i class="fa-solid fa-robot"></i></span>
+          <div><p>AI credits are running low — 76% used this month.</p><span>Yesterday, 6:15 PM</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ===== MOBILE BOTTOM NAV + FAB ===== -->
+<nav class="bottom-nav" aria-label="Mobile primary">
+  <a href="dashboard.html" class="bottom-nav-link is-active"><i class="fa-solid fa-grip"></i>Dashboard</a>
+  <a href="inbox.html" class="bottom-nav-link"><i class="fa-brands fa-whatsapp"></i>Inbox</a>
+  <a href="appointments.html" class="bottom-nav-link"><i class="fa-solid fa-calendar-days"></i>Appts</a>
+  <a href="products.html" class="bottom-nav-link"><i class="fa-solid fa-box"></i>Products</a>
+  <a href="settings.html" class="bottom-nav-link"><i class="fa-solid fa-ellipsis"></i>More</a>
+</nav>
+<button class="fab" aria-label="Quick add"><i class="fa-solid fa-plus"></i></button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.4/chart.umd.min.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/sidebar.js"></script>
+<script src="js/charts/chart-theme.js"></script>
+<script src="js/charts/revenue-chart.js"></script>
+<script src="js/dashboard.js"></script>
+</body>
+</html>

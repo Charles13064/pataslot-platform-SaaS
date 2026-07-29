@@ -1,0 +1,152 @@
+/* ==========================================================================
+   PataSlot — Sidebar
+   ========================================================================== */
+
+.app-shell {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  min-height: 100vh;
+}
+
+.sidebar {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  background: var(--color-white);
+  border-right: 1px solid var(--border-subtle);
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-5) var(--space-4);
+  transition: width var(--dur-base) var(--ease-out), transform var(--dur-base) var(--ease-out);
+  z-index: var(--z-nav);
+}
+
+.sidebar-brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-weight: var(--fw-bold);
+  padding: var(--space-2) var(--space-2) var(--space-6);
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.sidebar-collapse-btn {
+  width: 32px; height: 32px;
+  border-radius: var(--radius-sm);
+  display: grid;
+  place-items: center;
+  color: var(--color-gray-500);
+  margin-left: auto;
+}
+.sidebar-collapse-btn:hover { background: var(--color-gray-100); color: var(--color-black); }
+
+.sidebar-section-label {
+  font-size: 10px;
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-gray-500);
+  padding: var(--space-5) var(--space-2) var(--space-2);
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: 10px var(--space-3);
+  border-radius: var(--radius-md);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  color: var(--color-gray-600);
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+  transition: background var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out);
+}
+.sidebar-link i { width: 18px; text-align: center; font-size: 15px; flex-shrink: 0; }
+.sidebar-link:hover { background: var(--color-gray-100); color: var(--color-black); }
+.sidebar-link.is-active {
+  background: var(--color-primary-light);
+  color: var(--color-primary-dark);
+  font-weight: var(--fw-semibold);
+}
+.sidebar-link.is-active::before {
+  content: '';
+  position: absolute;
+  left: -16px; top: 8px; bottom: 8px;
+  width: 3px;
+  border-radius: 2px;
+  background: var(--color-primary);
+}
+.sidebar-link .badge-count {
+  margin-left: auto;
+  background: var(--color-primary);
+  color: white;
+  font-size: 10px;
+  font-weight: var(--fw-semibold);
+  padding: 2px 7px;
+  border-radius: var(--radius-pill);
+}
+
+.sidebar-footer {
+  margin-top: auto;
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--border-subtle);
+}
+.sidebar-user {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-2);
+  border-radius: var(--radius-md);
+}
+.sidebar-user:hover { background: var(--color-gray-100); }
+.sidebar-user img { width: 34px; height: 34px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
+.sidebar-user__meta { overflow: hidden; white-space: nowrap; }
+.sidebar-user__meta strong { display: block; font-size: var(--fs-sm); color: var(--color-black); }
+.sidebar-user__meta span { font-size: var(--fs-xs); color: var(--color-gray-500); }
+
+/* ---- Collapsed (icon rail) state — desktop only ---- */
+.app-shell.is-collapsed { grid-template-columns: 76px 1fr; }
+.app-shell.is-collapsed .sidebar { width: 76px; }
+.app-shell.is-collapsed .sidebar-brand span:not(.brand-mark),
+.app-shell.is-collapsed .sidebar-section-label,
+.app-shell.is-collapsed .sidebar-link span,
+.app-shell.is-collapsed .sidebar-link .badge-count,
+.app-shell.is-collapsed .sidebar-user__meta { display: none; }
+.app-shell.is-collapsed .sidebar-collapse-btn { transform: rotate(180deg); margin-inline: auto; }
+.app-shell.is-collapsed .sidebar-link { justify-content: center; }
+.app-shell.is-collapsed .sidebar-link.is-active::before { left: -16px; }
+
+/* ---- Mobile drawer ---- */
+.sidebar-backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.5);
+  z-index: calc(var(--z-nav) - 1);
+}
+.sidebar-backdrop.is-open { display: block; }
+
+@media (max-width: 1024px) {
+  .app-shell { grid-template-columns: 1fr; }
+  .sidebar {
+    position: fixed;
+    top: 0; left: 0; bottom: 0;
+    width: 280px;
+    transform: translateX(-100%);
+    box-shadow: var(--shadow-lg);
+  }
+  .sidebar.is-open { transform: translateX(0); }
+  .sidebar-collapse-btn { display: none; }
+}

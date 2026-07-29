@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inbox — PataSlot</title>
+
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/theme.css">
+<script src="js/theme.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/typography.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/buttons.css">
+<link rel="stylesheet" href="css/forms.css">
+<link rel="stylesheet" href="css/cards.css">
+<link rel="stylesheet" href="css/sidebar.css">
+<link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="css/inbox.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<div class="app-shell" data-app-shell>
+
+  <div class="sidebar-backdrop" data-sidebar-backdrop></div>
+
+  <!-- ===================== SIDEBAR ===================== -->
+  <aside class="sidebar" data-sidebar>
+    <div class="sidebar-brand">
+      <span class="brand-mark" aria-hidden="true"><i class="fa-solid fa-calendar-check"></i></span>
+      <span>PataSlot</span>
+      <button class="sidebar-collapse-btn" data-sidebar-collapse aria-label="Collapse sidebar">
+        <i class="fa-solid fa-angles-left"></i>
+      </button>
+    </div>
+
+    <nav class="sidebar-nav" aria-label="Primary">
+      <a href="dashboard.html" class="sidebar-link"><i class="fa-solid fa-grip"></i><span>Dashboard</span></a>
+      <a href="inbox.html" class="sidebar-link is-active"><i class="fa-brands fa-whatsapp"></i><span>Inbox</span><span class="badge-count">12</span></a>
+      <a href="contacts.html" class="sidebar-link"><i class="fa-solid fa-address-book"></i><span>Contacts</span></a>
+
+      <p class="sidebar-section-label">Catalog</p>
+      <a href="products.html" class="sidebar-link"><i class="fa-solid fa-box"></i><span>Products</span></a>
+      <a href="services.html" class="sidebar-link"><i class="fa-solid fa-scissors"></i><span>Services</span></a>
+      <a href="appointments.html" class="sidebar-link"><i class="fa-solid fa-calendar-days"></i><span>Appointments</span></a>
+      <a href="gallery.html" class="sidebar-link"><i class="fa-solid fa-images"></i><span>Gallery</span></a>
+
+      <p class="sidebar-section-label">Engage</p>
+      <a href="broadcasts.html" class="sidebar-link"><i class="fa-solid fa-tower-broadcast"></i><span>Broadcasts</span></a>
+      <a href="automations.html" class="sidebar-link"><i class="fa-solid fa-diagram-project"></i><span>Automations</span></a>
+      <a href="ai.html" class="sidebar-link"><i class="fa-solid fa-robot"></i><span>AI Assistant</span></a>
+
+      <p class="sidebar-section-label">Business</p>
+      <a href="analytics.html" class="sidebar-link"><i class="fa-solid fa-chart-line"></i><span>Analytics</span></a>
+      <a href="integrations.html" class="sidebar-link"><i class="fa-solid fa-plug"></i><span>Integrations</span></a>
+      <a href="billing.html" class="sidebar-link"><i class="fa-solid fa-credit-card"></i><span>Billing</span></a>
+      <a href="settings.html" class="sidebar-link"><i class="fa-solid fa-gear"></i><span>Settings</span></a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <a href="profile.html" class="sidebar-user">
+        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Faith Wanjiru">
+        <div class="sidebar-user__meta">
+          <strong>Faith Wanjiru</strong>
+          <span>Glow Beauty Studio</span>
+        </div>
+      </a>
+      <a href="login.html" class="sidebar-link"><i class="fa-solid fa-arrow-right-from-bracket"></i><span>Log out</span></a>
+    </div>
+  </aside>
+
+  <!-- ===================== MAIN ===================== -->
+  <div class="main-content">
+
+    <header class="topbar">
+      <button class="topbar-menu-btn" data-sidebar-open aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+      <h1 class="topbar-title">Inbox</h1>
+      <div class="topbar-actions">
+        <button class="theme-toggle" aria-label="Toggle dark mode">
+          <i class="fa-solid fa-moon"></i>
+          <i class="fa-solid fa-sun"></i>
+        </button>
+        <button class="topbar-icon-btn" aria-label="Notifications">
+          <i class="fa-regular fa-bell"></i>
+          <span class="dot"></span>
+        </button>
+        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Faith Wanjiru" class="topbar-avatar">
+      </div>
+    </header>
+
+    <!-- ===================== 3-COLUMN INBOX ===================== -->
+    <div class="inbox-shell" data-inbox-shell>
+
+      <!-- Column 1 — chat list -->
+      <section class="inbox-list">
+        <div class="inbox-list__search">
+          <div class="field">
+            <input class="field__control" type="search" id="inbox-search" placeholder=" " data-filter-input data-filter-target="[data-inbox-list-scroll]">
+            <label class="field__label" for="inbox-search">Search conversations</label>
+          </div>
+        </div>
+        <div class="inbox-list__tabs">
+          <span class="inbox-list__tab is-active">All</span>
+          <span class="inbox-list__tab">Unread</span>
+          <span class="inbox-list__tab">AI handled</span>
+          <span class="inbox-list__tab">Assigned to me</span>
+        </div>
+        <div class="inbox-list__scroll" data-inbox-list-scroll>
+          <div class="inbox-list-item is-active" data-filter-row>
+            <img src="https://randomuser.me/api/portraits/men/54.jpg" alt="">
+            <div class="inbox-list-item__body">
+              <div class="inbox-list-item__top"><strong>John Mwangi</strong><span>2m</span></div>
+              <p class="inbox-list-item__preview">Booked a haircut for 3:15pm ✂️</p>
+            </div>
+          </div>
+          <div class="inbox-list-item" data-filter-row>
+            <img src="https://randomuser.me/api/portraits/women/22.jpg" alt="">
+            <div class="inbox-list-item__body">
+              <div class="inbox-list-item__top"><strong>Mercy Njeri</strong><span>18m</span></div>
+              <p class="inbox-list-item__preview">Is the 5pm slot still available?</p>
+            </div>
+            <span class="inbox-list-item__unread">2</span>
+          </div>
+          <div class="inbox-list-item" data-filter-row>
+            <img src="https://randomuser.me/api/portraits/men/76.jpg" alt="">
+            <div class="inbox-list-item__body">
+              <div class="inbox-list-item__top"><strong>Peter Otieno</strong><span>1h</span></div>
+              <p class="inbox-list-item__preview">Paid KES 500 deposit via M-Pesa</p>
+            </div>
+          </div>
+          <div class="inbox-list-item" data-filter-row>
+            <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="">
+            <div class="inbox-list-item__body">
+              <div class="inbox-list-item__top"><strong>Grace Achieng</strong><span>3h</span></div>
+              <p class="inbox-list-item__preview">Thank you, see you tomorrow!</p>
+            </div>
+          </div>
+          <div class="inbox-list-item" data-filter-row>
+            <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="">
+            <div class="inbox-list-item__body">
+              <div class="inbox-list-item__top"><strong>Amina Hassan</strong><span>Yesterday</span></div>
+              <p class="inbox-list-item__preview">Do you deliver to Kilimani?</p>
+            </div>
+            <span class="inbox-list-item__unread">1</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Column 2 — conversation -->
+      <section class="inbox-conversation">
+        <div class="inbox-conversation__head">
+          <button class="composer-icon-btn inbox-back-btn" data-inbox-back aria-label="Back to chats"><i class="fa-solid fa-arrow-left"></i></button>
+          <img src="https://randomuser.me/api/portraits/men/54.jpg" alt="John Mwangi">
+          <div>
+            <strong>John Mwangi</strong>
+            <span>Online</span>
+          </div>
+          <div class="inbox-conversation__head-actions">
+            <button class="composer-icon-btn" aria-label="Call"><i class="fa-solid fa-phone"></i></button>
+            <button class="composer-icon-btn" data-inbox-info aria-label="Customer details"><i class="fa-solid fa-circle-info"></i></button>
+            <button class="composer-icon-btn" data-modal-open="modal-archive" aria-label="More"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+          </div>
+        </div>
+
+        <div class="inbox-conversation__messages">
+          <span class="msg-day-divider">Today</span>
+          <div class="msg-bubble msg-bubble--in">Hi! Is there a slot open for a haircut around 3pm today? ✂️<span class="msg-bubble__time">2:41 PM</span></div>
+          <div class="msg-bubble msg-bubble--out msg-bubble--ai"><span class="msg-bubble__tag"><i class="fa-solid fa-robot"></i> AI reply</span>Yes John! I have 3:15pm with Brian free. Shall I book it for you?<span class="msg-bubble__time">2:41 PM</span></div>
+          <div class="msg-bubble msg-bubble--in">Perfect, book it 🙌<span class="msg-bubble__time">2:42 PM</span></div>
+          <div class="msg-bubble msg-bubble--out"><i class="fa-solid fa-calendar-check"></i> Booking confirmed — Haircut with Brian, 3:15pm<span class="msg-bubble__time">2:42 PM</span></div>
+          <span class="msg-bubble--system">John paid KES 200.00 via M-Pesa</span>
+        </div>
+
+        <div class="ai-toggle-row">
+          <span class="toggle">
+            <input type="checkbox" data-ai-toggle checked>
+            <span class="toggle-track"></span>
+          </span>
+          <span data-ai-toggle-label>AI auto-reply is ON</span>
+        </div>
+
+        <div class="inbox-conversation__composer">
+          <button class="composer-icon-btn" aria-label="Attach file"><i class="fa-solid fa-paperclip"></i></button>
+          <textarea class="composer-input" rows="1" placeholder="Type a message…"></textarea>
+          <button class="composer-icon-btn" aria-label="Voice note"><i class="fa-solid fa-microphone"></i></button>
+          <button class="composer-send-btn" data-inbox-send aria-label="Send message"><i class="fa-solid fa-paper-plane"></i></button>
+        </div>
+      </section>
+
+      <!-- Column 3 — customer details -->
+      <aside class="inbox-details">
+        <div class="inbox-details__profile">
+          <img src="https://randomuser.me/api/portraits/men/54.jpg" alt="John Mwangi">
+          <h4>John Mwangi</h4>
+          <p class="text-muted">+254 712 345 678</p>
+        </div>
+
+        <div class="inbox-details__stats">
+          <div class="stat-card card"><div class="stat-value">14</div><div class="stat-label">Visits</div></div>
+          <div class="stat-card card"><div class="stat-value">KES 8.4K</div><div class="stat-label">Total spent</div></div>
+          <div class="stat-card card"><div class="stat-value">2</div><div class="stat-label">Upcoming</div></div>
+          <div class="stat-card card"><div class="stat-value">98%</div><div class="stat-label">Show-up rate</div></div>
+        </div>
+
+        <p class="form-section-title">Tags</p>
+        <div class="flex gap-2 mb-6 flex-wrap">
+          <span class="chip">Regular</span>
+          <span class="chip">Haircut</span>
+          <span class="chip">Prefers Brian</span>
+        </div>
+
+        <p class="form-section-title">Actions</p>
+        <div class="inbox-details__actions">
+          <button class="btn btn--secondary"><i class="fa-solid fa-user-plus"></i> Assign to staff</button>
+          <button class="btn btn--secondary"><i class="fa-solid fa-check"></i> Mark as done</button>
+          <button class="btn btn--secondary"><i class="fa-solid fa-box-archive"></i> Archive chat</button>
+          <button class="btn btn--secondary text-danger"><i class="fa-solid fa-ban"></i> Block contact</button>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+</div>
+
+<!-- ===== Archive/more confirm modal ===== -->
+<div class="modal-backdrop" id="modal-archive">
+  <div class="modal">
+    <div class="modal__head">
+      <h3>Conversation options</h3>
+      <button class="modal__close" data-modal-close aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="modal__body">
+      <div class="inbox-details__actions">
+        <button class="btn btn--secondary btn--block"><i class="fa-solid fa-language"></i> Translate conversation</button>
+        <button class="btn btn--secondary btn--block"><i class="fa-solid fa-box-archive"></i> Archive</button>
+        <button class="btn btn--secondary btn--block text-danger"><i class="fa-solid fa-ban"></i> Block contact</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/utils.js"></script>
+<script src="js/sidebar.js"></script>
+<script src="js/table-filter.js"></script>
+<script src="js/modal.js"></script>
+<script src="js/inbox.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+/* ==========================================================================
+   PataSlot — Tables
+   ========================================================================== */
+
+.data-table-wrap {
+  background: var(--color-white);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  overflow-x: auto;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 720px;
+  font-size: var(--fs-sm);
+}
+.data-table thead th {
+  text-align: left;
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  color: var(--color-gray-500);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: var(--space-4) var(--space-4);
+  border-bottom: 1px solid var(--border-subtle);
+  white-space: nowrap;
+}
+.data-table tbody td {
+  padding: var(--space-4);
+  border-bottom: 1px solid var(--border-subtle);
+  color: var(--color-gray-700, var(--color-gray-600));
+  vertical-align: middle;
+}
+.data-table tbody tr:last-child td { border-bottom: none; }
+.data-table tbody tr:hover { background: var(--color-gray-50); }
+
+.table-entity { display: flex; align-items: center; gap: var(--space-3); }
+.table-entity img { width: 36px; height: 36px; border-radius: var(--radius-sm); object-fit: cover; }
+.table-entity strong { display: block; font-size: var(--fs-sm); color: var(--color-black); }
+.table-entity span { font-size: var(--fs-xs); color: var(--color-gray-500); }
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+  font-size: 11px;
+  font-weight: var(--fw-semibold);
+}
+.badge--success { background: var(--color-primary-light); color: var(--color-primary-dark); }
+.badge--warning { background: #FEF3C7; color: #92400E; }
+.badge--danger { background: #FEE2E2; color: #991B1B; }
+.badge--neutral { background: var(--color-gray-100); color: var(--color-gray-600); }
+.badge-dot-icon { font-size: 6px; }
+
+.table-actions { display: flex; gap: var(--space-2); }
+.table-actions button {
+  width: 30px; height: 30px;
+  border-radius: var(--radius-sm);
+  display: grid;
+  place-items: center;
+  color: var(--color-gray-500);
+}
+.table-actions button:hover { background: var(--color-gray-100); color: var(--color-black); }
+
+.table-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border-bottom: 1px solid var(--border-subtle);
+}
+.table-toolbar .field { margin: 0; width: 280px; }
+.toolbar-card { background: var(--color-white); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); }
+
+@media (max-width: 640px) {
+  .data-table { min-width: 600px; }
+}

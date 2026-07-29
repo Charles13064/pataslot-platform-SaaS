@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin | PataSlot</title>
+
+<link rel="stylesheet" href="variables.css">
+<link rel="stylesheet" href="theme.css">
+<script src="theme.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet" href="CSS/reset.css">
+<link rel="stylesheet" href="CSS/typography.css">
+<link rel="stylesheet" href="CSS/layout.css">
+<link rel="stylesheet" href="Css/buttons.css">
+<link rel="stylesheet" href="css/forms.css">
+<link rel="stylesheet" href="css/cards.css">
+<link rel="stylesheet" href="css/sidebar.css">
+<link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="css/tables.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<div class="app-shell" data-app-shell>
+
+  <div class="sidebar-backdrop" data-sidebar-backdrop></div>
+
+  <!-- ===================== SIDEBAR (Platform Admin — separate nav from tenants) ===================== -->
+  <aside class="sidebar" data-sidebar>
+    <div class="sidebar-brand">
+      <span class="brand-mark" aria-hidden="true">
+        <i class="fa-solid fa-shield-halved"></i>
+      </span>
+      <span>PataSlot Admin</span>
+      <button class="sidebar-collapse-btn" data-sidebar-collapse aria-label="Collapse sidebar">
+        <i class="fa-solid fa-angles-left"></i>
+      </button>
+    </div>
+
+    <nav class="sidebar-nav" aria-label="Primary">
+      <a href="admin-dashboard.html" class="sidebar-link is-active">
+        <i class="fa-solid fa-grip"></i>
+        <span>Dashboard</span>
+      </a>
+
+      <a href="admin-businesses.html" class="sidebar-link">
+        <i class="fa-solid fa-building"></i>
+        <span>
+          Businesses
+        </span>
+      </a>
+
+      <a href="admin-subscriptions.html" class="sidebar-link">
+        <i class="fa-solid fa-rotate"
+        ></i>
+        <span>Subscriptions</span>
+      </a>
+
+      <a href="admin-payments.html" class="sidebar-link">
+        <i class="fa-solid fa-money-check-dollar"></i>
+        <span>Payments</span></a>
+      <a href="admin-users.html" class="sidebar-link"><i class="fa-solid fa-users"></i><span>Users</span></a>
+
+      <p class="sidebar-section-label">Platform usage</p>
+      <a href="admin-whatsapp-usage.html" class="sidebar-link"><i class="fa-brands fa-whatsapp"></i><span>WhatsApp usage</span></a>
+      <a href="admin-ai-usage.html" class="sidebar-link"><i class="fa-solid fa-robot"></i><span>AI usage</span></a>
+      <a href="admin-analytics.html" class="sidebar-link"><i class="fa-solid fa-chart-line"></i><span>System analytics</span></a>
+
+      <p class="sidebar-section-label">Operations</p>
+      <a href="admin-support.html" class="sidebar-link"><i class="fa-solid fa-headset"></i><span>Support tickets</span><span class="badge-count">7</span></a>
+      <a href="admin-announcements.html" class="sidebar-link"><i class="fa-solid fa-bullhorn"></i><span>Announcements</span></a>
+      <a href="admin-coupons.html" class="sidebar-link"><i class="fa-solid fa-tag"></i><span>Coupons</span></a>
+      <a href="admin-plans.html" class="sidebar-link"><i class="fa-solid fa-layer-group"></i><span>Plans</span></a>
+      <a href="admin-audit-logs.html" class="sidebar-link"><i class="fa-solid fa-clipboard-list"></i><span>Audit logs</span></a>
+      <a href="admin-settings.html" class="sidebar-link"><i class="fa-solid fa-gear"></i><span>Settings</span></a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <a href="admin-profile.html" class="sidebar-user">
+        <img src="https://randomuser.me/api/portraits/men/91.jpg" alt="Charles">
+        <div class="sidebar-user__meta">
+          <strong>Charles</strong>
+          <span>Platform Owner</span>
+        </div>
+      </a>
+      <a href="login.html" class="sidebar-link"><i class="fa-solid fa-arrow-right-from-bracket"></i><span>Log out</span></a>
+    </div>
+  </aside>
+
+  <!-- ===================== MAIN ===================== -->
+  <div class="main-content">
+
+    <header class="topbar">
+      <button class="topbar-menu-btn" data-sidebar-open aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+
+      <div class="topbar-search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <span>Search businesses, users, tickets…</span>
+        <kbd>Ctrl K</kbd>
+      </div>
+
+      <div class="topbar-actions">
+        <button class="theme-toggle" aria-label="Toggle dark mode">
+          <i class="fa-solid fa-moon"></i>
+          <i class="fa-solid fa-sun"></i>
+        </button>
+        <button class="topbar-icon-btn" aria-label="System status">
+          <i class="fa-solid fa-server"></i>
+          <span class="dot"></span>
+        </button>
+        <button class="topbar-icon-btn" aria-label="Notifications">
+          <i class="fa-regular fa-bell"></i>
+          <span class="dot"></span>
+        </button>
+        <img src="https://randomuser.me/api/portraits/men/91.jpg" alt="Charles" class="topbar-avatar">
+      </div>
+    </header>
+
+    <div class="page-wrap">
+
+      <div class="page-head">
+        <div>
+          <h1>Platform overview</h1>
+          <p class="text-muted">How PataSlot is performing today across every business.</p>
+        </div>
+        <span class="badge badge--success"><i class="fa-solid fa-circle badge-dot-icon"></i> All systems operational</span>
+      </div>
+
+      <!-- ===== TOP METRICS ===== -->
+      <div class="metric-grid" data-stagger>
+        <div class="metric-card hover-lift" data-reveal="up">
+          <div class="metric-card__top"><span class="metric-card__label">Active businesses</span><span class="metric-card__icon"><i class="fa-solid fa-building"></i></span></div>
+          <span class="metric-card__value"><span class="counter" data-counter="2400" data-suffix="+">0</span></span>
+          <span class="metric-card__delta metric-card__delta--up"><i class="fa-solid fa-arrow-up"></i> 12% this month</span>
+        </div>
+        <div class="metric-card hover-lift" data-reveal="up">
+          <div class="metric-card__top"><span class="metric-card__label">New today</span><span class="metric-card__icon"><i class="fa-solid fa-user-plus"></i></span></div>
+          <span class="metric-card__value"><span class="counter" data-counter="18">0</span></span>
+          <span class="metric-card__delta metric-card__delta--up"><i class="fa-solid fa-arrow-up"></i> 3 from referrals</span>
+        </div>
+        <div class="metric-card hover-lift" data-reveal="up">
+          <div class="metric-card__top"><span class="metric-card__label">MRR</span><span class="metric-card__icon"><i class="fa-solid fa-sack-dollar"></i></span></div>
+          <span class="metric-card__value">KES <span class="counter" data-counter="14.2" data-suffix="M">0</span></span>
+          <span class="metric-card__delta metric-card__delta--up"><i class="fa-solid fa-arrow-up"></i> 8% vs last month</span>
+        </div>
+        <div class="metric-card hover-lift" data-reveal="up">
+          <div class="metric-card__top"><span class="metric-card__label">AI requests today</span><span class="metric-card__icon"><i class="fa-solid fa-robot"></i></span></div>
+          <span class="metric-card__value"><span class="counter" data-counter="176" data-suffix="K">0</span></span>
+          <span class="metric-card__delta metric-card__delta--down"><i class="fa-solid fa-arrow-down"></i> 2% vs yesterday</span>
+        </div>
+      </div>
+
+      <!-- ===== REVENUE + SUBSCRIPTION BREAKDOWN ===== -->
+      <div class="dashboard-grid">
+        <div class="chart-panel hover-lift" data-reveal="up">
+          <div class="chart-panel__head">
+            <h3>Revenue (MRR)</h3>
+            <span class="chip">Last 6 months</span>
+          </div>
+          <div class="chart-panel__canvas-wrap">
+            <canvas id="platformRevenueChart"></canvas>
+          </div>
+        </div>
+
+        <div class="chart-panel hover-lift" data-reveal="up">
+          <div class="chart-panel__head"><h3>Plan breakdown</h3></div>
+          <div class="chart-panel__canvas-wrap">
+            <canvas id="subscriptionBreakdownChart"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== GROWTH + MESSAGES ===== -->
+      <div class="dashboard-grid">
+        <div class="chart-panel hover-lift" data-reveal="up">
+          <div class="chart-panel__head"><h3>New business signups</h3></div>
+          <div class="chart-panel__canvas-wrap chart-panel__canvas-wrap--sm">
+            <canvas id="businessGrowthChart"></canvas>
+          </div>
+        </div>
+        <div class="chart-panel hover-lift" data-reveal="up">
+          <div class="chart-panel__head"><h3>WhatsApp messages</h3></div>
+          <div class="chart-panel__canvas-wrap chart-panel__canvas-wrap--sm">
+            <canvas id="whatsappMessagesChart"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== AI USAGE ===== -->
+      <div class="chart-panel hover-lift mt-6" data-reveal="up">
+        <div class="chart-panel__head">
+          <h3>AI token usage</h3>
+          <span class="chip">Last 7 days</span>
+        </div>
+        <div class="chart-panel__canvas-wrap chart-panel__canvas-wrap--sm">
+          <canvas id="aiUsageChart"></canvas>
+        </div>
+      </div>
+
+      <!-- ===== LATEST BUSINESSES ===== -->
+      <p class="form-section-title mt-8">Latest businesses</p>
+      <div class="data-table-wrap">
+        <div class="table-toolbar">
+          <div class="flex gap-3">
+            <span class="chip"><i class="fa-solid fa-filter"></i> All plans</span>
+            <span class="chip"><i class="fa-solid fa-arrow-down-wide-short"></i> Newest first</span>
+          </div>
+          <a href="admin-businesses.html" class="btn btn--secondary btn--sm">View all businesses</a>
+        </div>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Business</th>
+              <th>Plan</th>
+              <th>Joined</th>
+              <th>Status</th>
+              <th>Last active</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><div class="table-entity"><img src="https://randomuser.me/api/portraits/women/68.jpg" alt=""><div><strong>Glow Beauty Studio</strong><span>Faith Wanjiru</span></div></div></td>
+              <td>Growth</td>
+              <td>Today</td>
+              <td><span class="badge badge--success">Active</span></td>
+              <td>2 min ago</td>
+              <td class="table-actions"><button aria-label="View"><i class="fa-solid fa-eye"></i></button></td>
+            </tr>
+            <tr>
+              <td><div class="table-entity"><img src="https://randomuser.me/api/portraits/men/32.jpg" alt=""><div><strong>Fiti Gym</strong><span>Brian Otieno</span></div></div></td>
+              <td>Scale</td>
+              <td>Yesterday</td>
+              <td><span class="badge badge--success">Active</span></td>
+              <td>10 min ago</td>
+              <td class="table-actions"><button aria-label="View"><i class="fa-solid fa-eye"></i></button></td>
+            </tr>
+            <tr>
+              <td><div class="table-entity"><img src="https://randomuser.me/api/portraits/women/45.jpg" alt=""><div><strong>Soko Fresh Grocers</strong><span>Amina Hassan</span></div></div></td>
+              <td>Starter</td>
+              <td>2 days ago</td>
+              <td><span class="badge badge--warning">Trial</span></td>
+              <td>1 hr ago</td>
+              <td class="table-actions"><button aria-label="View"><i class="fa-solid fa-eye"></i></button></td>
+            </tr>
+            <tr>
+              <td><div class="table-entity"><img src="https://randomuser.me/api/portraits/men/54.jpg" alt=""><div><strong>Baraka Auto Clinic</strong><span>David Kamau</span></div></div></td>
+              <td>Growth</td>
+              <td>3 days ago</td>
+              <td><span class="badge badge--danger">Payment failed</span></td>
+              <td>5 hrs ago</td>
+              <td class="table-actions"><button aria-label="View"><i class="fa-solid fa-eye"></i></button></td>
+            </tr>
+            <tr>
+              <td><div class="table-entity"><img src="https://randomuser.me/api/portraits/women/12.jpg" alt=""><div><strong>Furaha Vet Clinic</strong><span>Grace Achieng</span></div></div></td>
+              <td>Starter</td>
+              <td>4 days ago</td>
+              <td><span class="badge badge--neutral">Inactive</span></td>
+              <td>2 days ago</td>
+              <td class="table-actions"><button aria-label="View"><i class="fa-solid fa-eye"></i></button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- ===== SYSTEM NOTIFICATIONS ===== -->
+      <p class="form-section-title mt-8">System notifications</p>
+      <div class="chart-panel">
+        <div class="notif-item">
+          <span class="notif-item__icon notif-item__icon--error"><i class="fa-solid fa-triangle-exclamation"></i></span>
+          <div><p>Webhook delivery failed for Baraka Auto Clinic (3 retries).</p><span>12 min ago</span></div>
+        </div>
+        <div class="notif-item">
+          <span class="notif-item__icon notif-item__icon--warn"><i class="fa-solid fa-credit-card"></i></span>
+          <div><p>4 subscriptions have failed payments this week.</p><span>1 hr ago</span></div>
+        </div>
+        <div class="notif-item">
+          <span class="notif-item__icon notif-item__icon--info"><i class="fa-solid fa-circle-check"></i></span>
+          <div><p>Meta verification approved for Soko Fresh Grocers.</p><span>3 hrs ago</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.4/chart.umd.min.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/sidebar.js"></script>
+<script src="js/charts/chart-theme.js"></script>
+<script src="js/charts/revenue-chart.js"></script>
+<script src="js/charts/business-growth-chart.js"></script>
+<script src="js/charts/whatsapp-messages-chart.js"></script>
+<script src="js/charts/ai-usage-chart.js"></script>
+<script src="js/charts/subscription-breakdown-chart.js"></script>
+<script src="js/admin-dashboard.js"></script>
+</body>
+</html>
