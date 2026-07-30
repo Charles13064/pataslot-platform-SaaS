@@ -52,7 +52,7 @@ const Api = (function () {
         body: body ? JSON.stringify(body) : undefined,
       });
     } catch (networkErr) {
-      throw new ApiError('Network error — check your connection and try again.', 0, null);
+      throw new ApiError('Network error! Check your connection and try again.', 0, null);
     }
 
     // Token expired — refresh once, then retry the original request.

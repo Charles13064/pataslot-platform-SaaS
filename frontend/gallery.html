@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery | PataSlot</title>
+
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/theme.css">
+<script src="js/theme.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/typography.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/buttons.css">
+<link rel="stylesheet" href="css/forms.css">
+<link rel="stylesheet" href="css/cards.css">
+<link rel="stylesheet" href="css/sidebar.css">
+<link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="css/tables.css">
+<link rel="stylesheet" href="css/modals.css">
+<link rel="stylesheet" href="css/gallery.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+
+<!-- Favicon Icon-->
+<link rel="icon" type="image/png" href="favicon/favicon-96x96.png?v=20260729" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="favicon/favicon/favicon.svg?v=20260729" />
+<link rel="shortcut icon" href="favicon/favicon.ico?v=20260729" />
+<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png?v=20260729" />
+<meta name="apple-mobile-web-app-title" content="PataSlot" />
+<link rel="manifest" href="favicon/site.webmanifest?v=20260729" />
+</head>
+<body>
+
+<div class="app-shell" data-app-shell>
+  <div class="sidebar-backdrop" data-sidebar-backdrop></div>
+
+  <aside class="sidebar" data-sidebar>
+    <div class="sidebar-brand">
+      <span class="brand-mark" aria-hidden="true">
+        <img src="Assets/PataSlot ICON.png">
+      </span>
+      <span>PataSlot</span>
+      <button class="sidebar-collapse-btn" data-sidebar-collapse aria-label="Collapse sidebar"><i class="fa-solid fa-angles-left"></i></button>
+    </div>
+    <nav class="sidebar-nav" aria-label="Primary">
+      <a href="dashboard.html" class="sidebar-link"><i class="fa-solid fa-grip"></i><span>Dashboard</span></a>
+      <a href="inbox.html" class="sidebar-link"><i class="fa-brands fa-whatsapp"></i><span>Inbox</span><span class="badge-count">12</span></a>
+      <a href="contacts.html" class="sidebar-link"><i class="fa-solid fa-address-book"></i><span>Contacts</span></a>
+      <p class="sidebar-section-label">Catalog</p>
+      <a href="products.html" class="sidebar-link"><i class="fa-solid fa-box"></i><span>Products</span></a>
+      <a href="services.html" class="sidebar-link"><i class="fa-solid fa-scissors"></i><span>Services</span></a>
+      <a href="appointments.html" class="sidebar-link"><i class="fa-solid fa-calendar-days"></i><span>Appointments</span></a>
+      <a href="gallery.html" class="sidebar-link is-active"><i class="fa-solid fa-images"></i><span>Gallery</span></a>
+      <p class="sidebar-section-label">Engage</p>
+      <a href="broadcasts.html" class="sidebar-link"><i class="fa-solid fa-tower-broadcast"></i><span>Broadcasts</span></a>
+      <a href="automations.html" class="sidebar-link"><i class="fa-solid fa-diagram-project"></i><span>Automations</span></a>
+      <a href="ai.html" class="sidebar-link"><i class="fa-solid fa-robot"></i><span>AI Assistant</span></a>
+      <p class="sidebar-section-label">Business</p>
+      <a href="analytics.html" class="sidebar-link"><i class="fa-solid fa-chart-line"></i><span>Analytics</span></a>
+      <a href="integrations.html" class="sidebar-link"><i class="fa-solid fa-plug"></i><span>Integrations</span></a>
+      <a href="billing.html" class="sidebar-link"><i class="fa-solid fa-credit-card"></i><span>Billing</span></a>
+      <a href="settings.html" class="sidebar-link"><i class="fa-solid fa-gear"></i><span>Settings</span></a>
+    </nav>
+    <div class="sidebar-footer">
+      <a href="profile.html" class="sidebar-user">
+        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Faith Wanjiru">
+        <div class="sidebar-user__meta"><strong>Faith Wanjiru</strong><span>Glow Beauty Studio</span></div>
+      </a>
+      <a href="login.html" class="sidebar-link"><i class="fa-solid fa-arrow-right-from-bracket"></i><span>Log out</span></a>
+    </div>
+  </aside>
+
+  <div class="main-content">
+    <header class="topbar">
+      <button class="topbar-menu-btn" data-sidebar-open aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+      <h1 class="topbar-title">Gallery</h1>
+      <div class="topbar-actions">
+        <button class="theme-toggle" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i><i class="fa-solid fa-sun"></i></button>
+        <button class="topbar-icon-btn" aria-label="Notifications"><i class="fa-regular fa-bell"></i><span class="dot"></span></button>
+        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Faith Wanjiru" class="topbar-avatar">
+      </div>
+    </header>
+
+    <div class="page-wrap">
+      <div class="page-head">
+        <div>
+          <h1>Gallery</h1>
+          <p class="text-muted">Photos customers see when they browse your WhatsApp catalog.</p>
+        </div>
+        <button class="btn btn--primary" data-modal-open="modal-upload"><i class="fa-solid fa-cloud-arrow-up"></i> Upload photos</button>
+      </div>
+
+      <div class="table-toolbar toolbar-card mb-6">
+        <div class="flex gap-3 flex-wrap" data-tab-group>
+          <span class="chip is-active is-clickable">All (24)</span>
+          <span class="chip is-clickable">Haircuts</span>
+          <span class="chip is-clickable">Coloring</span>
+          <span class="chip is-clickable">Nails</span>
+          <span class="chip is-clickable">Storefront</span>
+        </div>
+        <span class="chip"><i class="fa-solid fa-arrow-down-wide-short"></i> Newest first</span>
+      </div>
+
+      <div class="gallery-grid">
+        <button class="gallery-item gallery-item--upload" data-modal-open="modal-upload">
+          <i class="fa-solid fa-cloud-arrow-up"></i>
+          <span>Drag &amp; drop or click to upload</span>
+        </button>
+
+        <div class="gallery-item">
+          <img src="https://picsum.photos/seed/glow1/400/520" alt="Finished haircut result" loading="lazy">
+          <span class="gallery-item__drag"><i class="fa-solid fa-grip-vertical"></i></span>
+          <div class="gallery-item__overlay">
+            <span class="gallery-item__caption">Haircuts</span>
+            <div class="gallery-item__actions">
+              <button aria-label="Edit"><i class="fa-solid fa-pen"></i></button>
+              <button class="is-danger" aria-label="Delete"><i class="fa-solid fa-trash"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="https://picsum.photos/seed/glow2/400/300" alt="Salon storefront" loading="lazy">
+          <span class="gallery-item__drag"><i class="fa-solid fa-grip-vertical"></i></span>
+          <div class="gallery-item__overlay">
+            <span class="gallery-item__caption">Storefront</span>
+            <div class="gallery-item__actions">
+              <button aria-label="Edit"><i class="fa-solid fa-pen"></i></button>
+              <button class="is-danger" aria-label="Delete"><i class="fa-solid fa-trash"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="https://picsum.photos/seed/glow3/400/460" alt="Hair coloring result" loading="lazy">
+          <span class="gallery-item__drag"><i class="fa-solid fa-grip-vertical"></i></span>
+          <div class="gallery-item__overlay">
+            <span class="gallery-item__caption">Coloring</span>
+            <div class="gallery-item__actions">
+              <button aria-label="Edit"><i class="fa-solid fa-pen"></i></button>
+              <button class="is-danger" aria-label="Delete"><i class="fa-solid fa-trash"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="https://picsum.photos/seed/glow4/400/360" alt="Manicure result" loading="lazy">
+          <span class="gallery-item__drag"><i class="fa-solid fa-grip-vertical"></i></span>
+          <div class="gallery-item__overlay">
+            <span class="gallery-item__caption">Nails</span>
+            <div class="gallery-item__actions">
+              <button aria-label="Edit"><i class="fa-solid fa-pen"></i></button>
+              <button class="is-danger" aria-label="Delete"><i class="fa-solid fa-trash"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="https://picsum.photos/seed/glow5/400/500" alt="Braiding result" loading="lazy">
+          <span class="gallery-item__drag"><i class="fa-solid fa-grip-vertical"></i></span>
+          <div class="gallery-item__overlay">
+            <span class="gallery-item__caption">Haircuts</span>
+            <div class="gallery-item__actions">
+              <button aria-label="Edit"><i class="fa-solid fa-pen"></i></button>
+              <button class="is-danger" aria-label="Delete"><i class="fa-solid fa-trash"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="https://picsum.photos/seed/glow6/400/330" alt="Salon interior" loading="lazy">
+          <span class="gallery-item__drag"><i class="fa-solid fa-grip-vertical"></i></span>
+          <div class="gallery-item__overlay">
+            <span class="gallery-item__caption">Storefront</span>
+            <div class="gallery-item__actions">
+              <button aria-label="Edit"><i class="fa-solid fa-pen"></i></button>
+              <button class="is-danger" aria-label="Delete"><i class="fa-solid fa-trash"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="https://picsum.photos/seed/glow7/400/420" alt="Color transformation" loading="lazy">
+          <span class="gallery-item__drag"><i class="fa-solid fa-grip-vertical"></i></span>
+          <div class="gallery-item__overlay">
+            <span class="gallery-item__caption">Coloring</span>
+            <div class="gallery-item__actions">
+              <button aria-label="Edit"><i class="fa-solid fa-pen"></i></button>
+              <button class="is-danger" aria-label="Delete"><i class="fa-solid fa-trash"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Upload modal ===== -->
+<div class="modal-backdrop" id="modal-upload">
+  <div class="modal">
+    <div class="modal__head">
+      <h3>Upload photos</h3>
+      <button class="modal__close" data-modal-close aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="modal__body">
+      <div class="dropzone" data-dropzone>
+        <input type="file" name="gallery_images" accept="image/*" multiple hidden>
+        <div class="dropzone__prompt">
+          <div class="dropzone__icon"><i class="fa-solid fa-images"></i></div>
+          <p>Drag &amp; drop photos, or click to upload</p>
+          <p class="field__hint">You can select multiple files at once</p>
+        </div>
+        <div class="dropzone__preview">
+          <img class="dropzone__thumb" data-dropzone-thumb alt="Preview">
+          <div><p data-dropzone-filename></p><button type="button" class="btn btn--ghost btn--sm" data-dropzone-remove>Remove</button></div>
+        </div>
+      </div>
+
+      <div class="field field--select mt-5">
+        <select class="field__control select-control" id="gallery-category">
+          <option>Haircuts</option>
+          <option>Coloring</option>
+          <option>Nails</option>
+          <option>Storefront</option>
+        </select>
+        <label class="field__label" for="gallery-category">Category</label>
+      </div>
+    </div>
+    <div class="modal__foot">
+      <button class="btn btn--secondary" data-modal-close>Cancel</button>
+      <button class="btn btn--primary"><i class="fa-solid fa-cloud-arrow-up"></i> Upload</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/utils.js"></script>
+<script src="js/sidebar.js"></script>
+<script src="js/tabs.js"></script>
+<script src="js/modal.js"></script>
+<script src="js/dropzone.js"></script>
+</body>
+</html>

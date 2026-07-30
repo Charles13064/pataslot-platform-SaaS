@@ -103,7 +103,7 @@
 const benefitTitles = [
   "Jibu customers hata usiku 🌙",
   "Stop typing the same reply 100 times",
-  "Wateja wako wako WhatsApp already",
+  "Wateja wako on WhatsApp ?",
   "Human handoff 🤖",
   "Grow bila kuongeza staff",
   "Lipa, order, book — all on WhatsApp",

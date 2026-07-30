@@ -156,3 +156,21 @@
     });
   }
 })();
+
+
+/* ==========================================================================
+   preloader dismissal and the footer year.
+   Loaded last, after every other module.
+   ========================================================================== */
+
+(function () {
+  window.addEventListener('load', () => {
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+      setTimeout(() => preloader.classList.add('hidden'), 250);
+    }
+  });
+
+  const yearEl = document.getElementById('year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+})();

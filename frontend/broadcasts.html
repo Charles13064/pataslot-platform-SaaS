@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Broadcasts | PataSlot</title>
+
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/theme.css">
+<script src="js/theme.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/typography.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/buttons.css">
+<link rel="stylesheet" href="css/forms.css">
+<link rel="stylesheet" href="css/cards.css">
+<link rel="stylesheet" href="css/sidebar.css">
+<link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="css/tables.css">
+<link rel="stylesheet" href="css/modals.css">
+<link rel="stylesheet" href="css/broadcasts.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+
+<!-- Favicon Icon-->
+<link rel="icon" type="image/png" href="favicon/favicon-96x96.png?v=20260729" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="favicon/favicon/favicon.svg?v=20260729" />
+<link rel="shortcut icon" href="favicon/favicon.ico?v=20260729" />
+<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png?v=20260729" />
+<meta name="apple-mobile-web-app-title" content="PataSlot" />
+<link rel="manifest" href="favicon/site.webmanifest?v=20260729" />
+</head>
+<body>
+
+<div class="app-shell" data-app-shell>
+  <div class="sidebar-backdrop" data-sidebar-backdrop></div>
+
+  <aside class="sidebar" data-sidebar>
+    <div class="sidebar-brand">
+      <span class="brand-mark" aria-hidden="true">
+        <img src="Assets/PataSlot ICON.png">
+      </span>
+      <span>PataSlot</span>
+      <button class="sidebar-collapse-btn" data-sidebar-collapse aria-label="Collapse sidebar"><i class="fa-solid fa-angles-left"></i></button>
+    </div>
+    <nav class="sidebar-nav" aria-label="Primary">
+      <a href="dashboard.html" class="sidebar-link"><i class="fa-solid fa-grip"></i><span>Dashboard</span></a>
+      <a href="inbox.html" class="sidebar-link"><i class="fa-brands fa-whatsapp"></i><span>Inbox</span><span class="badge-count">12</span></a>
+      <a href="contacts.html" class="sidebar-link"><i class="fa-solid fa-address-book"></i><span>Contacts</span></a>
+      <p class="sidebar-section-label">Catalog</p>
+      <a href="products.html" class="sidebar-link"><i class="fa-solid fa-box"></i><span>Products</span></a>
+      <a href="services.html" class="sidebar-link"><i class="fa-solid fa-scissors"></i><span>Services</span></a>
+      <a href="appointments.html" class="sidebar-link"><i class="fa-solid fa-calendar-days"></i><span>Appointments</span></a>
+      <a href="gallery.html" class="sidebar-link"><i class="fa-solid fa-images"></i><span>Gallery</span></a>
+      <p class="sidebar-section-label">Engage</p>
+      <a href="broadcasts.html" class="sidebar-link is-active"><i class="fa-solid fa-tower-broadcast"></i><span>Broadcasts</span></a>
+      <a href="automations.html" class="sidebar-link"><i class="fa-solid fa-diagram-project"></i><span>Automations</span></a>
+      <a href="ai.html" class="sidebar-link"><i class="fa-solid fa-robot"></i><span>AI Assistant</span></a>
+      <p class="sidebar-section-label">Business</p>
+      <a href="analytics.html" class="sidebar-link"><i class="fa-solid fa-chart-line"></i><span>Analytics</span></a>
+      <a href="integrations.html" class="sidebar-link"><i class="fa-solid fa-plug"></i><span>Integrations</span></a>
+      <a href="billing.html" class="sidebar-link"><i class="fa-solid fa-credit-card"></i><span>Billing</span></a>
+      <a href="settings.html" class="sidebar-link"><i class="fa-solid fa-gear"></i><span>Settings</span></a>
+    </nav>
+    <div class="sidebar-footer">
+      <a href="profile.html" class="sidebar-user">
+        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Faith Wanjiru">
+        <div class="sidebar-user__meta"><strong>Faith Wanjiru</strong><span>Glow Beauty Studio</span></div>
+      </a>
+      <a href="login.html" class="sidebar-link"><i class="fa-solid fa-arrow-right-from-bracket"></i><span>Log out</span></a>
+    </div>
+  </aside>
+
+  <div class="main-content">
+    <header class="topbar">
+      <button class="topbar-menu-btn" data-sidebar-open aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+      <h1 class="topbar-title">Broadcasts</h1>
+      <div class="topbar-actions">
+        <button class="theme-toggle" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i><i class="fa-solid fa-sun"></i></button>
+        <button class="topbar-icon-btn" aria-label="Notifications"><i class="fa-regular fa-bell"></i><span class="dot"></span></button>
+        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Faith Wanjiru" class="topbar-avatar">
+      </div>
+    </header>
+
+    <div class="page-wrap">
+      <div class="page-head">
+        <div>
+          <h1>Broadcasts</h1>
+          <p class="text-muted">WhatsApp campaigns sent to your customer segments.</p>
+        </div>
+        <button class="btn btn--primary" data-modal-open="modal-new-broadcast"><i class="fa-solid fa-tower-broadcast"></i> New broadcast</button>
+      </div>
+
+      <div class="metric-grid mb-8" data-stagger>
+        <div class="metric-card hover-lift" data-reveal="up">
+          <div class="metric-card__top"><span class="metric-card__label">Sent this month</span><span class="metric-card__icon"><i class="fa-solid fa-paper-plane"></i></span></div>
+          <span class="metric-card__value"><span class="counter" data-counter="6">0</span></span>
+        </div>
+        <div class="metric-card hover-lift" data-reveal="up">
+          <div class="metric-card__top"><span class="metric-card__label">Avg. delivery rate</span><span class="metric-card__icon"><i class="fa-solid fa-check-double"></i></span></div>
+          <span class="metric-card__value"><span class="counter" data-counter="97" data-suffix="%">0</span></span>
+        </div>
+        <div class="metric-card hover-lift" data-reveal="up">
+          <div class="metric-card__top"><span class="metric-card__label">Avg. open rate</span><span class="metric-card__icon"><i class="fa-solid fa-envelope-open"></i></span></div>
+          <span class="metric-card__value"><span class="counter" data-counter="84" data-suffix="%">0</span></span>
+        </div>
+        <div class="metric-card hover-lift" data-reveal="up">
+          <div class="metric-card__top"><span class="metric-card__label">Bookings from broadcasts</span><span class="metric-card__icon"><i class="fa-solid fa-calendar-check"></i></span></div>
+          <span class="metric-card__value"><span class="counter" data-counter="58">0</span></span>
+        </div>
+      </div>
+
+      <p class="form-section-title">Past broadcasts</p>
+      <div class="broadcast-row">
+        <span class="broadcast-row__icon"><i class="fa-solid fa-percent"></i></span>
+        <div class="broadcast-row__body"><strong>Weekend 20% off haircuts</strong><span>Sent to All contacts · Yesterday, 9:00 AM</span></div>
+        <div class="broadcast-row__stats">
+          <div class="broadcast-row__stat"><strong>1,240</strong><span>Sent</span></div>
+          <div class="broadcast-row__stat"><strong>1,198</strong><span>Delivered</span></div>
+          <div class="broadcast-row__stat"><strong>986</strong><span>Read</span></div>
+        </div>
+        <span class="badge badge--success">Sent</span>
+      </div>
+      <div class="broadcast-row">
+        <span class="broadcast-row__icon"><i class="fa-solid fa-gift"></i></span>
+        <div class="broadcast-row__body"><strong>New bridal bundle launch</strong><span>Sent to VIP customers · 3 days ago</span></div>
+        <div class="broadcast-row__stats">
+          <div class="broadcast-row__stat"><strong>320</strong><span>Sent</span></div>
+          <div class="broadcast-row__stat"><strong>318</strong><span>Delivered</span></div>
+          <div class="broadcast-row__stat"><strong>290</strong><span>Read</span></div>
+        </div>
+        <span class="badge badge--success">Sent</span>
+      </div>
+      <div class="broadcast-row">
+        <span class="broadcast-row__icon"><i class="fa-solid fa-calendar-day"></i></span>
+        <div class="broadcast-row__body"><strong>Holiday hours reminder</strong><span>Scheduled for All contacts · Tomorrow, 8:00 AM</span></div>
+        <div class="broadcast-row__stats">
+          <div class="broadcast-row__stat"><strong>—</strong><span>Sent</span></div>
+          <div class="broadcast-row__stat"><strong>—</strong><span>Delivered</span></div>
+          <div class="broadcast-row__stat"><strong>—</strong><span>Read</span></div>
+        </div>
+        <span class="badge badge--warning">Scheduled</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== New broadcast modal ===== -->
+<div class="modal-backdrop" id="modal-new-broadcast">
+  <div class="modal modal--lg">
+    <div class="modal__head">
+      <h3>New broadcast</h3>
+      <button class="modal__close" data-modal-close aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="modal__body">
+      <div class="broadcast-compose">
+        <div>
+          <p class="form-section-title">Audience</p>
+          <div class="broadcast-audience" data-tab-group>
+            <label class="audience-chip is-active"><input type="radio" name="audience" hidden checked>All contacts<span>1,240 people</span></label>
+            <label class="audience-chip"><input type="radio" name="audience" hidden>Regular customers<span>486 people</span></label>
+            <label class="audience-chip"><input type="radio" name="audience" hidden>VIP customers<span>320 people</span></label>
+            <label class="audience-chip"><input type="radio" name="audience" hidden>Custom list<span>Upload CSV</span></label>
+          </div>
+
+          <div class="field field--select">
+            <select class="field__control select-control" id="broadcast-template">
+              <option>Blank message</option>
+              <option>Promotion announcement</option>
+              <option>New arrival</option>
+              <option>Appointment reminder</option>
+            </select>
+            <label class="field__label" for="broadcast-template">Message template</label>
+          </div>
+
+          <div class="field">
+            <textarea class="field__control" id="broadcast-message" rows="4" placeholder=" " data-broadcast-message>Hi! 🎉 This weekend only — 20% off all haircuts at Glow Beauty Studio. Reply BOOK to grab your slot.</textarea>
+            <label class="field__label" for="broadcast-message">Message</label>
+          </div>
+
+          <div class="dropzone" data-dropzone>
+            <input type="file" name="broadcast_media" accept="image/*" hidden>
+            <div class="dropzone__prompt">
+              <div class="dropzone__icon"><i class="fa-solid fa-image"></i></div>
+              <p>Attach an image (optional)</p>
+            </div>
+            <div class="dropzone__preview">
+              <img class="dropzone__thumb" data-dropzone-thumb alt="Preview">
+              <div><p data-dropzone-filename></p><button type="button" class="btn btn--ghost btn--sm" data-dropzone-remove>Remove</button></div>
+            </div>
+          </div>
+
+          <p class="form-section-title mt-6">When to send</p>
+          <label class="check-row mb-3">
+            <input type="radio" name="broadcast_timing" value="now" checked>
+            <span>Send now</span>
+          </label>
+          <label class="check-row mb-3">
+            <input type="radio" name="broadcast_timing" value="schedule">
+            <span>Schedule for later</span>
+          </label>
+          <div class="field-row is-hidden" data-schedule-field>
+            <div class="field">
+              <input class="field__control" type="date" id="broadcast-date" placeholder=" ">
+              <label class="field__label" for="broadcast-date">Date</label>
+            </div>
+            <div class="field">
+              <input class="field__control" type="time" id="broadcast-time" placeholder=" ">
+              <label class="field__label" for="broadcast-time">Time</label>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <p class="form-section-title">Preview</p>
+          <div class="broadcast-preview">
+            <div class="preview-phone">
+              <div class="preview-phone__screen">
+                <div class="preview-phone__header"><i class="fa-brands fa-whatsapp"></i> Khalifah Fades</div>
+                <div class="preview-phone__bubble" data-broadcast-preview>Your broadcast message will appear here…</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal__foot">
+      <button class="btn btn--secondary" data-modal-close>Save as draft</button>
+      <button class="btn btn--primary"><i class="fa-solid fa-paper-plane"></i> Send broadcast</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/utils.js"></script>
+<script src="js/sidebar.js"></script>
+<script src="js/tabs.js"></script>
+<script src="js/modal.js"></script>
+<script src="js/dropzone.js"></script>
+<script src="js/broadcasts.js"></script>
+</body>
+</html>

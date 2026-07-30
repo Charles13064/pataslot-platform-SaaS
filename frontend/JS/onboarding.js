@@ -132,6 +132,23 @@
   });
 
   /* ---------------------------------------------------------------------
+   * Password visibility toggle
+   * ------------------------------------------------------------------- */
+  wizard.querySelectorAll('[data-toggle-password]').forEach((toggleBtn) => {
+    const passwordField = toggleBtn.closest('.field')?.querySelector('input[type="password"], input[type="text"]');
+    if (!passwordField) return;
+
+    toggleBtn.addEventListener('click', () => {
+      const isPassword = passwordField.type === 'password';
+      passwordField.type = isPassword ? 'text' : 'password';
+      toggleBtn.innerHTML = isPassword
+        ? '<i class="fa-solid fa-eye-slash"></i>'
+        : '<i class="fa-solid fa-eye"></i>';
+      toggleBtn.setAttribute('aria-label', isPassword ? 'Hide password' : 'Show password');
+    });
+  });
+
+  /* ---------------------------------------------------------------------
    * Password strength meter (live)
    * ------------------------------------------------------------------- */
   const pwInput = wizard.querySelector('[data-field="password"]');

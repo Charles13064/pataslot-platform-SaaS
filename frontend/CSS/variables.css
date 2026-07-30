@@ -103,6 +103,9 @@
   color: var(--color-white);
 }
 
-*scroll-bar{
-  width: 12px;
+* {
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
+  scrollbar-base-color:  #16A34A;
+  scrollbar-color:  #16A34A;
 }
