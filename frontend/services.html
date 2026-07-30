@@ -36,13 +36,24 @@
 <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
+<!-- Lucide icons -->
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    if (window.lucide) {
+      window.lucide.createIcons();
+    }
+  });
+</script>
 
 <div class="app-shell" data-app-shell>
   <div class="sidebar-backdrop" data-sidebar-backdrop></div>
 
   <aside class="sidebar" data-sidebar>
     <div class="sidebar-brand">
-      <span class="brand-mark" aria-hidden="true"><i class="fa-solid fa-calendar-check"></i></span>
+      <span class="brand-mark" aria-hidden="true">
+        <img src="Assets/PataSlot ICON.png">
+      </span>
       <span>PataSlot</span>
       <button class="sidebar-collapse-btn" data-sidebar-collapse aria-label="Collapse sidebar"><i class="fa-solid fa-angles-left"></i></button>
     </div>
@@ -51,17 +62,27 @@
       <a href="inbox.html" class="sidebar-link"><i class="fa-brands fa-whatsapp"></i><span>Inbox</span><span class="badge-count">12</span></a>
       <a href="contacts.html" class="sidebar-link"><i class="fa-solid fa-address-book"></i><span>Contacts</span></a>
       <p class="sidebar-section-label">Catalog</p>
-      <a href="products.html" class="sidebar-link"><i class="fa-solid fa-box"></i><span>Products</span></a>
-      <a href="services.html" class="sidebar-link is-active"><i class="fa-solid fa-scissors"></i><span>Services</span></a>
-      <a href="appointments.html" class="sidebar-link"><i class="fa-solid fa-calendar-days"></i><span>Appointments</span></a>
-      <a href="gallery.html" class="sidebar-link"><i class="fa-solid fa-images"></i><span>Gallery</span></a>
+      <a href="products.html" class="sidebar-link">
+        <i data-lucide="shopping-basket"></i> 
+        <span>Products</span></a>
+      <a href="services.html" class="sidebar-link"><i class="fa-solid fa-scissors"></i><span>Services</span></a>
+      <a href="appointments.html" class="sidebar-link">
+        <i data-lucide="clipboard-clock"></i>
+        <span>Appointments</span></a>
+      <a href="gallery.html" class="sidebar-link">
+        <i data-lucide="images"></i>
+        <span>Gallery</span></a>
       <p class="sidebar-section-label">Engage</p>
-      <a href="broadcasts.html" class="sidebar-link"><i class="fa-solid fa-tower-broadcast"></i><span>Broadcasts</span></a>
+      <a href="broadcasts.html" class="sidebar-link is-active"><i class="fa-solid fa-tower-broadcast"></i><span>Broadcasts</span></a>
       <a href="automations.html" class="sidebar-link"><i class="fa-solid fa-diagram-project"></i><span>Automations</span></a>
-      <a href="ai.html" class="sidebar-link"><i class="fa-solid fa-robot"></i><span>AI Assistant</span></a>
+      <a href="ai.html" class="sidebar-link">
+        <i data-lucide="bot-message-square"></i>
+        <span>AI Assistant</span></a>
       <p class="sidebar-section-label">Business</p>
       <a href="analytics.html" class="sidebar-link"><i class="fa-solid fa-chart-line"></i><span>Analytics</span></a>
-      <a href="integrations.html" class="sidebar-link"><i class="fa-solid fa-plug"></i><span>Integrations</span></a>
+      <a href="integrations.html" class="sidebar-link">
+        <i data-lucide="combine"></i>
+        <span>Integrations</span></a>
       <a href="billing.html" class="sidebar-link"><i class="fa-solid fa-credit-card"></i><span>Billing</span></a>
       <a href="settings.html" class="sidebar-link"><i class="fa-solid fa-gear"></i><span>Settings</span></a>
     </nav>
