@@ -107,5 +107,25 @@
   scrollbar-width: thin;
   scroll-behavior: smooth;
   scrollbar-base-color:  #16A34A;
-  scrollbar-color:  #16A34A;
+  scrollbar-color: #22c55e transparent;
+}
+
+/* WebKit Browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 4px;  /* Vertical scrollbar width (very thin) */
+  height: 4px; /* Horizontal scrollbar height (very thin) */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* Removes default background */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #22c55e; /* Green color */
+  border-radius: 20px;       /* Makes the edges round */
+}
+
+/* Optional: Darker green on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #16a34a; 
 }

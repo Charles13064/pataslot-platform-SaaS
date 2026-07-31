@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Settings — PataSlot</title>
+
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/theme.css">
+<script src="js/theme.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/typography.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/buttons.css">
+<link rel="stylesheet" href="css/forms.css">
+<link rel="stylesheet" href="css/cards.css">
+<link rel="stylesheet" href="css/sidebar.css">
+<link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="css/tables.css">
+<link rel="stylesheet" href="css/modals.css">
+<link rel="stylesheet" href="css/settings.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<div class="app-shell" data-app-shell>
+  <div class="sidebar-backdrop" data-sidebar-backdrop></div>
+
+  <aside class="sidebar" data-sidebar>
+    <div class="sidebar-brand">
+      <span class="brand-mark" aria-hidden="true"><i class="fa-solid fa-calendar-check"></i></span>
+      <span>PataSlot</span>
+      <button class="sidebar-collapse-btn" data-sidebar-collapse aria-label="Collapse sidebar"><i class="fa-solid fa-angles-left"></i></button>
+    </div>
+    <nav class="sidebar-nav" aria-label="Primary">
+      <a href="dashboard.html" class="sidebar-link"><i class="fa-solid fa-grip"></i><span>Dashboard</span></a>
+      <a href="inbox.html" class="sidebar-link"><i class="fa-brands fa-whatsapp"></i><span>Inbox</span><span class="badge-count">12</span></a>
+      <a href="contacts.html" class="sidebar-link"><i class="fa-solid fa-address-book"></i><span>Contacts</span></a>
+      <p class="sidebar-section-label">Catalog</p>
+      <a href="products.html" class="sidebar-link"><i class="fa-solid fa-box"></i><span>Products</span></a>
+      <a href="services.html" class="sidebar-link"><i class="fa-solid fa-scissors"></i><span>Services</span></a>
+      <a href="appointments.html" class="sidebar-link"><i class="fa-solid fa-calendar-days"></i><span>Appointments</span></a>
+      <a href="gallery.html" class="sidebar-link"><i class="fa-solid fa-images"></i><span>Gallery</span></a>
+      <p class="sidebar-section-label">Engage</p>
+      <a href="broadcasts.html" class="sidebar-link"><i class="fa-solid fa-tower-broadcast"></i><span>Broadcasts</span></a>
+      <a href="automations.html" class="sidebar-link"><i class="fa-solid fa-diagram-project"></i><span>Automations</span></a>
+      <a href="ai.html" class="sidebar-link"><i class="fa-solid fa-robot"></i><span>AI Assistant</span></a>
+      <p class="sidebar-section-label">Business</p>
+      <a href="analytics.html" class="sidebar-link"><i class="fa-solid fa-chart-line"></i><span>Analytics</span></a>
+      <a href="integrations.html" class="sidebar-link"><i class="fa-solid fa-plug"></i><span>Integrations</span></a>
+      <a href="billing.html" class="sidebar-link"><i class="fa-solid fa-credit-card"></i><span>Billing</span></a>
+      <a href="settings.html" class="sidebar-link is-active"><i class="fa-solid fa-gear"></i><span>Settings</span></a>
+    </nav>
+    <div class="sidebar-footer">
+      <a href="profile.html" class="sidebar-user">
+        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Faith Wanjiru">
+        <div class="sidebar-user__meta"><strong>Faith Wanjiru</strong><span>Glow Beauty Studio</span></div>
+      </a>
+      <a href="login.html" class="sidebar-link"><i class="fa-solid fa-arrow-right-from-bracket"></i><span>Log out</span></a>
+    </div>
+  </aside>
+
+  <div class="main-content">
+    <header class="topbar">
+      <button class="topbar-menu-btn" data-sidebar-open aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+      <h1 class="topbar-title">Settings</h1>
+      <div class="topbar-actions">
+        <button class="theme-toggle" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i><i class="fa-solid fa-sun"></i></button>
+        <button class="topbar-icon-btn" aria-label="Notifications"><i class="fa-regular fa-bell"></i><span class="dot"></span></button>
+        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Faith Wanjiru" class="topbar-avatar">
+      </div>
+    </header>
+
+    <div class="page-wrap">
+      <div class="page-head">
+        <div>
+          <h1>Settings</h1>
+          <p class="text-muted">Manage how Glow Beauty Studio runs on PataSlot.</p>
+        </div>
+      </div>
+
+      <div class="settings-shell">
+        <nav class="settings-nav" aria-label="Settings sections">
+          <div class="settings-nav__item is-active" data-tab-target="#panel-profile"><i class="fa-solid fa-building"></i> Business profile</div>
+          <div class="settings-nav__item" data-tab-target="#panel-hours"><i class="fa-solid fa-clock"></i> Business hours</div>
+          <div class="settings-nav__item" data-tab-target="#panel-whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp &amp; Meta</div>
+          <div class="settings-nav__item" data-tab-target="#panel-notifications"><i class="fa-solid fa-bell"></i> Notifications</div>
+          <div class="settings-nav__item" data-tab-target="#panel-security"><i class="fa-solid fa-shield-halved"></i> Security</div>
+          <div class="settings-nav__item is-danger-nav" data-tab-target="#panel-danger"><i class="fa-solid fa-triangle-exclamation"></i> Danger zone</div>
+        </nav>
+
+        <div>
+          <section class="settings-panel is-active" id="panel-profile">
+            <div class="settings-card">
+              <div class="settings-card__head"><h3>Business profile</h3><p class="text-muted">This is what customers see when they message you.</p></div>
+
+              <div class="dropzone mb-5" data-dropzone>
+                <input type="file" name="logo" accept="image/*" hidden>
+                <div class="dropzone__prompt"><div class="dropzone__icon"><i class="fa-solid fa-image"></i></div><p>Drag &amp; drop your logo, or click to upload</p></div>
+                <div class="dropzone__preview"><img class="dropzone__thumb" data-dropzone-thumb alt=""><div><p data-dropzone-filename></p><button type="button" class="btn btn--ghost btn--sm" data-dropzone-remove>Remove</button></div></div>
+              </div>
+
+              <div class="field">
+                <input class="field__control" type="text" id="settings-business-name" placeholder=" " value="Glow Beauty Studio">
+                <label class="field__label" for="settings-business-name">Business name</label>
+              </div>
+              <div class="field-row">
+                <div class="field field--select">
+                  <select class="field__control select-control" id="settings-category">
+                    <option>Beauty &amp; Salon</option>
+                    <option>Health &amp; Wellness</option>
+                    <option>Fitness</option>
+                  </select>
+                  <label class="field__label" for="settings-category">Category</label>
+                </div>
+                <div class="field">
+                  <input class="field__control" type="tel" id="settings-phone" placeholder=" " value="+254 712 345 678">
+                  <label class="field__label" for="settings-phone">Business phone</label>
+                </div>
+              </div>
+              <div class="field">
+                <textarea class="field__control" id="settings-description" rows="3" placeholder=" ">Premium hair and beauty studio in Kilimani, Nairobi.</textarea>
+                <label class="field__label" for="settings-description">Description</label>
+              </div>
+              <button class="btn btn--primary">Save changes</button>
+            </div>
+          </section>
+
+          <section class="settings-panel" id="panel-hours">
+            <div class="settings-card">
+              <div class="settings-card__head"><h3>Business hours</h3><p class="text-muted">The AI uses this to tell customers when you're open.</p></div>
+
+              <div class="hours-row">
+                <span class="hours-row__day">Monday</span>
+                <div class="hours-row__times">
+                  <input class="field__control" type="time" value="09:00">
+                  <span>to</span>
+                  <input class="field__control" type="time" value="19:00"></div><label class="toggle"><input type="checkbox" checked><span class="toggle-track"></span></label></div>
+              <div class="hours-row"><span class="hours-row__day">Tuesday</span><div class="hours-row__times"><input class="field__control" type="time" value="09:00"><span>to</span><input class="field__control" type="time" value="19:00"></div><label class="toggle"><input type="checkbox" checked><span class="toggle-track"></span></label></div>
+              <div class="hours-row"><span class="hours-row__day">Wednesday</span><div class="hours-row__times"><input class="field__control" type="time" value="09:00"><span>to</span><input class="field__control" type="time" value="19:00"></div><label class="toggle"><input type="checkbox" checked><span class="toggle-track"></span></label></div>
+              <div class="hours-row"><span class="hours-row__day">Thursday</span><div class="hours-row__times"><input class="field__control" type="time" value="09:00"><span>to</span><input class="field__control" type="time" value="19:00"></div><label class="toggle"><input type="checkbox" checked><span class="toggle-track"></span></label></div>
+              <div class="hours-row"><span class="hours-row__day">Friday</span><div class="hours-row__times"><input class="field__control" type="time" value="09:00"><span>to</span><input class="field__control" type="time" value="19:00"></div><label class="toggle"><input type="checkbox" checked><span class="toggle-track"></span></label></div>
+              <div class="hours-row"><span class="hours-row__day">Saturday</span><div class="hours-row__times"><input class="field__control" type="time" value="10:00"><span>to</span><input class="field__control" type="time" value="17:00"></div><label class="toggle"><input type="checkbox" checked><span class="toggle-track"></span></label></div>
+              <div class="hours-row"><span class="hours-row__day">Sunday</span><div class="hours-row__times"><span class="text-muted text-sm">Closed</span></div><label class="toggle"><input type="checkbox"><span class="toggle-track"></span></label></div>
+
+              <button class="btn btn--primary mt-5">Save hours</button>
+            </div>
+          </section>
+
+          <section class="settings-panel" id="panel-whatsapp">
+            <div class="settings-card">
+              <div class="settings-card__head"><h3>WhatsApp &amp; Meta configuration</h3><p class="text-muted">Found in Meta Business Suite → WhatsApp → API Setup.</p></div>
+              <div class="field-row">
+                <div class="field"><input class="field__control" type="text" id="settings-meta-app-id" placeholder=" "><label class="field__label" for="settings-meta-app-id">Meta App ID</label></div>
+                <div class="field"><input class="field__control" type="password" id="settings-meta-secret" placeholder=" " autocomplete="off"><label class="field__label" for="settings-meta-secret">Meta App Secret</label></div>
+              </div>
+              <div class="field-row">
+                <div class="field"><input class="field__control" type="text" id="settings-wa-account-id" placeholder=" "><label class="field__label" for="settings-wa-account-id">WhatsApp Business Account ID</label></div>
+                <div class="field"><input class="field__control" type="text" id="settings-wa-phone-id" placeholder=" "><label class="field__label" for="settings-wa-phone-id">WhatsApp Phone Number ID</label></div>
+              </div>
+              <div class="field-row">
+                <div class="field"><input class="field__control" type="text" id="settings-webhook-token" placeholder=" "><label class="field__label" for="settings-webhook-token">Webhook Verify Token</label></div>
+                <div class="field"><input class="field__control" type="password" id="settings-access-token" placeholder=" " autocomplete="off"><label class="field__label" for="settings-access-token">Permanent Access Token</label></div>
+              </div>
+              <span class="badge badge--success mb-5"><i class="fa-solid fa-circle badge-dot-icon"></i> WhatsApp connected</span>
+              <br>
+              <button class="btn btn--primary mt-3">Save configuration</button>
+            </div>
+          </section>
+
+          <section class="settings-panel" id="panel-notifications">
+            <div class="settings-card">
+              <div class="settings-card__head"><h3>Notification preferences</h3></div>
+              <label class="check-row mb-3"><input type="checkbox" checked><span>New booking confirmations</span></label>
+              <label class="check-row mb-3"><input type="checkbox" checked><span>Payment received</span></label>
+              <label class="check-row mb-3"><input type="checkbox" checked><span>Low AI credits warning</span></label>
+              <label class="check-row mb-3"><input type="checkbox"><span>Weekly performance summary</span></label>
+              <label class="check-row mb-5"><input type="checkbox" checked><span>Failed webhook alerts</span></label>
+              <button class="btn btn--primary">Save preferences</button>
+            </div>
+          </section>
+
+          <section class="settings-panel" id="panel-security">
+            <div class="settings-card">
+              <div class="settings-card__head"><h3>Password</h3></div>
+              <div class="field"><input class="field__control" type="password" id="settings-current-pw" placeholder=" " autocomplete="off"><label class="field__label" for="settings-current-pw">Current password</label></div>
+              <div class="field-row">
+                <div class="field"><input class="field__control" type="password" id="settings-new-pw" placeholder=" " autocomplete="off"><label class="field__label" for="settings-new-pw">New password</label></div>
+                <div class="field"><input class="field__control" type="password" id="settings-confirm-pw" placeholder=" " autocomplete="off"><label class="field__label" for="settings-confirm-pw">Confirm new password</label></div>
+              </div>
+              <button class="btn btn--primary">Update password</button>
+            </div>
+            <div class="settings-card">
+              <div class="settings-card__head"><h3>Two-factor authentication</h3><p class="text-muted">Add an extra layer of security to your account.</p></div>
+              <label class="check-row"><input type="checkbox"><span>Require a code at login</span></label>
+            </div>
+          </section>
+
+          <section class="settings-panel" id="panel-danger">
+            <div class="settings-card danger-zone">
+              <div class="settings-card__head"><h3 class="text-danger">Danger zone</h3><p class="text-muted">These actions can't be undone.</p></div>
+              <div class="flex flex-between mb-4">
+                <div><strong class="text-sm">Deactivate account</strong><p class="text-muted text-sm">Temporarily pause your WhatsApp automation.</p></div>
+                <button class="btn btn--secondary">Deactivate</button>
+              </div>
+              <div class="flex flex-between">
+                <div><strong class="text-sm">Delete account</strong><p class="text-muted text-sm">Permanently delete all data — cannot be undone.</p></div>
+                <button class="btn btn--secondary text-danger" data-modal-open="modal-delete-confirm">Delete account</button>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+<!-- ===== Delete confirmation modal ===== -->
+<div class="modal-backdrop" id="modal-delete-confirm">
+  <div class="modal modal--confirm">
+    <div class="modal__head">
+      <h3>Delete account</h3>
+      <button class="modal__close" data-modal-close aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="modal__body">
+      <div class="modal__icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+      <p>This permanently deletes Glow Beauty Studio's account, including all contacts, appointments, and message history. This cannot be undone.</p>
+    </div>
+    <div class="modal__foot">
+      <button class="btn btn--secondary" data-modal-close>Cancel</button>
+      <button class="btn btn--danger">Yes, delete permanently</button>
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+
+<script src="js/utils.js"></script>
+<script src="js/sidebar.js"></script>
+<script src="js/tabs.js"></script>
+<script src="js/table-filter.js"></script>
+<script src="js/modal.js"></script>
+<script src="js/dropzone.js"></script>
+<script src="js/section-tabs.js"></script>
+</body>
+</html>

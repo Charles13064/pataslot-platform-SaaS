@@ -1,0 +1,88 @@
+/* ==========================================================================
+   PataSlot — Broadcasts
+   ========================================================================== */
+
+.broadcast-compose {
+  display: grid;
+  grid-template-columns: 1fr 260px;
+  gap: var(--space-6);
+}
+
+.broadcast-audience { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-bottom: var(--space-5); }
+.audience-chip {
+  padding: 10px 14px;
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--border-subtle);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-medium);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  cursor: pointer;
+  min-width: 120px;
+}
+.audience-chip span { color: var(--color-gray-500); font-weight: var(--fw-regular); }
+.audience-chip.is-active { border-color: var(--color-primary); background: var(--color-primary-light); color: var(--color-primary-dark); }
+.audience-chip.is-active span { color: var(--color-primary-dark); }
+
+.broadcast-preview {
+  background: var(--surface-alt);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.preview-phone {
+  width: 100%;
+  max-width: 220px;
+  background: var(--color-black);
+  border-radius: 26px;
+  padding: 8px;
+}
+.preview-phone__screen {
+  background: #ECE5DD;
+  border-radius: 20px;
+  min-height: 300px;
+  padding: var(--space-3);
+  display: flex;
+  flex-direction: column;
+}
+.preview-phone__header { font-size: 10px; color: var(--color-gray-600); font-weight: var(--fw-semibold); margin-bottom: var(--space-2); }
+.preview-phone__bubble {
+  background: white;
+  border-radius: 10px 10px 10px 2px;
+  padding: 10px 12px;
+  font-size: 11px;
+  line-height: 1.5;
+  box-shadow: var(--shadow-sm);
+  word-break: break-word;
+}
+.preview-phone__bubble img { width: 100%; border-radius: 8px; margin-bottom: 6px; }
+.preview-phone__placeholder { color: var(--color-gray-500); font-style: italic; }
+
+/* ---- Past broadcasts stat row ---- */
+.broadcast-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  background: var(--color-white);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  margin-bottom: var(--space-3);
+}
+.broadcast-row__icon { width: 40px; height: 40px; border-radius: var(--radius-sm); background: var(--color-primary-light); color: var(--color-primary-dark); display: grid; place-items: center; flex-shrink: 0; }
+.broadcast-row__body { flex: 1; min-width: 0; }
+.broadcast-row__body strong { display: block; font-size: var(--fs-sm); }
+.broadcast-row__body span { font-size: var(--fs-xs); color: var(--color-gray-500); }
+.broadcast-row__stats { display: flex; gap: var(--space-6); }
+.broadcast-row__stat { text-align: center; }
+.broadcast-row__stat strong { display: block; font-size: var(--fs-sm); color: var(--color-black); }
+.broadcast-row__stat span { font-size: 10px; color: var(--color-gray-500); text-transform: uppercase; letter-spacing: 0.04em; }
+
+@media (max-width: 900px) {
+  .broadcast-compose { grid-template-columns: 1fr; }
+  .broadcast-row { flex-wrap: wrap; }
+  .broadcast-row__stats { width: 100%; justify-content: space-between; }
+}

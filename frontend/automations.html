@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Automations — PataSlot</title>
+
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/theme.css">
+<script src="js/theme.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/typography.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/buttons.css">
+<link rel="stylesheet" href="css/forms.css">
+<link rel="stylesheet" href="css/cards.css">
+<link rel="stylesheet" href="css/sidebar.css">
+<link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="css/tables.css">
+<link rel="stylesheet" href="css/modals.css">
+<link rel="stylesheet" href="css/automations.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<div class="app-shell" data-app-shell>
+  <div class="sidebar-backdrop" data-sidebar-backdrop></div>
+
+  <aside class="sidebar" data-sidebar>
+    <div class="sidebar-brand">
+      <span class="brand-mark" aria-hidden="true"><i class="fa-solid fa-calendar-check"></i></span>
+      <span>PataSlot</span>
+      <button class="sidebar-collapse-btn" data-sidebar-collapse aria-label="Collapse sidebar"><i class="fa-solid fa-angles-left"></i></button>
+    </div>
+    <nav class="sidebar-nav" aria-label="Primary">
+      <a href="dashboard.html" class="sidebar-link"><i class="fa-solid fa-grip"></i><span>Dashboard</span></a>
+      <a href="inbox.html" class="sidebar-link"><i class="fa-brands fa-whatsapp"></i><span>Inbox</span><span class="badge-count">12</span></a>
+      <a href="contacts.html" class="sidebar-link"><i class="fa-solid fa-address-book"></i><span>Contacts</span></a>
+      <p class="sidebar-section-label">Catalog</p>
+      <a href="products.html" class="sidebar-link"><i class="fa-solid fa-box"></i><span>Products</span></a>
+      <a href="services.html" class="sidebar-link"><i class="fa-solid fa-scissors"></i><span>Services</span></a>
+      <a href="appointments.html" class="sidebar-link"><i class="fa-solid fa-calendar-days"></i><span>Appointments</span></a>
+      <a href="gallery.html" class="sidebar-link"><i class="fa-solid fa-images"></i><span>Gallery</span></a>
+      <p class="sidebar-section-label">Engage</p>
+      <a href="broadcasts.html" class="sidebar-link"><i class="fa-solid fa-tower-broadcast"></i><span>Broadcasts</span></a>
+      <a href="automations.html" class="sidebar-link is-active"><i class="fa-solid fa-diagram-project"></i><span>Automations</span></a>
+      <a href="ai.html" class="sidebar-link"><i class="fa-solid fa-robot"></i><span>AI Assistant</span></a>
+      <p class="sidebar-section-label">Business</p>
+      <a href="analytics.html" class="sidebar-link"><i class="fa-solid fa-chart-line"></i><span>Analytics</span></a>
+      <a href="integrations.html" class="sidebar-link"><i class="fa-solid fa-plug"></i><span>Integrations</span></a>
+      <a href="billing.html" class="sidebar-link"><i class="fa-solid fa-credit-card"></i><span>Billing</span></a>
+      <a href="settings.html" class="sidebar-link"><i class="fa-solid fa-gear"></i><span>Settings</span></a>
+    </nav>
+    <div class="sidebar-footer">
+      <a href="profile.html" class="sidebar-user">
+        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Faith Wanjiru">
+        <div class="sidebar-user__meta"><strong>Faith Wanjiru</strong><span>Glow Beauty Studio</span></div>
+      </a>
+      <a href="login.html" class="sidebar-link"><i class="fa-solid fa-arrow-right-from-bracket"></i><span>Log out</span></a>
+    </div>
+  </aside>
+
+  <div class="main-content">
+    <header class="topbar">
+      <button class="topbar-menu-btn" data-sidebar-open aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+      <h1 class="topbar-title">Automations</h1>
+      <div class="topbar-actions">
+        <button class="theme-toggle" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i><i class="fa-solid fa-sun"></i></button>
+        <button class="topbar-icon-btn" aria-label="Notifications"><i class="fa-regular fa-bell"></i><span class="dot"></span></button>
+        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Faith Wanjiru" class="topbar-avatar">
+      </div>
+    </header>
+
+    <div class="page-wrap">
+      <div class="page-head">
+        <div>
+          <h1>Automations</h1>
+          <p class="text-muted">Rules that run automatically on WhatsApp, no typing required.</p>
+        </div>
+        <button class="btn btn--primary" data-modal-open="modal-new-automation"><i class="fa-solid fa-plus"></i> Create automation</button>
+      </div>
+
+      <p class="form-section-title">Start from a template</p>
+      <div class="automation-templates mb-8">
+        <div class="automation-template-card"><i class="fa-solid fa-cart-shopping"></i><strong>Abandoned booking</strong><span>Nudge customers who didn't confirm</span></div>
+        <div class="automation-template-card"><i class="fa-solid fa-star"></i><strong>Review request</strong><span>Ask for a review after a visit</span></div>
+        <div class="automation-template-card"><i class="fa-solid fa-birthday-cake"></i><strong>Birthday offer</strong><span>Send a discount on their birthday</span></div>
+        <div class="automation-template-card"><i class="fa-solid fa-clock-rotate-left"></i><strong>Win-back</strong><span>Re-engage customers after 60 days</span></div>
+      </div>
+
+      <p class="form-section-title">Active rules</p>
+
+      <div class="automation-row">
+        <div class="automation-row__flow">
+          <span class="flow-chip flow-chip--trigger"><i class="fa-solid fa-calendar-check"></i> Booking confirmed</span>
+          <i class="fa-solid fa-arrow-right flow-arrow"></i>
+          <span class="flow-chip flow-chip--action"><i class="fa-brands fa-whatsapp"></i> Send confirmation message</span>
+        </div>
+        <div class="automation-row__meta"><strong>1,240 runs</strong><span>Last run 2 min ago</span></div>
+        <div class="automation-row__controls">
+          <label class="toggle"><input type="checkbox" checked><span class="toggle-track"></span></label>
+          <button class="composer-icon-btn" aria-label="Edit"><i class="fa-solid fa-pen"></i></button>
+        </div>
+      </div>
+
+      <div class="automation-row">
+        <div class="automation-row__flow">
+          <span class="flow-chip flow-chip--trigger"><i class="fa-solid fa-clock"></i> 24 hours before appointment</span>
+          <i class="fa-solid fa-arrow-right flow-arrow"></i>
+          <span class="flow-chip flow-chip--action"><i class="fa-brands fa-whatsapp"></i> Send reminder</span>
+        </div>
+        <div class="automation-row__meta"><strong>860 runs</strong><span>Last run 40 min ago</span></div>
+        <div class="automation-row__controls">
+          <label class="toggle"><input type="checkbox" checked><span class="toggle-track"></span></label>
+          <button class="composer-icon-btn" aria-label="Edit"><i class="fa-solid fa-pen"></i></button>
+        </div>
+      </div>
+
+      <div class="automation-row">
+        <div class="automation-row__flow">
+          <span class="flow-chip flow-chip--trigger"><i class="fa-solid fa-money-bill-transfer"></i> Deposit unpaid for 1 hour</span>
+          <i class="fa-solid fa-arrow-right flow-arrow"></i>
+          <span class="flow-chip flow-chip--action"><i class="fa-solid fa-calendar-xmark"></i> Auto-cancel booking</span>
+        </div>
+        <div class="automation-row__meta"><strong>34 runs</strong><span>Last run 3 hrs ago</span></div>
+        <div class="automation-row__controls">
+          <label class="toggle"><input type="checkbox" checked><span class="toggle-track"></span></label>
+          <button class="composer-icon-btn" aria-label="Edit"><i class="fa-solid fa-pen"></i></button>
+        </div>
+      </div>
+
+      <div class="automation-row">
+        <div class="automation-row__flow">
+          <span class="flow-chip flow-chip--trigger"><i class="fa-solid fa-user-plus"></i> New contact messages for first time</span>
+          <i class="fa-solid fa-arrow-right flow-arrow"></i>
+          <span class="flow-chip flow-chip--action"><i class="fa-brands fa-whatsapp"></i> Send welcome message</span>
+        </div>
+        <div class="automation-row__meta"><strong>212 runs</strong><span>Paused 2 days ago</span></div>
+        <div class="automation-row__controls">
+          <label class="toggle"><input type="checkbox"><span class="toggle-track"></span></label>
+          <button class="composer-icon-btn" aria-label="Edit"><i class="fa-solid fa-pen"></i></button>
+        </div>
+      </div>
+    </div>
+
+<!-- ===== New automation modal ===== -->
+<div class="modal-backdrop" id="modal-new-automation">
+  <div class="modal modal--lg">
+    <div class="modal__head">
+      <h3>Create automation</h3>
+      <button class="modal__close" data-modal-close aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="modal__body">
+      <div class="field">
+        <input class="field__control" type="text" id="automation-name" placeholder=" ">
+        <label class="field__label" for="automation-name">Automation name</label>
+      </div>
+
+      <p class="form-section-title mt-6">When this happens…</p>
+      <div class="field field--select">
+        <select class="field__control select-control" id="automation-trigger">
+          <option>Booking confirmed</option>
+          <option>Appointment reminder time</option>
+          <option>Deposit unpaid</option>
+          <option>New contact messages for first time</option>
+          <option>Appointment completed</option>
+        </select>
+        <label class="field__label" for="automation-trigger">Trigger</label>
+      </div>
+
+      <p class="form-section-title mt-6">Do this…</p>
+      <div class="field field--select">
+        <select class="field__control select-control" id="automation-action">
+          <option>Send WhatsApp message</option>
+          <option>Send M-Pesa payment request</option>
+          <option>Cancel booking</option>
+          <option>Add tag to contact</option>
+          <option>Notify staff</option>
+        </select>
+        <label class="field__label" for="automation-action">Action</label>
+      </div>
+      <div class="field">
+        <textarea class="field__control" id="automation-message" rows="3" placeholder=" "></textarea>
+        <label class="field__label" for="automation-message">Message (if sending WhatsApp message)</label>
+      </div>
+    </div>
+    <div class="modal__foot">
+      <button class="btn btn--secondary" data-modal-close>Cancel</button>
+      <button class="btn btn--primary"><i class="fa-solid fa-check"></i> Create automation</button>
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+
+<script src="js/utils.js"></script>
+<script src="js/sidebar.js"></script>
+<script src="js/tabs.js"></script>
+<script src="js/table-filter.js"></script>
+<script src="js/modal.js"></script>
+<script src="js/dropzone.js"></script>
+
+</body>
+</html>

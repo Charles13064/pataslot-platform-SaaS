@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Integrations — PataSlot</title>
+
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/theme.css">
+<script src="js/theme.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/typography.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/buttons.css">
+<link rel="stylesheet" href="css/forms.css">
+<link rel="stylesheet" href="css/cards.css">
+<link rel="stylesheet" href="css/sidebar.css">
+<link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="css/tables.css">
+<link rel="stylesheet" href="css/modals.css">
+
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<div class="app-shell" data-app-shell>
+  <div class="sidebar-backdrop" data-sidebar-backdrop></div>
+
+  <aside class="sidebar" data-sidebar>
+    <div class="sidebar-brand">
+      <span class="brand-mark" aria-hidden="true"><i class="fa-solid fa-calendar-check"></i></span>
+      <span>PataSlot</span>
+      <button class="sidebar-collapse-btn" data-sidebar-collapse aria-label="Collapse sidebar"><i class="fa-solid fa-angles-left"></i></button>
+    </div>
+    <nav class="sidebar-nav" aria-label="Primary">
+      <a href="dashboard.html" class="sidebar-link"><i class="fa-solid fa-grip"></i><span>Dashboard</span></a>
+      <a href="inbox.html" class="sidebar-link"><i class="fa-brands fa-whatsapp"></i><span>Inbox</span><span class="badge-count">12</span></a>
+      <a href="contacts.html" class="sidebar-link"><i class="fa-solid fa-address-book"></i><span>Contacts</span></a>
+      <p class="sidebar-section-label">Catalog</p>
+      <a href="products.html" class="sidebar-link"><i class="fa-solid fa-box"></i><span>Products</span></a>
+      <a href="services.html" class="sidebar-link"><i class="fa-solid fa-scissors"></i><span>Services</span></a>
+      <a href="appointments.html" class="sidebar-link"><i class="fa-solid fa-calendar-days"></i><span>Appointments</span></a>
+      <a href="gallery.html" class="sidebar-link"><i class="fa-solid fa-images"></i><span>Gallery</span></a>
+      <p class="sidebar-section-label">Engage</p>
+      <a href="broadcasts.html" class="sidebar-link"><i class="fa-solid fa-tower-broadcast"></i><span>Broadcasts</span></a>
+      <a href="automations.html" class="sidebar-link"><i class="fa-solid fa-diagram-project"></i><span>Automations</span></a>
+      <a href="ai.html" class="sidebar-link"><i class="fa-solid fa-robot"></i><span>AI Assistant</span></a>
+      <p class="sidebar-section-label">Business</p>
+      <a href="analytics.html" class="sidebar-link"><i class="fa-solid fa-chart-line"></i><span>Analytics</span></a>
+      <a href="integrations.html" class="sidebar-link is-active"><i class="fa-solid fa-plug"></i><span>Integrations</span></a>
+      <a href="billing.html" class="sidebar-link"><i class="fa-solid fa-credit-card"></i><span>Billing</span></a>
+      <a href="settings.html" class="sidebar-link"><i class="fa-solid fa-gear"></i><span>Settings</span></a>
+    </nav>
+    <div class="sidebar-footer">
+      <a href="profile.html" class="sidebar-user">
+        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Faith Wanjiru">
+        <div class="sidebar-user__meta"><strong>Faith Wanjiru</strong><span>Glow Beauty Studio</span></div>
+      </a>
+      <a href="login.html" class="sidebar-link"><i class="fa-solid fa-arrow-right-from-bracket"></i><span>Log out</span></a>
+    </div>
+  </aside>
+
+  <div class="main-content">
+    <header class="topbar">
+      <button class="topbar-menu-btn" data-sidebar-open aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+      <h1 class="topbar-title">Integrations</h1>
+      <div class="topbar-actions">
+        <button class="theme-toggle" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i><i class="fa-solid fa-sun"></i></button>
+        <button class="topbar-icon-btn" aria-label="Notifications"><i class="fa-regular fa-bell"></i><span class="dot"></span></button>
+        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Faith Wanjiru" class="topbar-avatar">
+      </div>
+    </header>
+
+    <div class="page-wrap">
+      <div class="page-head">
+        <div>
+          <h1>Integrations</h1>
+          <p class="text-muted">Connect the tools Glow Beauty Studio already uses.</p>
+        </div>
+      </div>
+
+      <div class="grid grid-4" data-stagger>
+        <div class="feature-card hover-lift" data-reveal="up">
+          <div class="flex flex-between">
+            <div class="feature-card__icon"><i class="fa-solid fa-money-bill-transfer"></i></div>
+            <span class="badge badge--success"><i class="fa-solid fa-circle badge-dot-icon"></i> Connected</span>
+          </div>
+          <h3>M-Pesa</h3>
+          <p>Collect deposits and payments via STK push, straight in chat.</p>
+          <button class="btn btn--secondary btn--block mt-3"><i class="fa-solid fa-gear"></i> Manage</button>
+        </div>
+        <div class="feature-card hover-lift" data-reveal="up">
+          <div class="flex flex-between">
+            <div class="feature-card__icon"><i class="fa-brands fa-google"></i></div>
+            <span class="badge badge--success"><i class="fa-solid fa-circle badge-dot-icon"></i> Connected</span>
+          </div>
+          <h3>Google Calendar</h3>
+          <p>Two-way sync so appointments never double-book.</p>
+          <button class="btn btn--secondary btn--block mt-3"><i class="fa-solid fa-gear"></i> Manage</button>
+        </div>
+        <div class="feature-card hover-lift" data-reveal="up">
+          <div class="flex flex-between">
+            <div class="feature-card__icon"><i class="fa-brands fa-instagram"></i></div>
+            <span class="badge badge--neutral">Not connected</span>
+          </div>
+          <h3>Instagram</h3>
+          <p>Reply to DMs and comments from the same inbox.</p>
+          <button class="btn btn--primary btn--block mt-3"><i class="fa-solid fa-plug"></i> Connect</button>
+        </div>
+        <div class="feature-card hover-lift" data-reveal="up">
+          <div class="flex flex-between">
+            <div class="feature-card__icon"><i class="fa-brands fa-facebook"></i></div>
+            <span class="badge badge--neutral">Not connected</span>
+          </div>
+          <h3>Facebook</h3>
+          <p>Manage Messenger conversations alongside WhatsApp.</p>
+          <button class="btn btn--primary btn--block mt-3"><i class="fa-solid fa-plug"></i> Connect</button>
+        </div>
+        <div class="feature-card hover-lift" data-reveal="up">
+          <div class="flex flex-between">
+            <div class="feature-card__icon"><i class="fa-brands fa-tiktok"></i></div>
+            <span class="badge badge--neutral">Not connected</span>
+          </div>
+          <h3>TikTok</h3>
+          <p>Turn TikTok comments into booked appointments.</p>
+          <button class="btn btn--primary btn--block mt-3"><i class="fa-solid fa-plug"></i> Connect</button>
+        </div>
+        <div class="feature-card hover-lift" data-reveal="up">
+          <div class="flex flex-between">
+            <div class="feature-card__icon"><i class="fa-solid fa-bolt"></i></div>
+            <span class="badge badge--neutral">Not connected</span>
+          </div>
+          <h3>Zapier</h3>
+          <p>Connect PataSlot to 5,000+ other apps.</p>
+          <button class="btn btn--primary btn--block mt-3"><i class="fa-solid fa-plug"></i> Connect</button>
+        </div>
+        <div class="feature-card hover-lift" data-reveal="up">
+          <div class="flex flex-between">
+            <div class="feature-card__icon"><i class="fa-solid fa-robot"></i></div>
+            <span class="badge badge--success"><i class="fa-solid fa-circle badge-dot-icon"></i> Connected</span>
+          </div>
+          <h3>OpenAI / OpenRouter</h3>
+          <p>Bring your own API key for a custom AI model.</p>
+          <button class="btn btn--secondary btn--block mt-3"><i class="fa-solid fa-gear"></i> Manage</button>
+        </div>
+        <div class="feature-card hover-lift" data-reveal="up">
+          <div class="flex flex-between">
+            <div class="feature-card__icon"><i class="fa-brands fa-meta"></i></div>
+            <span class="badge badge--success"><i class="fa-solid fa-circle badge-dot-icon"></i> Connected</span>
+          </div>
+          <h3>Meta Business Suite</h3>
+          <p>WhatsApp Business API credentials and webhook setup.</p>
+          <button class="btn btn--secondary btn--block mt-3"><i class="fa-solid fa-gear"></i> Manage</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/utils.js"></script>
+<script src="js/sidebar.js"></script>
+<script src="js/tabs.js"></script>
+<script src="js/table-filter.js"></script>
+<script src="js/modal.js"></script>
+<script src="js/dropzone.js"></script>
+
+</body>
+</html>

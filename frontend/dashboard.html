@@ -23,6 +23,7 @@
 <meta name="apple-mobile-web-app-title" content="PataSlot" />
 <link rel="manifest" href="favicon/site.webmanifest?v=20260729" />
 
+<script src="https://cdn.lordicon.com/lordicon.js"></script>
 
 <link rel="stylesheet" href="Frontenfcss/reset.css">
 <link rel="stylesheet" href="css/typography.css">
@@ -37,6 +38,9 @@
 <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
+
+<!-- Lordicon-->
+
 
 <!-- Lucide icons -->
 <script src="https://unpkg.com/lucide@latest"></script>
@@ -128,7 +132,8 @@
 
       <div class="page-head">
         <div>
-          <h1>Good morning, Faith 👋</h1>
+          <!--Greeting the user-->
+          <h1 id="greeting-title">Loading greeting...</h1><p> Faith 👋</p>
           <p class="text-muted">Here's how Glow Beauty Studio is doing today.</p>
         </div>
         <a href="broadcasts.html" class="btn btn--primary"><i class="fa-solid fa-tower-broadcast"></i> New broadcast</a>
@@ -256,11 +261,16 @@
       <!-- ===== QUICK ACTIONS ===== -->
       <p class="form-section-title mt-8">Quick actions</p>
       <div class="quick-actions">
-        <a href="products.html" class="quick-action-btn hover-lift"><i class="fa-solid fa-box"></i> Add product</a>
+        <a href="products.html" class="quick-action-btn hover-lift">Add product</a>
+
         <a href="services.html" class="quick-action-btn hover-lift"><i class="fa-solid fa-scissors"></i> Add service</a>
+
         <a href="broadcasts.html" class="quick-action-btn hover-lift"><i class="fa-solid fa-tower-broadcast"></i> Broadcast</a>
-        <a href="gallery.html" class="quick-action-btn hover-lift"><i class="fa-solid fa-images"></i> Upload gallery</a>
+
+        <a href="gallery.html" class="quick-action-btn hover-lift"><i data-lucide="images" style="color: green;"></i> Upload gallery</a>
+
         <a href="automations.html" class="quick-action-btn hover-lift"><i class="fa-solid fa-diagram-project"></i> Automation</a>
+
       </div>
 
       <!-- ===== NOTIFICATIONS ===== -->
@@ -275,7 +285,7 @@
           <div><p>Appointment with Sarah K. was cancelled.</p><span>Today, 7:41 AM</span></div>
         </div>
         <div class="notif-item">
-          <span class="notif-item__icon notif-item__icon--info"><i class="fa-solid fa-robot"></i></span>
+          <span class="notif-item__icon notif-item__icon--info"><i data-lucide="bot-message-square"></i></span>
           <div><p>AI credits are running low — 76% used this month.</p><span>Yesterday, 6:15 PM</span></div>
         </div>
       </div>
@@ -288,8 +298,8 @@
 <nav class="bottom-nav" aria-label="Mobile primary">
   <a href="dashboard.html" class="bottom-nav-link is-active"><i class="fa-solid fa-grip"></i>Dashboard</a>
   <a href="inbox.html" class="bottom-nav-link"><i class="fa-brands fa-whatsapp"></i>Inbox</a>
-  <a href="appointments.html" class="bottom-nav-link"><i class="fa-solid fa-calendar-days"></i>Appts</a>
-  <a href="products.html" class="bottom-nav-link"><i class="fa-solid fa-box"></i>Products</a>
+  <a href="appointments.html" class="bottom-nav-link"><i data-lucide="clipboard-clock"></i> Appts</a>
+  <a href="products.html" class="bottom-nav-link"><i data-lucide="shopping-basket"></i>Products</a>
   <a href="settings.html" class="bottom-nav-link"><i class="fa-solid fa-ellipsis"></i>More</a>
 </nav>
 <button class="fab" aria-label="Quick add"><i class="fa-solid fa-plus"></i></button>
@@ -300,5 +310,6 @@
 <script src="js/charts/chart-theme.js"></script>
 <script src="js/charts/revenue-chart.js"></script>
 <script src="js/dashboard.js"></script>
+<script src="JS/greeting.js"></script>
 </body>
 </html>

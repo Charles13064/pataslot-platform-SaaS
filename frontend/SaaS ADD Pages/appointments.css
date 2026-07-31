@@ -1,0 +1,70 @@
+/* ==========================================================================
+   PataSlot — Appointments
+   Day-grouped agenda list (calendar grid is a v2 upgrade of this shell).
+   ========================================================================== */
+
+.view-toggle {
+  display: inline-flex;
+  background: var(--color-gray-100);
+  border-radius: var(--radius-pill);
+  padding: 3px;
+}
+.view-toggle button {
+  padding: 7px 16px;
+  border-radius: var(--radius-pill);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-medium);
+  color: var(--color-gray-600);
+}
+.view-toggle button.is-active { background: var(--color-white); color: var(--color-black); box-shadow: var(--shadow-sm); }
+
+.agenda-group { margin-bottom: var(--space-6); }
+.agenda-group__label {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  color: var(--color-black);
+  margin-bottom: var(--space-3);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+.agenda-group__label .chip { font-weight: var(--fw-medium); }
+
+.agenda-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  background: var(--color-white);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  margin-bottom: var(--space-3);
+  transition: box-shadow var(--dur-fast) var(--ease-out), transform var(--dur-fast) var(--ease-out);
+}
+.agenda-row:hover { box-shadow: var(--shadow-sm); transform: translateY(-1px); }
+.agenda-row__time { width: 64px; flex-shrink: 0; text-align: center; }
+.agenda-row__time strong { display: block; font-size: var(--fs-sm); color: var(--color-black); }
+.agenda-row__time span { font-size: 10px; color: var(--color-gray-500); }
+.agenda-row__divider { width: 1px; align-self: stretch; background: var(--border-subtle); }
+.agenda-row img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
+.agenda-row__body { flex: 1; min-width: 0; }
+.agenda-row__body strong { display: block; font-size: var(--fs-sm); color: var(--color-black); }
+.agenda-row__body span { font-size: var(--fs-xs); color: var(--color-gray-500); }
+.agenda-row__staff { display: none; font-size: var(--fs-xs); color: var(--color-gray-500); white-space: nowrap; }
+.agenda-row__actions { display: flex; gap: var(--space-2); flex-shrink: 0; }
+.agenda-row__actions button {
+  width: 32px; height: 32px;
+  border-radius: var(--radius-sm);
+  display: grid;
+  place-items: center;
+  color: var(--color-gray-500);
+}
+.agenda-row__actions button:hover { background: var(--color-gray-100); color: var(--color-black); }
+
+@media (min-width: 900px) {
+  .agenda-row__staff { display: block; width: 120px; }
+}
+
+@media (max-width: 640px) {
+  .agenda-row__time { width: 48px; }
+}

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Assistant — PataSlot</title>
+
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/theme.css">
+<script src="js/theme.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/typography.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/buttons.css">
+<link rel="stylesheet" href="css/forms.css">
+<link rel="stylesheet" href="css/cards.css">
+<link rel="stylesheet" href="css/sidebar.css">
+<link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="css/tables.css">
+<link rel="stylesheet" href="css/modals.css">
+<link rel="stylesheet" href="css/ai.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<div class="app-shell" data-app-shell>
+  <div class="sidebar-backdrop" data-sidebar-backdrop></div>
+
+  <aside class="sidebar" data-sidebar>
+    <div class="sidebar-brand">
+      <span class="brand-mark" aria-hidden="true"><i class="fa-solid fa-calendar-check"></i></span>
+      <span>PataSlot</span>
+      <button class="sidebar-collapse-btn" data-sidebar-collapse aria-label="Collapse sidebar"><i class="fa-solid fa-angles-left"></i></button>
+    </div>
+    <nav class="sidebar-nav" aria-label="Primary">
+      <a href="dashboard.html" class="sidebar-link"><i class="fa-solid fa-grip"></i><span>Dashboard</span></a>
+      <a href="inbox.html" class="sidebar-link"><i class="fa-brands fa-whatsapp"></i><span>Inbox</span><span class="badge-count">12</span></a>
+      <a href="contacts.html" class="sidebar-link"><i class="fa-solid fa-address-book"></i><span>Contacts</span></a>
+      <p class="sidebar-section-label">Catalog</p>
+      <a href="products.html" class="sidebar-link"><i class="fa-solid fa-box"></i><span>Products</span></a>
+      <a href="services.html" class="sidebar-link"><i class="fa-solid fa-scissors"></i><span>Services</span></a>
+      <a href="appointments.html" class="sidebar-link"><i class="fa-solid fa-calendar-days"></i><span>Appointments</span></a>
+      <a href="gallery.html" class="sidebar-link"><i class="fa-solid fa-images"></i><span>Gallery</span></a>
+      <p class="sidebar-section-label">Engage</p>
+      <a href="broadcasts.html" class="sidebar-link"><i class="fa-solid fa-tower-broadcast"></i><span>Broadcasts</span></a>
+      <a href="automations.html" class="sidebar-link"><i class="fa-solid fa-diagram-project"></i><span>Automations</span></a>
+      <a href="ai.html" class="sidebar-link is-active"><i class="fa-solid fa-robot"></i><span>AI Assistant</span></a>
+      <p class="sidebar-section-label">Business</p>
+      <a href="analytics.html" class="sidebar-link"><i class="fa-solid fa-chart-line"></i><span>Analytics</span></a>
+      <a href="integrations.html" class="sidebar-link"><i class="fa-solid fa-plug"></i><span>Integrations</span></a>
+      <a href="billing.html" class="sidebar-link"><i class="fa-solid fa-credit-card"></i><span>Billing</span></a>
+      <a href="settings.html" class="sidebar-link"><i class="fa-solid fa-gear"></i><span>Settings</span></a>
+    </nav>
+    <div class="sidebar-footer">
+      <a href="profile.html" class="sidebar-user">
+        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Faith Wanjiru">
+        <div class="sidebar-user__meta"><strong>Faith Wanjiru</strong><span>Glow Beauty Studio</span></div>
+      </a>
+      <a href="login.html" class="sidebar-link"><i class="fa-solid fa-arrow-right-from-bracket"></i><span>Log out</span></a>
+    </div>
+  </aside>
+
+  <div class="main-content">
+    <header class="topbar">
+      <button class="topbar-menu-btn" data-sidebar-open aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+      <h1 class="topbar-title">AI Assistant</h1>
+      <div class="topbar-actions">
+        <button class="theme-toggle" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i><i class="fa-solid fa-sun"></i></button>
+        <button class="topbar-icon-btn" aria-label="Notifications"><i class="fa-regular fa-bell"></i><span class="dot"></span></button>
+        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Faith Wanjiru" class="topbar-avatar">
+      </div>
+    </header>
+
+    <div class="page-wrap">
+      <div class="page-head">
+        <div>
+          <h1>AI Assistant</h1>
+          <p class="text-muted">Train and test the AI that answers your customers on WhatsApp.</p>
+        </div>
+        <button class="btn btn--primary" data-modal-open="modal-ai-settings"><i class="fa-solid fa-sliders"></i> AI settings</button>
+      </div>
+
+      <div class="metric-grid mb-6" data-stagger>
+        <div class="metric-card hover-lift" data-reveal="up">
+          <div class="metric-card__top"><span class="metric-card__label">Credits used</span><span class="metric-card__icon"><i class="fa-solid fa-robot"></i></span></div>
+          <span class="metric-card__value"><span class="counter" data-counter="380">0</span> / 500</span>
+        </div>
+        <div class="metric-card hover-lift" data-reveal="up">
+          <div class="metric-card__top"><span class="metric-card__label">Avg. response time</span><span class="metric-card__icon"><i class="fa-solid fa-bolt"></i></span></div>
+          <span class="metric-card__value">2.4s</span>
+        </div>
+        <div class="metric-card hover-lift" data-reveal="up">
+          <div class="metric-card__top"><span class="metric-card__label">Resolved without human</span><span class="metric-card__icon"><i class="fa-solid fa-circle-check"></i></span></div>
+          <span class="metric-card__value"><span class="counter" data-counter="89" data-suffix="%">0</span></span>
+        </div>
+        <div class="metric-card hover-lift" data-reveal="up">
+          <div class="metric-card__top"><span class="metric-card__label">Handed to human</span><span class="metric-card__icon"><i class="fa-solid fa-people-arrows"></i></span></div>
+          <span class="metric-card__value"><span class="counter" data-counter="11" data-suffix="%">0</span></span>
+        </div>
+      </div>
+
+      <div class="ai-shell">
+        <aside class="ai-side">
+          <div>
+            <p class="ai-side__group-label">Prompt history</p>
+            <a href="#" class="ai-side__item is-active">Test: booking flow</a>
+            <a href="#" class="ai-side__item">Test: pricing question</a>
+            <a href="#" class="ai-side__item">Test: cancellation</a>
+            <a href="#" class="ai-side__item">Test: Swahili greeting</a>
+          </div>
+          <div>
+            <p class="ai-side__group-label">Templates</p>
+            <a href="#" class="ai-side__item">Welcome message</a>
+            <a href="#" class="ai-side__item">Booking confirmation</a>
+            <a href="#" class="ai-side__item">Payment reminder</a>
+          </div>
+          <div>
+            <p class="ai-side__group-label">Business knowledge</p>
+            <a href="#" class="ai-side__item"><i class="fa-solid fa-file-lines"></i> Services &amp; pricing</a>
+            <a href="#" class="ai-side__item"><i class="fa-solid fa-file-lines"></i> Opening hours</a>
+            <a href="#" class="ai-side__item"><i class="fa-solid fa-file-lines"></i> FAQs</a>
+            <button class="btn btn--secondary btn--sm btn--block mt-3" data-modal-open="modal-add-knowledge"><i class="fa-solid fa-plus"></i> Add knowledge</button>
+          </div>
+        </aside>
+
+        <section class="ai-main">
+          <div class="ai-main__head">
+            <h3>Test your assistant</h3>
+            <span class="badge badge--success"><i class="fa-solid fa-circle badge-dot-icon"></i> Live on WhatsApp</span>
+          </div>
+
+          <div class="ai-thread" data-ai-thread>
+            <div class="ai-msg ai-msg--user"><span class="ai-msg__avatar"><i class="fa-solid fa-user"></i></span><span class="ai-msg__bubble">Hi, is there a slot for a haircut around 3pm?</span></div>
+            <div class="ai-msg ai-msg--assistant"><span class="ai-msg__avatar"><i class="fa-solid fa-robot"></i></span><span class="ai-msg__bubble">Yes! I have 3:15pm with Brian free. Shall I book it for you?</span></div>
+          </div>
+
+          <div class="ai-suggested">
+            <span class="chip is-clickable" data-suggested-reply>Yes, book it</span>
+            <span class="chip is-clickable" data-suggested-reply>What's the price?</span>
+            <span class="chip is-clickable" data-suggested-reply>Any earlier slots?</span>
+          </div>
+
+          <div class="ai-composer">
+            <textarea class="composer-input" rows="1" placeholder="Type a test message…" data-ai-input></textarea>
+            <button class="composer-send-btn" data-ai-send aria-label="Send"><i class="fa-solid fa-paper-plane"></i></button>
+          </div>
+        </section>
+      </div>
+    </div>
+
+<!-- ===== AI settings modal ===== -->
+<div class="modal-backdrop" id="modal-ai-settings">
+  <div class="modal">
+    <div class="modal__head">
+      <h3>AI settings</h3>
+      <button class="modal__close" data-modal-close aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="modal__body">
+      <div class="field field--select">
+        <select class="field__control select-control" id="ai-model-setting">
+          <option>PataSlot Default (recommended)</option>
+          <option>GPT-4o mini</option>
+          <option>Claude Haiku</option>
+          <option>Llama 3.1 70B</option>
+        </select>
+        <label class="field__label" for="ai-model-setting">AI model</label>
+      </div>
+      <div class="field field--select">
+        <select class="field__control select-control" id="ai-tone-setting">
+          <option>Friendly &amp; casual</option>
+          <option>Professional</option>
+          <option>Warm &amp; formal</option>
+        </select>
+        <label class="field__label" for="ai-tone-setting">Reply tone</label>
+      </div>
+      <label class="check-row">
+        <input type="checkbox" checked>
+        <span>Hand off to a human when the AI isn't confident</span>
+      </label>
+    </div>
+    <div class="modal__foot">
+      <button class="btn btn--secondary" data-modal-close>Cancel</button>
+      <button class="btn btn--primary">Save settings</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Add knowledge modal ===== -->
+<div class="modal-backdrop" id="modal-add-knowledge">
+  <div class="modal">
+    <div class="modal__head">
+      <h3>Add business knowledge</h3>
+      <button class="modal__close" data-modal-close aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="modal__body">
+      <div class="field">
+        <input class="field__control" type="text" id="knowledge-title" placeholder=" ">
+        <label class="field__label" for="knowledge-title">Title</label>
+      </div>
+      <div class="field">
+        <textarea class="field__control" id="knowledge-content" rows="4" placeholder=" "></textarea>
+        <label class="field__label" for="knowledge-content">Content the AI should know</label>
+      </div>
+    </div>
+    <div class="modal__foot">
+      <button class="btn btn--secondary" data-modal-close>Cancel</button>
+      <button class="btn btn--primary">Add</button>
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+
+<script src="js/utils.js"></script>
+<script src="js/sidebar.js"></script>
+<script src="js/tabs.js"></script>
+<script src="js/table-filter.js"></script>
+<script src="js/modal.js"></script>
+<script src="js/dropzone.js"></script>
+<script src="js/ai.js"></script>
+</body>
+</html>

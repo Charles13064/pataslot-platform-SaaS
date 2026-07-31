@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Appointments — PataSlot</title>
+
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/theme.css">
+<script src="js/theme.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/typography.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/buttons.css">
+<link rel="stylesheet" href="css/forms.css">
+<link rel="stylesheet" href="css/cards.css">
+<link rel="stylesheet" href="css/sidebar.css">
+<link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="css/tables.css">
+<link rel="stylesheet" href="css/modals.css">
+<link rel="stylesheet" href="css/appointments.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<div class="app-shell" data-app-shell>
+  <div class="sidebar-backdrop" data-sidebar-backdrop></div>
+
+  <aside class="sidebar" data-sidebar>
+    <div class="sidebar-brand">
+      <span class="brand-mark" aria-hidden="true"><i class="fa-solid fa-calendar-check"></i></span>
+      <span>PataSlot</span>
+      <button class="sidebar-collapse-btn" data-sidebar-collapse aria-label="Collapse sidebar"><i class="fa-solid fa-angles-left"></i></button>
+    </div>
+    <nav class="sidebar-nav" aria-label="Primary">
+      <a href="dashboard.html" class="sidebar-link"><i class="fa-solid fa-grip"></i><span>Dashboard</span></a>
+      <a href="inbox.html" class="sidebar-link"><i class="fa-brands fa-whatsapp"></i><span>Inbox</span><span class="badge-count">12</span></a>
+      <a href="contacts.html" class="sidebar-link"><i class="fa-solid fa-address-book"></i><span>Contacts</span></a>
+      <p class="sidebar-section-label">Catalog</p>
+      <a href="products.html" class="sidebar-link"><i class="fa-solid fa-box"></i><span>Products</span></a>
+      <a href="services.html" class="sidebar-link"><i class="fa-solid fa-scissors"></i><span>Services</span></a>
+      <a href="appointments.html" class="sidebar-link is-active"><i class="fa-solid fa-calendar-days"></i><span>Appointments</span></a>
+      <a href="gallery.html" class="sidebar-link"><i class="fa-solid fa-images"></i><span>Gallery</span></a>
+      <p class="sidebar-section-label">Engage</p>
+      <a href="broadcasts.html" class="sidebar-link"><i class="fa-solid fa-tower-broadcast"></i><span>Broadcasts</span></a>
+      <a href="automations.html" class="sidebar-link"><i class="fa-solid fa-diagram-project"></i><span>Automations</span></a>
+      <a href="ai.html" class="sidebar-link"><i class="fa-solid fa-robot"></i><span>AI Assistant</span></a>
+      <p class="sidebar-section-label">Business</p>
+      <a href="analytics.html" class="sidebar-link"><i class="fa-solid fa-chart-line"></i><span>Analytics</span></a>
+      <a href="integrations.html" class="sidebar-link"><i class="fa-solid fa-plug"></i><span>Integrations</span></a>
+      <a href="billing.html" class="sidebar-link"><i class="fa-solid fa-credit-card"></i><span>Billing</span></a>
+      <a href="settings.html" class="sidebar-link"><i class="fa-solid fa-gear"></i><span>Settings</span></a>
+    </nav>
+    <div class="sidebar-footer">
+      <a href="profile.html" class="sidebar-user">
+        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Faith Wanjiru">
+        <div class="sidebar-user__meta"><strong>Faith Wanjiru</strong><span>Glow Beauty Studio</span></div>
+      </a>
+      <a href="login.html" class="sidebar-link"><i class="fa-solid fa-arrow-right-from-bracket"></i><span>Log out</span></a>
+    </div>
+  </aside>
+
+  <div class="main-content">
+    <header class="topbar">
+      <button class="topbar-menu-btn" data-sidebar-open aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+      <h1 class="topbar-title">Appointments</h1>
+      <div class="topbar-actions">
+        <button class="theme-toggle" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i><i class="fa-solid fa-sun"></i></button>
+        <button class="topbar-icon-btn" aria-label="Notifications"><i class="fa-regular fa-bell"></i><span class="dot"></span></button>
+        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Faith Wanjiru" class="topbar-avatar">
+      </div>
+    </header>
+
+    <div class="page-wrap">
+      <div class="page-head">
+        <div>
+          <h1>Appointments</h1>
+          <p class="text-muted">Everything booked through WhatsApp, in one place.</p>
+        </div>
+        <div class="flex gap-3">
+          <button class="btn btn--secondary"><i class="fa-solid fa-file-export"></i> Export</button>
+          <button class="btn btn--primary" data-modal-open="modal-new-appt"><i class="fa-solid fa-plus"></i> New appointment</button>
+        </div>
+      </div>
+
+      <div class="metric-grid mb-6" data-stagger>
+        <div class="metric-card hover-lift" data-reveal="up">
+          <div class="metric-card__top"><span class="metric-card__label">Today</span><span class="metric-card__icon"><i class="fa-solid fa-calendar-day"></i></span></div>
+          <span class="metric-card__value"><span class="counter" data-counter="19">0</span></span>
+        </div>
+        <div class="metric-card hover-lift" data-reveal="up">
+          <div class="metric-card__top"><span class="metric-card__label">Upcoming</span><span class="metric-card__icon"><i class="fa-solid fa-hourglass-half"></i></span></div>
+          <span class="metric-card__value"><span class="counter" data-counter="47">0</span></span>
+        </div>
+        <div class="metric-card hover-lift" data-reveal="up">
+          <div class="metric-card__top"><span class="metric-card__label">Completed this week</span><span class="metric-card__icon"><i class="fa-solid fa-circle-check"></i></span></div>
+          <span class="metric-card__value"><span class="counter" data-counter="112">0</span></span>
+        </div>
+        <div class="metric-card hover-lift" data-reveal="up">
+          <div class="metric-card__top"><span class="metric-card__label">Cancelled this week</span><span class="metric-card__icon"><i class="fa-solid fa-calendar-xmark"></i></span></div>
+          <span class="metric-card__value"><span class="counter" data-counter="6">0</span></span>
+        </div>
+      </div>
+
+      <div class="table-toolbar toolbar-card mb-6">
+        <div class="field">
+          <input class="field__control" type="search" id="appt-search" placeholder=" " data-filter-input data-filter-target="[data-appt-list]">
+          <label class="field__label" for="appt-search">Search appointments</label>
+        </div>
+        <div class="flex gap-3 flex-wrap">
+          <div class="flex gap-3" data-tab-group>
+            <span class="chip is-active is-clickable">All</span>
+            <span class="chip is-clickable">Upcoming</span>
+            <span class="chip is-clickable">Completed</span>
+            <span class="chip is-clickable">Cancelled</span>
+          </div>
+          <div class="view-toggle" data-tab-group>
+            <button class="is-active"><i class="fa-solid fa-list"></i> List</button>
+            <button><i class="fa-solid fa-calendar"></i> Calendar</button>
+          </div>
+        </div>
+      </div>
+
+      <div data-appt-list>
+        <div class="agenda-group">
+          <p class="agenda-group__label">Today <span class="chip">29 Jul</span></p>
+
+          <div class="agenda-row" data-filter-row>
+            <div class="agenda-row__time"><strong>11:00</strong><span>AM</span></div>
+            <div class="agenda-row__divider"></div>
+            <img src="https://randomuser.me/api/portraits/women/33.jpg" alt="">
+            <div class="agenda-row__body"><strong>Jane Wambui</strong><span>Hair coloring · 90 min</span></div>
+            <span class="agenda-row__staff">Staff: Brian</span>
+            <span class="badge badge--success">Confirmed</span>
+            <div class="agenda-row__actions">
+              <button aria-label="Reschedule"><i class="fa-solid fa-pen"></i></button>
+              <button aria-label="Cancel"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+          </div>
+
+          <div class="agenda-row" data-filter-row>
+            <div class="agenda-row__time"><strong>12:30</strong><span>PM</span></div>
+            <div class="agenda-row__divider"></div>
+            <img src="https://randomuser.me/api/portraits/men/61.jpg" alt="">
+            <div class="agenda-row__body"><strong>Kevin Kiprop</strong><span>Beard trim · 30 min</span></div>
+            <span class="agenda-row__staff">Staff: Faith</span>
+            <span class="badge badge--success">Confirmed</span>
+            <div class="agenda-row__actions">
+              <button aria-label="Reschedule"><i class="fa-solid fa-pen"></i></button>
+              <button aria-label="Cancel"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+          </div>
+
+          <div class="agenda-row" data-filter-row>
+            <div class="agenda-row__time"><strong>3:15</strong><span>PM</span></div>
+            <div class="agenda-row__divider"></div>
+            <img src="https://randomuser.me/api/portraits/men/54.jpg" alt="">
+            <div class="agenda-row__body"><strong>John Mwangi</strong><span>Haircut · 45 min</span></div>
+            <span class="agenda-row__staff">Staff: Brian</span>
+            <span class="badge badge--warning">Pending deposit</span>
+            <div class="agenda-row__actions">
+              <button aria-label="Reschedule"><i class="fa-solid fa-pen"></i></button>
+              <button aria-label="Cancel"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+          </div>
+
+          <div class="agenda-row" data-filter-row>
+            <div class="agenda-row__time"><strong>5:00</strong><span>PM</span></div>
+            <div class="agenda-row__divider"></div>
+            <img src="https://randomuser.me/api/portraits/women/22.jpg" alt="">
+            <div class="agenda-row__body"><strong>Mercy Njeri</strong><span>Manicure · 40 min</span></div>
+            <span class="agenda-row__staff">Staff: Faith</span>
+            <span class="badge badge--success">Confirmed</span>
+            <div class="agenda-row__actions">
+              <button aria-label="Reschedule"><i class="fa-solid fa-pen"></i></button>
+              <button aria-label="Cancel"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="agenda-group">
+          <p class="agenda-group__label">Tomorrow <span class="chip">30 Jul</span></p>
+
+          <div class="agenda-row" data-filter-row>
+            <div class="agenda-row__time"><strong>9:00</strong><span>AM</span></div>
+            <div class="agenda-row__divider"></div>
+            <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="">
+            <div class="agenda-row__body"><strong>Grace Achieng</strong><span>Full set · 120 min</span></div>
+            <span class="agenda-row__staff">Staff: Brian</span>
+            <span class="badge badge--success">Confirmed</span>
+            <div class="agenda-row__actions">
+              <button aria-label="Reschedule"><i class="fa-solid fa-pen"></i></button>
+              <button aria-label="Cancel"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+          </div>
+
+          <div class="agenda-row" data-filter-row>
+            <div class="agenda-row__time"><strong>2:00</strong><span>PM</span></div>
+            <div class="agenda-row__divider"></div>
+            <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="">
+            <div class="agenda-row__body"><strong>Amina Hassan</strong><span>Haircut · 45 min</span></div>
+            <span class="agenda-row__staff">Staff: Faith</span>
+            <span class="badge badge--neutral">Cancelled</span>
+            <div class="agenda-row__actions">
+              <button aria-label="Reschedule"><i class="fa-solid fa-pen"></i></button>
+              <button aria-label="Cancel"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-between mt-6 is-hidden" data-filter-empty>
+        <span class="text-muted text-sm">No appointments match your search.</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== New appointment modal ===== -->
+<div class="modal-backdrop" id="modal-new-appt">
+  <div class="modal modal--lg">
+    <div class="modal__head">
+      <h3>New appointment</h3>
+      <button class="modal__close" data-modal-close aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="modal__body">
+      <div class="field">
+        <input class="field__control" type="text" id="appt-customer" placeholder=" ">
+        <label class="field__label" for="appt-customer">Customer name or phone</label>
+      </div>
+      <div class="field-row">
+        <div class="field field--select">
+          <select class="field__control select-control" id="appt-service">
+            <option>Haircut · 45 min</option>
+            <option>Hair coloring · 90 min</option>
+            <option>Beard trim · 30 min</option>
+            <option>Manicure · 40 min</option>
+          </select>
+          <label class="field__label" for="appt-service">Service</label>
+        </div>
+        <div class="field field--select">
+          <select class="field__control select-control" id="appt-staff">
+            <option>Brian</option>
+            <option>Faith</option>
+            <option>Any available</option>
+          </select>
+          <label class="field__label" for="appt-staff">Staff</label>
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <input class="field__control" type="date" id="appt-date" placeholder=" ">
+          <label class="field__label" for="appt-date">Date</label>
+        </div>
+        <div class="field">
+          <input class="field__control" type="time" id="appt-time" placeholder=" ">
+          <label class="field__label" for="appt-time">Time</label>
+        </div>
+      </div>
+      <div class="field">
+        <textarea class="field__control" id="appt-notes" rows="2" placeholder=" "></textarea>
+        <label class="field__label" for="appt-notes">Notes (optional)</label>
+      </div>
+    </div>
+    <div class="modal__foot">
+      <button class="btn btn--secondary" data-modal-close>Cancel</button>
+      <button class="btn btn--primary"><i class="fa-solid fa-calendar-check"></i> Book appointment</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/utils.js"></script>
+<script src="js/sidebar.js"></script>
+<script src="js/table-filter.js"></script>
+<script src="js/tabs.js"></script>
+<script src="js/modal.js"></script>
+</body>
+</html>

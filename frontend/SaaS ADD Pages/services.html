@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services — PataSlot</title>
+
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/theme.css">
+<script src="js/theme.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/typography.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/buttons.css">
+<link rel="stylesheet" href="css/forms.css">
+<link rel="stylesheet" href="css/cards.css">
+<link rel="stylesheet" href="css/sidebar.css">
+<link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="css/tables.css">
+<link rel="stylesheet" href="css/modals.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<div class="app-shell" data-app-shell>
+  <div class="sidebar-backdrop" data-sidebar-backdrop></div>
+
+  <aside class="sidebar" data-sidebar>
+    <div class="sidebar-brand">
+      <span class="brand-mark" aria-hidden="true"><i class="fa-solid fa-calendar-check"></i></span>
+      <span>PataSlot</span>
+      <button class="sidebar-collapse-btn" data-sidebar-collapse aria-label="Collapse sidebar"><i class="fa-solid fa-angles-left"></i></button>
+    </div>
+    <nav class="sidebar-nav" aria-label="Primary">
+      <a href="dashboard.html" class="sidebar-link"><i class="fa-solid fa-grip"></i><span>Dashboard</span></a>
+      <a href="inbox.html" class="sidebar-link"><i class="fa-brands fa-whatsapp"></i><span>Inbox</span><span class="badge-count">12</span></a>
+      <a href="contacts.html" class="sidebar-link"><i class="fa-solid fa-address-book"></i><span>Contacts</span></a>
+      <p class="sidebar-section-label">Catalog</p>
+      <a href="products.html" class="sidebar-link"><i class="fa-solid fa-box"></i><span>Products</span></a>
+      <a href="services.html" class="sidebar-link is-active"><i class="fa-solid fa-scissors"></i><span>Services</span></a>
+      <a href="appointments.html" class="sidebar-link"><i class="fa-solid fa-calendar-days"></i><span>Appointments</span></a>
+      <a href="gallery.html" class="sidebar-link"><i class="fa-solid fa-images"></i><span>Gallery</span></a>
+      <p class="sidebar-section-label">Engage</p>
+      <a href="broadcasts.html" class="sidebar-link"><i class="fa-solid fa-tower-broadcast"></i><span>Broadcasts</span></a>
+      <a href="automations.html" class="sidebar-link"><i class="fa-solid fa-diagram-project"></i><span>Automations</span></a>
+      <a href="ai.html" class="sidebar-link"><i class="fa-solid fa-robot"></i><span>AI Assistant</span></a>
+      <p class="sidebar-section-label">Business</p>
+      <a href="analytics.html" class="sidebar-link"><i class="fa-solid fa-chart-line"></i><span>Analytics</span></a>
+      <a href="integrations.html" class="sidebar-link"><i class="fa-solid fa-plug"></i><span>Integrations</span></a>
+      <a href="billing.html" class="sidebar-link"><i class="fa-solid fa-credit-card"></i><span>Billing</span></a>
+      <a href="settings.html" class="sidebar-link"><i class="fa-solid fa-gear"></i><span>Settings</span></a>
+    </nav>
+    <div class="sidebar-footer">
+      <a href="profile.html" class="sidebar-user">
+        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Faith Wanjiru">
+        <div class="sidebar-user__meta"><strong>Faith Wanjiru</strong><span>Glow Beauty Studio</span></div>
+      </a>
+      <a href="login.html" class="sidebar-link"><i class="fa-solid fa-arrow-right-from-bracket"></i><span>Log out</span></a>
+    </div>
+  </aside>
+
+  <div class="main-content">
+    <header class="topbar">
+      <button class="topbar-menu-btn" data-sidebar-open aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+      <h1 class="topbar-title">Services</h1>
+      <div class="topbar-actions">
+        <button class="theme-toggle" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i><i class="fa-solid fa-sun"></i></button>
+        <button class="topbar-icon-btn" aria-label="Notifications"><i class="fa-regular fa-bell"></i><span class="dot"></span></button>
+        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Faith Wanjiru" class="topbar-avatar">
+      </div>
+    </header>
+
+    <div class="page-wrap">
+      <div class="page-head">
+        <div>
+          <h1>Services</h1>
+          <p class="text-muted">What customers can book, and who delivers it.</p>
+        </div>
+        <button class="btn btn--primary" data-modal-open="modal-add-service"><i class="fa-solid fa-plus"></i> Add service</button>
+      </div>
+
+      <div class="table-toolbar toolbar-card mb-6">
+        <div class="field">
+          <input class="field__control" type="search" id="service-search" placeholder=" " data-filter-input data-filter-target="[data-service-grid]">
+          <label class="field__label" for="service-search">Search services</label>
+        </div>
+        <div class="flex gap-3 flex-wrap" data-tab-group>
+          <span class="chip is-active is-clickable">All</span>
+          <span class="chip is-clickable">Hair</span>
+          <span class="chip is-clickable">Nails</span>
+          <span class="chip is-clickable">Skin</span>
+        </div>
+      </div>
+
+      <div class="grid grid-3" data-service-grid data-stagger>
+        <div class="service-card hover-lift" data-reveal="up" data-filter-row>
+          <div class="service-card__top">
+            <span class="service-card__icon"><i class="fa-solid fa-scissors"></i></span>
+            <label class="toggle" aria-label="Bookable online">
+              <input type="checkbox" checked>
+              <span class="toggle-track"></span>
+            </label>
+          </div>
+          <div>
+            <h4>Haircut</h4>
+            <p class="text-muted text-sm">Classic cut, wash and style.</p>
+          </div>
+          <div class="service-card__meta">
+            <span><i class="fa-regular fa-clock"></i> 45 min</span>
+            <span><i class="fa-solid fa-user"></i> Brian, Faith</span>
+          </div>
+          <div class="service-card__foot">
+            <span class="service-card__price">KES 800</span>
+            <span class="service-card__foot-label">142 bookings</span>
+          </div>
+        </div>
+
+        <div class="service-card hover-lift" data-reveal="up" data-filter-row>
+          <div class="service-card__top">
+            <span class="service-card__icon"><i class="fa-solid fa-palette"></i></span>
+            <label class="toggle" aria-label="Bookable online">
+              <input type="checkbox" checked>
+              <span class="toggle-track"></span>
+            </label>
+          </div>
+          <div>
+            <h4>Hair coloring</h4>
+            <p class="text-muted text-sm">Full colour or balayage, includes gloss.</p>
+          </div>
+          <div class="service-card__meta">
+            <span><i class="fa-regular fa-clock"></i> 90 min</span>
+            <span><i class="fa-solid fa-user"></i> Brian</span>
+          </div>
+          <div class="service-card__foot">
+            <span class="service-card__price">KES 3,200</span>
+            <span class="service-card__foot-label">58 bookings</span>
+          </div>
+        </div>
+
+        <div class="service-card hover-lift" data-reveal="up" data-filter-row>
+          <div class="service-card__top">
+            <span class="service-card__icon"><i class="fa-solid fa-user-tie"></i></span>
+            <label class="toggle" aria-label="Bookable online">
+              <input type="checkbox" checked>
+              <span class="toggle-track"></span>
+            </label>
+          </div>
+          <div>
+            <h4>Beard trim</h4>
+            <p class="text-muted text-sm">Shape and line up with hot towel finish.</p>
+          </div>
+          <div class="service-card__meta">
+            <span><i class="fa-regular fa-clock"></i> 30 min</span>
+            <span><i class="fa-solid fa-user"></i> Faith</span>
+          </div>
+          <div class="service-card__foot">
+            <span class="service-card__price">KES 500</span>
+            <span class="service-card__foot-label">96 bookings</span>
+          </div>
+        </div>
+
+        <div class="service-card hover-lift" data-reveal="up" data-filter-row>
+          <div class="service-card__top">
+            <span class="service-card__icon"><i class="fa-solid fa-hand-sparkles"></i></span>
+            <label class="toggle" aria-label="Bookable online">
+              <input type="checkbox" checked>
+              <span class="toggle-track"></span>
+            </label>
+          </div>
+          <div>
+            <h4>Manicure</h4>
+            <p class="text-muted text-sm">Shape, cuticle care and polish.</p>
+          </div>
+          <div class="service-card__meta">
+            <span><i class="fa-regular fa-clock"></i> 40 min</span>
+            <span><i class="fa-solid fa-user"></i> Faith</span>
+          </div>
+          <div class="service-card__foot">
+            <span class="service-card__price">KES 600</span>
+            <span class="service-card__foot-label">73 bookings</span>
+          </div>
+        </div>
+
+        <div class="service-card hover-lift" data-reveal="up" data-filter-row>
+          <div class="service-card__top">
+            <span class="service-card__icon"><i class="fa-solid fa-spa"></i></span>
+            <label class="toggle" aria-label="Bookable online">
+              <input type="checkbox">
+              <span class="toggle-track"></span>
+            </label>
+          </div>
+          <div>
+            <h4>Facial treatment</h4>
+            <p class="text-muted text-sm">Deep cleanse, steam and mask.</p>
+          </div>
+          <div class="service-card__meta">
+            <span><i class="fa-regular fa-clock"></i> 60 min</span>
+            <span><i class="fa-solid fa-user"></i> Faith</span>
+          </div>
+          <div class="service-card__foot">
+            <span class="service-card__price">KES 1,800</span>
+            <span class="service-card__foot-label">Paused</span>
+          </div>
+        </div>
+
+        <div class="service-card hover-lift" data-reveal="up" data-filter-row>
+          <div class="service-card__top">
+            <span class="service-card__icon"><i class="fa-solid fa-gem"></i></span>
+            <label class="toggle" aria-label="Bookable online">
+              <input type="checkbox" checked>
+              <span class="toggle-track"></span>
+            </label>
+          </div>
+          <div>
+            <h4>Full set (nails)</h4>
+            <p class="text-muted text-sm">Gel extensions with design of choice.</p>
+          </div>
+          <div class="service-card__meta">
+            <span><i class="fa-regular fa-clock"></i> 120 min</span>
+            <span><i class="fa-solid fa-user"></i> Brian</span>
+          </div>
+          <div class="service-card__foot">
+            <span class="service-card__price">KES 2,500</span>
+            <span class="service-card__foot-label">41 bookings</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Add service modal ===== -->
+<div class="modal-backdrop" id="modal-add-service">
+  <div class="modal modal--lg">
+    <div class="modal__head">
+      <h3>Add service</h3>
+      <button class="modal__close" data-modal-close aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="modal__body">
+      <div class="field">
+        <input class="field__control" type="text" id="service-name" placeholder=" ">
+        <label class="field__label" for="service-name">Service name</label>
+      </div>
+      <div class="field-row">
+        <div class="field field--select">
+          <select class="field__control select-control" id="service-category">
+            <option>Hair</option>
+            <option>Nails</option>
+            <option>Skin</option>
+          </select>
+          <label class="field__label" for="service-category">Category</label>
+        </div>
+        <div class="field">
+          <input class="field__control" type="number" id="service-price" placeholder=" ">
+          <label class="field__label" for="service-price">Price (KES)</label>
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <input class="field__control" type="number" id="service-duration" placeholder=" ">
+          <label class="field__label" for="service-duration">Duration (minutes)</label>
+        </div>
+        <div class="field field--select">
+          <select class="field__control select-control" id="service-staff">
+            <option>Any staff</option>
+            <option>Brian</option>
+            <option>Faith</option>
+          </select>
+          <label class="field__label" for="service-staff">Assigned staff</label>
+        </div>
+      </div>
+      <label class="check-row">
+        <input type="checkbox" checked>
+        <span>Bookable online through WhatsApp</span>
+      </label>
+    </div>
+    <div class="modal__foot">
+      <button class="btn btn--secondary" data-modal-close>Cancel</button>
+      <button class="btn btn--primary"><i class="fa-solid fa-check"></i> Save service</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/utils.js"></script>
+<script src="js/sidebar.js"></script>
+<script src="js/table-filter.js"></script>
+<script src="js/tabs.js"></script>
+<script src="js/modal.js"></script>
+</body>
+</html>

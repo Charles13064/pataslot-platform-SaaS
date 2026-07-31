@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Analytics — PataSlot</title>
+
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/theme.css">
+<script src="js/theme.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/typography.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/buttons.css">
+<link rel="stylesheet" href="css/forms.css">
+<link rel="stylesheet" href="css/cards.css">
+<link rel="stylesheet" href="css/sidebar.css">
+<link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="css/tables.css">
+<link rel="stylesheet" href="css/modals.css">
+
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<div class="app-shell" data-app-shell>
+  <div class="sidebar-backdrop" data-sidebar-backdrop></div>
+
+  <aside class="sidebar" data-sidebar>
+    <div class="sidebar-brand">
+      <span class="brand-mark" aria-hidden="true"><i class="fa-solid fa-calendar-check"></i></span>
+      <span>PataSlot</span>
+      <button class="sidebar-collapse-btn" data-sidebar-collapse aria-label="Collapse sidebar"><i class="fa-solid fa-angles-left"></i></button>
+    </div>
+    <nav class="sidebar-nav" aria-label="Primary">
+      <a href="dashboard.html" class="sidebar-link"><i class="fa-solid fa-grip"></i><span>Dashboard</span></a>
+      <a href="inbox.html" class="sidebar-link"><i class="fa-brands fa-whatsapp"></i><span>Inbox</span><span class="badge-count">12</span></a>
+      <a href="contacts.html" class="sidebar-link"><i class="fa-solid fa-address-book"></i><span>Contacts</span></a>
+      <p class="sidebar-section-label">Catalog</p>
+      <a href="products.html" class="sidebar-link"><i class="fa-solid fa-box"></i><span>Products</span></a>
+      <a href="services.html" class="sidebar-link"><i class="fa-solid fa-scissors"></i><span>Services</span></a>
+      <a href="appointments.html" class="sidebar-link"><i class="fa-solid fa-calendar-days"></i><span>Appointments</span></a>
+      <a href="gallery.html" class="sidebar-link"><i class="fa-solid fa-images"></i><span>Gallery</span></a>
+      <p class="sidebar-section-label">Engage</p>
+      <a href="broadcasts.html" class="sidebar-link"><i class="fa-solid fa-tower-broadcast"></i><span>Broadcasts</span></a>
+      <a href="automations.html" class="sidebar-link"><i class="fa-solid fa-diagram-project"></i><span>Automations</span></a>
+      <a href="ai.html" class="sidebar-link"><i class="fa-solid fa-robot"></i><span>AI Assistant</span></a>
+      <p class="sidebar-section-label">Business</p>
+      <a href="analytics.html" class="sidebar-link is-active"><i class="fa-solid fa-chart-line"></i><span>Analytics</span></a>
+      <a href="integrations.html" class="sidebar-link"><i class="fa-solid fa-plug"></i><span>Integrations</span></a>
+      <a href="billing.html" class="sidebar-link"><i class="fa-solid fa-credit-card"></i><span>Billing</span></a>
+      <a href="settings.html" class="sidebar-link"><i class="fa-solid fa-gear"></i><span>Settings</span></a>
+    </nav>
+    <div class="sidebar-footer">
+      <a href="profile.html" class="sidebar-user">
+        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Faith Wanjiru">
+        <div class="sidebar-user__meta"><strong>Faith Wanjiru</strong><span>Glow Beauty Studio</span></div>
+      </a>
+      <a href="login.html" class="sidebar-link"><i class="fa-solid fa-arrow-right-from-bracket"></i><span>Log out</span></a>
+    </div>
+  </aside>
+
+  <div class="main-content">
+    <header class="topbar">
+      <button class="topbar-menu-btn" data-sidebar-open aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+      <h1 class="topbar-title">Analytics</h1>
+      <div class="topbar-actions">
+        <button class="theme-toggle" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i><i class="fa-solid fa-sun"></i></button>
+        <button class="topbar-icon-btn" aria-label="Notifications"><i class="fa-regular fa-bell"></i><span class="dot"></span></button>
+        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Faith Wanjiru" class="topbar-avatar">
+      </div>
+    </header>
+
+    <div class="page-wrap">
+      <div class="page-head">
+        <div>
+          <h1>Analytics</h1>
+          <p class="text-muted">How Glow Beauty Studio is trending over time.</p>
+        </div>
+        <span class="chip"><i class="fa-solid fa-calendar"></i> Last 6 months</span>
+      </div>
+
+      <div class="metric-grid mb-6" data-stagger>
+        <div class="metric-card hover-lift" data-reveal="up">
+          <div class="metric-card__top"><span class="metric-card__label">Revenue (6mo)</span><span class="metric-card__icon"><i class="fa-solid fa-sack-dollar"></i></span></div>
+          <span class="metric-card__value">KES <span class="counter" data-counter="1.5" data-suffix="M">0</span></span>
+          <span class="metric-card__delta metric-card__delta--up"><i class="fa-solid fa-arrow-up"></i> 22% growth</span>
+        </div>
+        <div class="metric-card hover-lift" data-reveal="up">
+          <div class="metric-card__top"><span class="metric-card__label">Avg. order value</span><span class="metric-card__icon"><i class="fa-solid fa-receipt"></i></span></div>
+          <span class="metric-card__value">KES <span class="counter" data-counter="1150">0</span></span>
+        </div>
+        <div class="metric-card hover-lift" data-reveal="up">
+          <div class="metric-card__top"><span class="metric-card__label">Repeat rate</span><span class="metric-card__icon"><i class="fa-solid fa-heart"></i></span></div>
+          <span class="metric-card__value"><span class="counter" data-counter="61" data-suffix="%">0</span></span>
+        </div>
+        <div class="metric-card hover-lift" data-reveal="up">
+          <div class="metric-card__top"><span class="metric-card__label">Message → booking</span><span class="metric-card__icon"><i class="fa-solid fa-filter"></i></span></div>
+          <span class="metric-card__value"><span class="counter" data-counter="40" data-suffix="%">0</span></span>
+        </div>
+      </div>
+
+      <div class="dashboard-grid">
+        <div class="chart-panel hover-lift" data-reveal="up">
+          <div class="chart-panel__head"><h3>Revenue</h3><span class="chip">Last 6 months</span></div>
+          <div class="chart-panel__canvas-wrap"><canvas id="analyticsRevenueChart"></canvas></div>
+        </div>
+        <div class="chart-panel hover-lift" data-reveal="up">
+          <div class="chart-panel__head"><h3>Booking funnel</h3></div>
+          <div class="chart-panel__canvas-wrap"><canvas id="bookingFunnelChart"></canvas></div>
+        </div>
+      </div>
+
+      <div class="dashboard-grid mt-5">
+        <div class="chart-panel hover-lift" data-reveal="up">
+          <div class="chart-panel__head"><h3>New vs returning customers</h3></div>
+          <div class="chart-panel__canvas-wrap chart-panel__canvas-wrap--sm"><canvas id="customerGrowthChart"></canvas></div>
+        </div>
+        <div class="chart-panel hover-lift" data-reveal="up">
+          <div class="chart-panel__head"><h3>WhatsApp messages</h3></div>
+          <div class="chart-panel__canvas-wrap chart-panel__canvas-wrap--sm"><canvas id="analyticsMessagesChart"></canvas></div>
+        </div>
+      </div>
+
+      <p class="form-section-title mt-8">Top services by revenue</p>
+      <div class="data-table-wrap">
+        <table class="data-table">
+          <thead><tr><th>Service</th><th>Bookings</th><th>Revenue</th><th>Avg. rating</th></tr></thead>
+          <tbody>
+            <tr><td>Hair coloring</td><td>58</td><td>KES 185,600</td><td>4.9 <i class="fa-solid fa-star text-warning"></i></td></tr>
+            <tr><td>Haircut</td><td>142</td><td>KES 113,600</td><td>4.8 <i class="fa-solid fa-star text-warning"></i></td></tr>
+            <tr><td>Full set (nails)</td><td>41</td><td>KES 102,500</td><td>4.7 <i class="fa-solid fa-star text-warning"></i></td></tr>
+            <tr><td>Manicure</td><td>73</td><td>KES 43,800</td><td>4.9 <i class="fa-solid fa-star text-warning"></i></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/utils.js"></script>
+<script src="js/sidebar.js"></script>
+<script src="js/tabs.js"></script>
+<script src="js/table-filter.js"></script>
+<script src="js/modal.js"></script>
+<script src="js/dropzone.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.4/chart.umd.min.js"></script>
+<script src="js/charts/chart-theme.js"></script>
+<script src="js/charts/revenue-chart.js"></script>
+<script src="js/charts/customer-growth-chart.js"></script>
+<script src="js/charts/booking-funnel-chart.js"></script>
+<script src="js/charts/whatsapp-messages-chart.js"></script>
+<script src="js/analytics.js"></script>
+</body>
+</html>
